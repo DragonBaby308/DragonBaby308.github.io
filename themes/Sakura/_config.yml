@@ -97,20 +97,27 @@ startdash:
 # your site build time or founded date
 siteBuildingTime: 12/12/2019
 
-#social  url, img PC端配置
+# 社交按钮PC端
+# url：链接
+# qrcode：二维码
+# img：图标
 social:
-  github: {url: http://github.com/honjun, img: /img/social/github.png}
-  sina: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/sina.png}
-  wangyiyun: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/wangyiyun.png}
-  zhihu: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/zhihu.png}
-  email: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/email.svg}
-  wechat: {url: /#, qrcode: /img/custom/wechat.jpg, img: /img/social/wechat.png}
+  GitHub: {url: http://github.com/DragonBaby308, img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/github.png}
+  掘金: {url: https://juejin.im/user/5cef386351882551b47a32f7, img: /img/social/juejin.jpg}
+  BiliBili: {url: https://space.bilibili.com/24837083, img: /img/social/bilibili.jpeg}
+  WeChat: {url: /#, qrcode: /img/social/wechat.jpg, img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/wechat.png}
+  QQ: {url: /#, qrcode: /img/social/qq.jpg, img: https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/social/qq.png}
 
-#social  url, img 移动端配置
+# 社交按钮移动端
+# url：链接
+# fontawesome：图标
+# color：颜色
 msocial:
-  github: {url: http://github.com/honjun, fa: fa-github, color: 333}
-  weibo: {url: http://weibo.com/mashirozx?is_all=1, fa: fa-weibo, color: dd4b39}
-  qq: {url: https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yes, fa: fa-qq, color: 25c6fe}
+  github: {url: http://github.com/DragonBaby308, fa: fa-github, color: 333}
+  # weibo: {url: http://weibo.com/mashirozx?is_all=1, fa: fa-weibo, color: dd4b39}
+  # qq: {url: https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yes, fa: fa-qq, color: 25c6fe}
+
+
 
 # 赞赏二维码
 donate:
