@@ -750,15 +750,6 @@ links:
 ---
 </code></pre>
 <hr>
-<h3 id="6-文章中插入BiliBili视频"><a href="#6-文章中插入BiliBili视频" class="headerlink" title="6.文章中插入BiliBili视频"></a>6.文章中插入<code>BiliBili</code>视频</h3><p><code>hexo-theme-sakura</code>集成了<code>hexo-tag-bilibili</code>，可以通过以下形式，在文章中引用<code>BiliBili</code>视频：</p>
-<pre><code class="md"># 单P视频只要写av号，多P视频除了av号，还要说明是第几P
-{% bilibili [av_id] %}
-{% bilibili [av_id] [page] %}
-
-# 比如插入https://www.bilibili.com/video/av2271112，就这么写——
-{% bilibili av2271112 %}
-</code></pre>
-<hr>
 <h2 id="（三）其他魔改"><a href="#（三）其他魔改" class="headerlink" title="（三）其他魔改"></a>（三）其他魔改</h2><h3 id="1-startdash名称更改"><a href="#1-startdash名称更改" class="headerlink" title="1.startdash名称更改"></a>1.<code>startdash</code>名称更改</h3><p>将<code>/themes/Sakura/layout/_partial/startdash.ejs</code>中的<code>&lt;h1 ...&gt;startdash&lt;/h1&gt;</code>改为<code>&lt;h1 ...&gt;快速导航&lt;/h1&gt;</code>。</p>
 <h3 id="2-Discovery名称更改"><a href="#2-Discovery名称更改" class="headerlink" title="2.Discovery名称更改"></a>2.<code>Discovery</code>名称更改</h3><p>将<code>/themes/Sakura/layout/index.ejs</code>中的<code>&lt;h1 ...&gt;Discovery&lt;/h1&gt;</code>改为<code>&lt;h1 ...&gt;正文&lt;/h1&gt;</code>。</p>
 <h3 id="3-文章链接更改"><a href="#3-文章链接更改" class="headerlink" title="3.文章链接更改"></a>3.文章链接更改</h3><p>将<code>_config.yaml</code>中的<code>permalink</code>属性修改为<code>permalink: :title/</code>。</p>
