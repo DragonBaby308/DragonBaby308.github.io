@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-12-13T14:43:47.364Z</updated>
+  <updated>2019-12-13T14:47:46.084Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,163 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Go语言网络编程（TCP、HTTP、Beego框架）</title>
+    <link href="/go-web/"/>
+    <id>/go-web/</id>
+    <published>2019-12-04T15:37:01.000Z</published>
+    <updated>2019-12-13T14:47:46.084Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Go语言网络编程（TCP、HTTP、Beego框架）&quot;&gt;&lt;a href=&quot;#Go语言网络编程（TCP、HTTP、Beego框架）&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Go" scheme="/categories/Go/"/>
+    
+    
+      <category term="GitHub" scheme="/tags/GitHub/"/>
+    
+      <category term="Go" scheme="/tags/Go/"/>
+    
+      <category term="TCP" scheme="/tags/TCP/"/>
+    
+      <category term="HTTP" scheme="/tags/HTTP/"/>
+    
+      <category term="Goroutine" scheme="/tags/Goroutine/"/>
+    
+      <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
+    
+      <category term="多线程" scheme="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+      <category term="Beego" scheme="/tags/Beego/"/>
+    
+      <category term="bee" scheme="/tags/bee/"/>
+    
+      <category term="JSON" scheme="/tags/JSON/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub小技巧</title>
+    <link href="/github/"/>
+    <id>/github/</id>
+    <published>2019-11-28T16:01:55.000Z</published>
+    <updated>2019-12-13T14:47:25.135Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;GitHub小技巧&quot;&gt;&lt;a href=&quot;#GitHub小技巧&quot; class=&quot;headerlink&quot; title=&quot;GitHub小技巧&quot;&gt;&lt;/a&gt;&lt;code&gt;GitHub&lt;/code&gt;小技巧&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;（一）快捷键查看：shift&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="GitHub" scheme="/categories/GitHub/"/>
+    
+    
+      <category term="GitHub" scheme="/tags/GitHub/"/>
+    
+      <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="Go" scheme="/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go语言并发编程</title>
+    <link href="/goroutine/"/>
+    <id>/goroutine/</id>
+    <published>2019-11-22T14:48:10.000Z</published>
+    <updated>2019-12-13T14:48:24.930Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Go语言并发编程&quot;&gt;&lt;a href=&quot;#Go语言并发编程&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Go" scheme="/categories/Go/"/>
+    
+    
+      <category term="Go" scheme="/tags/Go/"/>
+    
+      <category term="Goroutine" scheme="/tags/Goroutine/"/>
+    
+      <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
+    
+      <category term="OS" scheme="/tags/OS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go语言入门</title>
+    <link href="/go/"/>
+    <id>/go/</id>
+    <published>2019-11-20T15:03:51.000Z</published>
+    <updated>2019-12-13T14:48:06.859Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Go语言入门&quot;&gt;&lt;a href=&quot;#Go语言入门&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Go" scheme="/categories/Go/"/>
+    
+    
+      <category term="GitHub" scheme="/tags/GitHub/"/>
+    
+      <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="Homebrew" scheme="/tags/Homebrew/"/>
+    
+      <category term="Mac" scheme="/tags/Mac/"/>
+    
+      <category term="Go" scheme="/tags/Go/"/>
+    
+      <category term="HTTP" scheme="/tags/HTTP/"/>
+    
+      <category term="Goroutine" scheme="/tags/Goroutine/"/>
+    
+      <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
+    
+      <category term="多线程" scheme="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+      <category term="JSON" scheme="/tags/JSON/"/>
+    
+      <category term="OS" scheme="/tags/OS/"/>
+    
+      <category term="GC" scheme="/tags/GC/"/>
+    
+      <category term="协程" scheme="/tags/%E5%8D%8F%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Crond定时任务</title>
@@ -45,6 +202,90 @@
       <category term="Crond" scheme="/tags/Crond/"/>
     
       <category term="定时任务" scheme="/tags/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分布式全局唯一ID</title>
+    <link href="/uid/"/>
+    <id>/uid/</id>
+    <published>2019-09-10T14:35:30.000Z</published>
+    <updated>2019-12-13T14:46:01.735Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;分布式全局唯一ID&quot;&gt;&lt;a href=&quot;#分布式全局唯一ID&quot; class=&quot;headerlink&quot; title=&quot;分布式全局唯一ID&quot;&gt;&lt;/a&gt;分布式全局唯一ID&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;（一）UUID&quot;&gt;&lt;a href=&quot;#（一）UUID&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="分布式" scheme="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+    
+    
+      <category term="分布式" scheme="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+    
+      <category term="MySQL" scheme="/tags/MySQL/"/>
+    
+      <category term="HTTP" scheme="/tags/HTTP/"/>
+    
+      <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
+    
+      <category term="Redis" scheme="/tags/Redis/"/>
+    
+      <category term="雪花算法" scheme="/tags/%E9%9B%AA%E8%8A%B1%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="CAS" scheme="/tags/CAS/"/>
+    
+      <category term="JVM" scheme="/tags/JVM/"/>
+    
+      <category term="MyCat" scheme="/tags/MyCat/"/>
+    
+      <category term="Java Base" scheme="/tags/Java-Base/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分布式系统理论基础</title>
+    <link href="/Distributed-System/"/>
+    <id>/Distributed-System/</id>
+    <published>2019-09-06T13:01:40.000Z</published>
+    <updated>2019-12-13T14:45:38.871Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;分布式系统理论基础&quot;&gt;&lt;a href=&quot;#分布式系统理论基础&quot; class=&quot;headerlink&quot; title=&quot;分布式系统理论基础&quot;&gt;&lt;/a&gt;分布式系统理论基础&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;分布式系统目标&quot;&gt;&lt;a href=&quot;#分布式系统目标&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="分布式" scheme="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+    
+    
+      <category term="分布式" scheme="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+    
+      <category term="CAP" scheme="/tags/CAP/"/>
+    
+      <category term="BASE" scheme="/tags/BASE/"/>
+    
+      <category term="ZooKeeper" scheme="/tags/ZooKeeper/"/>
+    
+      <category term="ZAB" scheme="/tags/ZAB/"/>
+    
+      <category term="MySQL" scheme="/tags/MySQL/"/>
+    
+      <category term="高可用" scheme="/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/"/>
     
   </entry>
   
@@ -178,17 +419,68 @@
       <category term="Java基础" scheme="/categories/Java%E5%9F%BA%E7%A1%80/"/>
     
     
+      <category term="多线程" scheme="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+      <category term="Java Base" scheme="/tags/Java-Base/"/>
+    
       <category term="BIO" scheme="/tags/BIO/"/>
     
       <category term="NIO" scheme="/tags/NIO/"/>
     
-      <category term="Java Base" scheme="/tags/Java-Base/"/>
-    
-      <category term="多线程" scheme="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    
       <category term="线程池" scheme="/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/"/>
     
       <category term="Future" scheme="/tags/Future/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GayHub上一些有趣的项目【持续更新~】</title>
+    <link href="/fun-with-GayHub/"/>
+    <id>/fun-with-GayHub/</id>
+    <published>2019-08-04T09:47:11.000Z</published>
+    <updated>2019-12-13T14:47:01.653Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;GayHub上一些有趣的项目&quot;&gt;&lt;a href=&quot;#GayHub上一些有趣的项目&quot; class=&quot;headerlink&quot; title=&quot;GayHub上一些有趣的项目&quot;&gt;&lt;/a&gt;GayHub上一些有趣的项目&lt;/h1&gt;&lt;hr&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="GitHub" scheme="/categories/GitHub/"/>
+    
+    
+      <category term="GitHub" scheme="/tags/GitHub/"/>
+    
+      <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="Linux" scheme="/tags/Linux/"/>
+    
+      <category term="Shell" scheme="/tags/Shell/"/>
+    
+      <category term="Vim" scheme="/tags/Vim/"/>
+    
+      <category term="前端" scheme="/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Markdown" scheme="/tags/Markdown/"/>
+    
+      <category term="Node.js" scheme="/tags/Node-js/"/>
+    
+      <category term="Vue.js" scheme="/tags/Vue-js/"/>
+    
+      <category term="Fun!!!!!!!" scheme="/tags/Fun/"/>
+    
+      <category term="JS" scheme="/tags/JS/"/>
+    
+      <category term="Homebrew" scheme="/tags/Homebrew/"/>
+    
+      <category term="Mac" scheme="/tags/Mac/"/>
     
   </entry>
   
@@ -221,6 +513,158 @@
       <category term="HashMap" scheme="/tags/HashMap/"/>
     
       <category term="String" scheme="/tags/String/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>树莓派入门</title>
+    <link href="/raspberry-pi/"/>
+    <id>/raspberry-pi/</id>
+    <published>2019-07-07T05:59:25.000Z</published>
+    <updated>2019-12-13T14:49:39.354Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;树莓派入门&quot;&gt;&lt;a href=&quot;#树莓派入门&quot; class=&quot;headerlink&quot; title=&quot;树莓派入门&quot;&gt;&lt;/a&gt;树莓派入门&lt;/h1&gt;&lt;h2 id=&quot;外设&quot;&gt;&lt;a href=&quot;#外设&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="/tags/Linux/"/>
+    
+      <category term="Raspberry Pi" scheme="/tags/Raspberry-Pi/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker应用：使用NextCloud搭建私有云盘</title>
+    <link href="/docker-nextcloud/"/>
+    <id>/docker-nextcloud/</id>
+    <published>2019-07-06T12:13:06.000Z</published>
+    <updated>2019-12-13T14:46:22.008Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Docker应用：使用NextCloud搭建私有云盘&quot;&gt;&lt;a href=&quot;#Docker应用：使用NextCloud搭建私有云盘&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Docker" scheme="/categories/Docker/"/>
+    
+    
+      <category term="Docker" scheme="/tags/Docker/"/>
+    
+      <category term="NextCloud" scheme="/tags/NextCloud/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 、 k8s 基础</title>
+    <link href="/docker/"/>
+    <id>/docker/</id>
+    <published>2019-07-01T05:21:30.000Z</published>
+    <updated>2019-12-13T14:46:38.866Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Docker-、-k8s-基础&quot;&gt;&lt;a href=&quot;#Docker-、-k8s-基础&quot; class=&quot;headerlink&quot; title=&quot;Docker 、 k8s 基础&quot;&gt;&lt;/a&gt;Docker 、 k8s 基础&lt;/h1&gt;&lt;hr&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="Docker" scheme="/categories/Docker/"/>
+    
+    
+      <category term="分布式" scheme="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+    
+      <category term="MySQL" scheme="/tags/MySQL/"/>
+    
+      <category term="高可用" scheme="/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/"/>
+    
+      <category term="Docker" scheme="/tags/Docker/"/>
+    
+      <category term="Redis" scheme="/tags/Redis/"/>
+    
+      <category term="MongoDB" scheme="/tags/MongoDB/"/>
+    
+      <category term="Spring" scheme="/tags/Spring/"/>
+    
+      <category term="Maven" scheme="/tags/Maven/"/>
+    
+      <category term="k8s" scheme="/tags/k8s/"/>
+    
+      <category term="架构" scheme="/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+      <category term="REST" scheme="/tags/REST/"/>
+    
+      <category term="微服务" scheme="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    
+      <category term="etcd" scheme="/tags/etcd/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设计模式</title>
+    <link href="/Design-Pattern/"/>
+    <id>/Design-Pattern/</id>
+    <published>2019-05-31T06:34:05.000Z</published>
+    <updated>2019-12-13T14:45:10.442Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;设计模式&quot;&gt;&lt;a href=&quot;#设计模式&quot; class=&quot;headerlink&quot; title=&quot;设计模式&quot;&gt;&lt;/a&gt;设计模式&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;（一）策略模式（Strategy-Pattern）&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="设计模式" scheme="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="Redis" scheme="/tags/Redis/"/>
+    
+      <category term="Java Base" scheme="/tags/Java-Base/"/>
+    
+      <category term="Spring" scheme="/tags/Spring/"/>
+    
+      <category term="Java 8" scheme="/tags/Java-8/"/>
+    
+      <category term="函数式编程" scheme="/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="行为参数化" scheme="/tags/%E8%A1%8C%E4%B8%BA%E5%8F%82%E6%95%B0%E5%8C%96/"/>
+    
+      <category term="Lambda" scheme="/tags/Lambda/"/>
+    
+      <category term="设计模式" scheme="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="Reactor" scheme="/tags/Reactor/"/>
+    
+      <category term="响应式编程" scheme="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
