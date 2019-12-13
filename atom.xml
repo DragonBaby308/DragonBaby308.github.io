@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-12-13T14:50:05.335Z</updated>
+  <updated>2019-12-13T14:50:51.899Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo主题 —— Sakura 入门</title>
+    <link href="/hexo-theme-sakura/"/>
+    <id>/hexo-theme-sakura/</id>
+    <published>2019-12-13T09:20:00.000Z</published>
+    <updated>2019-12-13T14:50:51.899Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Hexo主题-——-Sakura-入门&quot;&gt;&lt;a href=&quot;#Hexo主题-——-Sakura-入门&quot; class=&quot;headerlink&quot; title=&quot;Hexo主题 —— Sakura 入门&quot;&gt;&lt;/a&gt;Hexo主题 —— Sakura
+        
+      
+    
+    </summary>
+    
+      <category term="Hexo" scheme="/categories/Hexo/"/>
+    
+    
+      <category term="GitHub" scheme="/tags/GitHub/"/>
+    
+      <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="Hexo框架" scheme="/tags/Hexo%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="Hexo主题" scheme="/tags/Hexo%E4%B8%BB%E9%A2%98/"/>
+    
+      <category term="CDN" scheme="/tags/CDN/"/>
+    
+      <category term="jsDeliver" scheme="/tags/jsDeliver/"/>
+    
+  </entry>
   
   <entry>
     <title>iTerm2和oh-my-zsh联合打造Mac终端</title>
