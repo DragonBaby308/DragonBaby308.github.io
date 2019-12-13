@@ -1,18 +1,36 @@
 # site name
-prefixName: さくら荘その
-siteName: hojun
+# 站点名前缀，可以省略
+prefixName: 想进阿里の
+# 站点名，显示为：前缀+站点名
+siteName: DB3
+
 # favicon and site master avatar
-favicon: /images/favicon.ico
-avatar: /img/custom/avatar.jpg
-url: https://sakura.hojun.cn
-description: Live your life with passion! With some drive!
-cdn: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6
+# 标签页小图标：
+favicon: /img/header/db3.png
+# 头像：
+avatar: /img/header/db3Avatar.jpg
+
+# 站点URL
+url: https://DragonBaby308.github.io/
+
+# 描述
+description: 2019年只剩下尾巴了，希望2020年春招可以进ATM！
+
+# 开启pjax
 pjax: 1
-# 1开启
+
 mathjax: 0
 
-notice: hexo-Sakura主题已经开源，目前正在开发中...
+# 公告
+notice: 我不玩游戏，我定规则。
+
+# 懒加载的加载中图片
 lazyloadImg: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg
+
+
+
+cdn: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6
+
 
 menus:
   首页: { path: /, fa: fa-fort-awesome faa-shake }
