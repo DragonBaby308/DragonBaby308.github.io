@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>DragonBaby308</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="/"/>
+  <updated>2019-12-13T14:37:35.975Z</updated>
+  <id>/</id>
+  
+  <author>
+    <name>DragonBaby308</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法专题——动态规划</title>
+    <link href="/Algorithm-DP/"/>
+    <id>/Algorithm-DP/</id>
+    <published>2019-09-03T14:40:22.000Z</published>
+    <updated>2019-12-13T14:37:35.975Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;算法专题——动态规划&quot;&gt;&lt;a href=&quot;#算法专题——动态规划&quot; class=&quot;headerlink&quot; title=&quot;算法专题——动态规划&quot;&gt;&lt;/a&gt;算法专题——动态规划&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;参考自&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="背包问题" scheme="/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="0-1背包" scheme="/tags/0-1%E8%83%8C%E5%8C%85/"/>
+    
+      <category term="完全背包" scheme="/tags/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85/"/>
+    
+      <category term="DP" scheme="/tags/DP/"/>
+    
+      <category term="递归" scheme="/tags/%E9%80%92%E5%BD%92/"/>
+    
+  </entry>
+  
+</feed>

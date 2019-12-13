@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">算法专题——动态规划 | DragonBaby308</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "さくら荘そのhojun";
+  mashiro_option.author_name = "hojun";
+  mashiro_option.site_url = "https://sakura.hojun.cn";
+  mashiro_option.v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz";
+  mashiro_option.v_appKey = "mgOpfzbkHYqU92CV4IDlAUHQ";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(1).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(3).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(6).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(7).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(8).jpg.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://sakura.hojun.cn">
+          <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/avatar.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Live your life with passion! With some drive!</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/honjun" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="social-github" title="sina">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/sina.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="social-github" title="wangyiyun">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/wangyiyun.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="social-github" title="zhihu">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/zhihu.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="social-github" title="email">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/email.svg">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/wechat.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">さくら荘その</span>
+            <span class="shironeko">hojun</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/资源/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/随想/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/转载/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          转载
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/图集/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          图集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Lab
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/client/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+                    客户端
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                    RSS
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/DP.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/DP.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      算法专题——动态规划</h1>
+      <p class="entry-census">
+        <span>
+          <a href="www.dragonbaby308.com">
+            <img src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3Avatar.jpeg">
+          </a>
+        </span>
+        <span>
+          <a href="www.dragonbaby308.com">DragonBaby308</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2019-9-3<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="算法专题——动态规划"><a href="#算法专题——动态规划" class="headerlink" title="算法专题——动态规划"></a>算法专题——动态规划</h1><blockquote>
+<p>参考自<a href="https://leetcode-cn.com/problems/coin-change/solution/dong-tai-gui-hua-tao-lu-xiang-jie-by-wei-lai-bu-ke/" target="_blank" rel="noopener">《动态规划套路详解》</a>，写得真好。</p>
+</blockquote>
+<p>动态规划（Dynamic Programming, <code>DP</code>）是一种<strong>将原有问题分解为相对简单的子问题</strong>，来求解复杂问题的方法，常常适用于有<strong>重叠子问题</strong>和<strong>最优子结构</strong>性质的问题。</p>
+<blockquote>
+<p>最优子结构：<strong>原问题的解由子问题的最优解构成，并且子问题必须相互独立、互不干扰</strong></p>
+</blockquote>
+<ul>
+<li>原理：<strong>将重复计算子问题转化为查表，保证每个子问题只计算一次</strong> —— 一旦某个给定子问题的解已经算出，则将其记忆化存储，以便下次需要同一个子问题解之时直接<strong>查表</strong>。</li>
+<li>用途：<code>DP</code>常用于<strong>优化递归</strong>问题，使用递归求解时如果需要计算很多次重复子问题，那么利用<code>DP</code>可以减少计算量，具有天然剪枝的功能。</li>
+<li>解<code>DP</code>问题的关键：找到<strong>状态转移方程</strong><blockquote>
+<p>找到状态转移方程，也就意味着找到了一种暴力破解的方法。</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="（〇）解DP的惯用三步骤"><a href="#（〇）解DP的惯用三步骤" class="headerlink" title="（〇）解DP的惯用三步骤"></a>（〇）解<code>DP</code>的惯用三步骤</h2><h3 id="1-递归"><a href="#1-递归" class="headerlink" title="1.递归"></a>1.递归</h3><ul>
+<li><strong>自顶向下，画递归树，找到递归解法，发现重复子问题</strong>。<blockquote>
+<p><img src="https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/algorithm/DP/s-rock-e.jpg" alt><br>可以看到存在很多重复计算。</p>
+</blockquote>
+</li>
+</ul>
+<pre><code class="c">int countPaths(boolean[][] grid, int row, int col)  {
+  if (!validSquare(grid, row, col)) {
+    return 0;
+  }
+  if (isAtEnd(grid, row, col)) {
+    return 1;
+  }
+  return countPaths(grid, row + 1, col) + countPaths(grid, row, col + 1);
+}
+</code></pre>
+<h3 id="2-递归-记忆化"><a href="#2-递归-记忆化" class="headerlink" title="2.递归 + 记忆化"></a>2.递归 + 记忆化</h3><ul>
+<li><strong>将重复子问题进行记忆化存储</strong><blockquote>
+<p>将每次计算所得结果存入一个数组中，每次不是重新求，而是查数组。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="3-定义状态数组，递推状态转移方程"><a href="#3-定义状态数组，递推状态转移方程" class="headerlink" title="3.定义状态数组，递推状态转移方程"></a>3.定义状态数组，递推状态转移方程</h3><ol>
+<li><strong>定义状态数组</strong>（即<code>dp[n]</code>数组）</li>
+<li><strong>自底向上，递推出状态转移方程，解决</strong><code>DP</code></li>
+</ol>
+<pre><code class="c">//边界条件：最下面一行和最右边一列，opt[i, j] = 0，只有一种走法
+if (a[i, j] = &#39;空地&#39;) {
+  opt[i, j] = opt[i - 1, j] + opt[i, j - 1];
+}else { //石头
+  opt[i, j] = 0;
+}
+</code></pre>
+<hr>
+<h2 id="（一）背包问题"><a href="#（一）背包问题" class="headerlink" title="（一）背包问题"></a>（一）背包问题</h2><p>将一系列具有重量w的物品（可能还有价值v），放入一个总容量为C的背包中，满足某种条件（比如放入的物品重量和恰好为C/重量和最大/价值和最大）。</p>
+<h3 id="（1）0-1背包"><a href="#（1）0-1背包" class="headerlink" title="（1）0-1背包"></a>（1）0-1背包</h3><p>0-1背包隐含的信息是：</p>
+<ul>
+<li><strong>对于每种物品只有两种选择，即“完全装入背包”/“不装入背包”。</strong></li>
+<li><strong>不能将同一个物品装入背包多次，也不能只装一个物品的一部分。</strong></li>
+</ul>
+<h4 id="①物品无价值：【重量和恰好为C-重量和最大】"><a href="#①物品无价值：【重量和恰好为C-重量和最大】" class="headerlink" title="①物品无价值：【重量和恰好为C/重量和最大】"></a>①物品无价值：【重量和恰好为C/重量和最大】</h4><p>假设有一个总容量为C的背包和n件重量分别为w1,w2,..,wn的物品，能否从n件物品中挑选若干件正好装满背包。</p>
+<ul>
+<li>当C=10，6件物品种类分别为{1,8,4,3,5,2}，可以找到以下4组解：(1,4,3,2)、(1,4,5)、(8,2)、(3,5,2)</li>
+<li><strong>状态转移方程：<code>maxValue[i][j] = Math.max(maxValue[i -1][j], maxValue[i - 1][j - w[i]] + w[i]);</code></strong>，其中<strong>0 &lt;= i &lt; n - 1，0 &lt;= j &lt;= C</strong></li>
+</ul>
+<blockquote>
+<p><a href="http://www.dragonbaby308.com/artsk20190903/" target="_blank" rel="noopener">无价值的0-1背包问题（重量和最大）</a></p>
+</blockquote>
+<h4 id="②物品有价值：【价值和最大】"><a href="#②物品有价值：【价值和最大】" class="headerlink" title="②物品有价值：【价值和最大】"></a>②物品有价值：【价值和最大】</h4><p>假设有一个总容量为C的背包，n种物品满足第i种物品重量为wi、价值为vi，应该如何选择装入背包的物品，使得装入背包中的物品价值和最大。</p>
+<ul>
+<li>用一个二维数组<code>maxValue[i][C]</code>来表示第i种物品装入容量为C的背包时的最大价值</li>
+<li>第i种物品装入背包时最大价值有两种情况：</li>
+</ul>
+<ol>
+<li><strong>装入第i种物品时，容量超过C：此时最大价值就是不装入第i种物品时的最大价值 —— <code>maxValue[i-1][C]</code></strong></li>
+<li><strong>装入第i种物品时，容量不超过C：此时最大价值需要在前i-1种物品最大价值上加上第i种物品的价值，同时前i-1种物品的容量需要减去第i种物品的容量 —— <code>vi + maxValue[i - 1][C - wi]</code></strong></li>
+</ol>
+<ul>
+<li>状态转移方程：<code>maxValue[i][C] = Math.max(maxValue[i - 1][C], vi + maxValue[i - 1][C - wi]);</code></li>
+</ul>
+<pre><code class="java">//@params: int[] w  重量
+//@params: int[] v  价值
+//@params: int C    背包容量
+public static int knapsack(int[] w, int[] v, int C) {
+    int size = w.length();
+    if(size &lt;= 0) return 0;
+    //最大价值数组
+    int[][] maxValue = new int[size][C + 1];
+    //边界值——只填入物品0时的最大价值
+    for(int i = 0; i &lt;= C; i++) {
+        //判断容量是否超过
+        maxValue[0][i] = w[0] &gt; C ? 0 : v[0];
+    }
+    //状态转移方程
+    for(int j = 1; j &lt; size; j++){
+        for(int k = 0; k &lt;= C; k++){
+            //这一步是为了过滤掉k - w[j] &lt; 0的情况，防止数组越界
+            maxValue[j][k] = maxValue[j - 1][k];
+            if(w[j] &lt;= k)
+                maxValue[j][k] = Math.max(maxValue[j][k]
+                    , maxValue[j - 1][k - w[j]] + v[j]);
+        }
+    }
+    //总共size种，从0开始
+    return maxValue[size - 1][C];
+}
+</code></pre>
+<blockquote>
+<p>以上DP使用了二维数组，空间复杂度是<code>O(n * C)</code>。可以优化为一维数组：</p>
+</blockquote>
+<pre><code class="java">//...
+int[] maxValue = new int[C + 1];
+//边界值——只填入第0种物品
+for(int i = 0; i &lt;= C; i++){
+    maxValue[i] = w[i] &lt; i ? v[i] : 0;
+}
+//状态转移方程
+for(int j = 1; j &lt; size; j++){
+    //从后往前遍历，防止计算结果被覆盖
+    for(int k = C; k &gt;= w[j]; k--){
+        maxValue[k] = Math.max(maxValue[k], v[j] + maxValue[k - w[j]]);
+    }
+}
+return maxValue[C];
+</code></pre>
+<hr>
+<h3 id="（2）完全背包"><a href="#（2）完全背包" class="headerlink" title="（2）完全背包"></a>（2）完全背包</h3><ul>
+<li><p>与“0-1背包”的区别在于<strong>每种物品可以放无限次</strong>。  </p>
+</li>
+<li><p>假设有一个总容量为C的背包，n种物品满足第i种物品重量为wi、价值为vi，<strong>每种物品可以放入无限多次</strong>，应该如何选择装入背包的物品，使得装入背包中的物品价值和最大。</p>
+</li>
+</ul>
+<hr>
+<h3 id="（3）多重背包"><a href="#（3）多重背包" class="headerlink" title="（3）多重背包"></a>（3）多重背包</h3><p>与“0-1背包”的区别在于<strong>每种物品有一个固定的次数上限</strong>。</p>
+<hr>
+<h2 id="（二）Leetcode-easy"><a href="#（二）Leetcode-easy" class="headerlink" title="（二）Leetcode easy"></a>（二）Leetcode easy</h2><h3 id="1-最大子序和"><a href="#1-最大子序和" class="headerlink" title="1.最大子序和"></a>1.最大子序和</h3><blockquote>
+<p><a href="https://leetcode-cn.com/problems/maximum-subarray/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/maximum-subarray/</a></p>
+</blockquote>
+<p>给定一个整数数组<code>nums</code>，找到一个具有最大和的<strong>连续子数组</strong>（子数组<strong>最少包含一个</strong>元素），返回其最大和。</p>
+<pre><code class="text">输入: [-2,1,-3,4,-1,2,1,-5,4]
+输出: 6
+解释: 连续子数组 [4,-1,2,1] 的和最大，为 6
+</code></pre>
+<h4 id="扫描法"><a href="#扫描法" class="headerlink" title="扫描法"></a>扫描法</h4><ul>
+<li><p>思路：加上一个正数和会增加，加上一个负数和会减少；由于子数组是<strong>连续</strong>的，所以对于当前元素来说，如果加入之前子数组和中得到了一个负数，那么就<strong>将累加结果丢弃并清零，子数组从当前元素重新开始遍历</strong>即可。</p>
+<blockquote>
+<p>看到网上有人将其类比成了“赌徒理论” —— 永远只记住自己赢钱的时候，如果哪一天查看总资产发现自己亏本了，就将这一天之前的那些天都忘记，从0开始赌。</p>
+</blockquote>
+</li>
+<li><p>时间复杂度：<code>O(N)</code></p>
+</li>
+</ul>
+<pre><code class="go">//8 ms
+//3.3  MB
+func scanMaxSubArray(nums []int) int {
+    //最大子数组和，由于子数组必然连续且非空，所以初始值即第一个元素
+    max := nums[0]
+    //当前子数组和
+    sum := 0
+    //遍历数组，将当前元素加入子数组（并不需要真正的加入，因为我们关心的只是加入后的数组和）
+    for i := 0; i &lt; len(nums); i++ {
+        sum += nums[i]
+        //如果加入的是正数，更新最大值
+        if sum &gt; max {
+            max = sum
+        }
+        //如果和为负数，将和丢弃并清空，即子数组开始元素变更为当前元素
+        if sum &lt; 0 {
+            sum = 0
+        }
+    }
+    return max
+}
+</code></pre>
+<h4 id="DP"><a href="#DP" class="headerlink" title="DP"></a><code>DP</code></h4><ul>
+<li>状态转移方程：<code>dp[i] = max(dp[i - 1] + nums[i], nums[i])</code></li>
+<li>时间复杂度：<code>O(N)</code></li>
+</ul>
+<pre><code class="go">//8 ms
+//3.5  MB
+func dpMaxSubArray(nums []int) int {
+    max := nums[0]
+    length := len(nums)
+    dp := make([]int, length)
+    //dp[i]代表的是数组下标为i的元素加入后，子数组中最大值
+    //所以可以知道dp[0] = nums[0]，即第一个元素
+    dp[0] = nums[0]
+    for i := 1; i &lt; length; i++ {
+        dp[i] = nums[i]
+        if sum := dp[i -1] + nums[i]; sum &gt; max {
+            dp[i] = sum
+        }
+        //记录最大值
+        if sum &gt; max {
+            max = sum
+        }
+    }
+    return max
+}
+</code></pre>
+<hr>
+<h3 id="2-买卖股票的最佳时机"><a href="#2-买卖股票的最佳时机" class="headerlink" title="2.买卖股票的最佳时机"></a>2.买卖股票的最佳时机</h3><p>给定一个数组，它的第<code>i</code>个元素是一支给定股票第<code>i</code>天的价格。<br>如果你最多只允许完成一笔交易（即买入和卖出一支股票），设计一个算法来计算你所能获取的最大利润。<br>注意你不能在买入股票前卖出股票。</p>
+<pre><code class="text">输入: [7,1,5,3,6,4]
+输出: 5
+解释: 在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5 。
+注意利润不能是 7-1 = 6, 因为卖出价格需要大于买入价格。
+
+输入: [7,6,4,3,1]
+输出: 0
+解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。
+</code></pre>
+<h4 id="O-N-解法"><a href="#O-N-解法" class="headerlink" title="O(N)解法"></a><code>O(N)</code>解法</h4><p>这种思路是很容易想到的，记录最小元素<code>min</code>和最大差值<code>max</code>，遍历数组，将当前位置元素和<code>min</code>做减法，更新<code>max</code>和<code>min</code>：</p>
+<pre><code class="go">// 12 ms
+// 3.1 MB
+func maxProfit(prices []int) int {
+    l := len(prices)
+    if l &lt;= 1 {
+        return 0
+    }
+    max := 0           //最大差值
+    min := prices[0]   //股票买入最低价
+    for i := 1; i &lt; l; i++ {
+        tmp := prices[i] - min    //此时卖出赚到的钱
+        if tmp &gt; max {
+            max = tmp
+        }
+    //如果赚到的钱是负数，更新最小值
+        if tmp &lt; 0 {
+            min = prices[i]
+        }
+    }
+    return max
+}
+</code></pre>
+<h4 id="DP-1"><a href="#DP-1" class="headerlink" title="DP"></a><code>DP</code></h4><p>根据惯有套路，我们要先<strong>定义状态数组，然后递推出<code>DP</code>的状态转移方程</strong>。<br>那么状态数组如何定义呢？</p>
+<ol>
+<li>首先最容易想到的是一维状态数组：<code>mp[i]</code>代表的是到第<code>i</code>天的最大利润。在第<code>i</code>天的时候可以选择买入股票或者卖出股票，尝试来写状态转移方程：<code>mp[i] = (price[i] &gt;= 0) ? (mp[i - 1] - price[i]) : (mp[i - 1] + price[i])</code>。但是这样写是<strong>不对</strong>的！我们还有其他的限制条件：<strong>买入股票时手里不能持有股票</strong>、<strong>卖出股票时手里必须有股票</strong>，所以只用一个一维数组来定义状态是不够的。</li>
+<li>我们增加一个维度：<code>mp[i][has]</code>代表的是到第<code>i</code>天的最大利润，<code>has ∈ {0, 1}</code>，<code>0</code>表示<strong>手中未持有股票</strong>，<code>1</code>表示<strong>手中持有股票</strong>。在第<code>i - 1</code>天如果手中没有股票，我们可以第<code>i</code>天保持原状或者选择买入，选择两者中的最大值；如果第<code>i - 1</code>天手中持有股票，我们可以在第<code>i</code>天保持原状或者卖出，选择两者中的最大值。状态转移方程变成了：</li>
+</ol>
+<pre><code class="go">mp[i][0] = max(mp[i - 1][0], mp[i - 1][1] + price[i]) //卖出股票，利润加上价格
+mp[i][1] = max(mp[i - 1][1], mp[i - 1][0] - price[i]) //买入股票，利润减去价格
+</code></pre>
+<ol start="3">
+<li>那么使用二维数组就够了吗？答案是还是不够，我们还有一个限制条件：<strong>最多只能买卖<code>k</code>次股票</strong>（本题中<code>k = 1</code>）。所以我们要再增加一个维度：<code>mp[i][cnt][has]</code>代表的是到第<code>i</code>天的最大利润，<code>cnt</code>代表<strong>第<code>i</code>天之前交易股票的次数</strong>，<code>has ∈ {0, 1}</code>（<code>0</code>表示手中未持有股票，<code>1</code>表示手中持有股票）。状态转移方程变成了：</li>
+</ol>
+<pre><code class="go">mp[i][k][0] = max(mp[i - 1][k][0], mp[i - 1][k - 1][1] + price[i])    //卖出股票，利润加上价格
+mp[i][k][1] = max(mp[i - 1][k][1], mp[i - 1][k - 1][0] - price[i])    //买入股票，利润减去价格
+</code></pre>
+<p>到这一步，最大利润就变成了<code>max( mp[n - 1][cnt][0] ), cnt在[0, k]范围内循环</code></p>
+<blockquote>
+<p>那么如果题目改为<strong>手中最多持有<code>X</code>股票</strong>呢？<br><code>has</code>在<code>[0, X]</code>范围内循环即可。<br>状态转移方程：<code>mp[i][k][j] = max(mp[i - 1][k][j], mp[i - 1][k - 1][j + 1] + price[i], mp[i - 1][k - 1][j - 1] - price[i])</code></p>
+</blockquote>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="www.dragonbaby308.com" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3Avatar.jpeg" itemprop="image" alt="DragonBaby308" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="www.dragonbaby308.com" itemprop="url" rel="author">DragonBaby308</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 DragonBaby308<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2018</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Coding Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">さくら荘そのhojun</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/honjun" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="http://weibo.com/mashirozx?is_all=1" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/资源/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/随想/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/转载/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  转载
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/悦读/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/图集/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  图集
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Lab
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/client/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+            客户端
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/atom.xml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2660651585"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>
