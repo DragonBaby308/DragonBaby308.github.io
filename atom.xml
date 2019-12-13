@@ -38,9 +38,9 @@
       <category term="Hexo" scheme="/categories/Hexo/"/>
     
     
-      <category term="Git" scheme="/tags/Git/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
+    
+      <category term="Git" scheme="/tags/Git/"/>
     
       <category term="Hexo框架" scheme="/tags/Hexo%E6%A1%86%E6%9E%B6/"/>
     
@@ -76,9 +76,9 @@
     
       <category term="Linux" scheme="/tags/Linux/"/>
     
-      <category term="Git" scheme="/tags/Git/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
+    
+      <category term="Git" scheme="/tags/Git/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
@@ -165,9 +165,9 @@
       <category term="GitHub" scheme="/categories/GitHub/"/>
     
     
-      <category term="Git" scheme="/tags/Git/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
+    
+      <category term="Git" scheme="/tags/Git/"/>
     
       <category term="Go" scheme="/tags/Go/"/>
     
@@ -227,15 +227,15 @@
       <category term="Go" scheme="/categories/Go/"/>
     
     
-      <category term="Git" scheme="/tags/Git/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
-      <category term="Go" scheme="/tags/Go/"/>
+      <category term="Git" scheme="/tags/Git/"/>
     
       <category term="Homebrew" scheme="/tags/Homebrew/"/>
     
       <category term="Mac" scheme="/tags/Mac/"/>
+    
+      <category term="Go" scheme="/tags/Go/"/>
     
       <category term="HTTP" scheme="/tags/HTTP/"/>
     
@@ -540,9 +540,9 @@
     
       <category term="Linux" scheme="/tags/Linux/"/>
     
-      <category term="Git" scheme="/tags/Git/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
+    
+      <category term="Git" scheme="/tags/Git/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
