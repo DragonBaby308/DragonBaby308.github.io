@@ -399,24 +399,6 @@ links:
 ---
 ```
 
-
----
-
-###  6.文章中插入`BiliBili`视频
-
-`hexo-theme-sakura`集成了`hexo-tag-bilibili`，可以通过以下形式，在文章中引用`BiliBili`视频：
-
-```md
-# 单P视频只要写av号，多P视频除了av号，还要说明是第几P
-{% bilibili [av_id] %}
-{% bilibili [av_id] [page] %}
-
-# 比如插入https://www.bilibili.com/video/av2271112，就这么写——
-{% bilibili av2271112 %}
-```
-
-{% bilibili av2271112 %}
-
 ---
 
 ##  （三）其他魔改
