@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Go语言网络编程（TCP、HTTP、Beego框架） | DragonBaby308</title>
+  <title itemprop="name">Tag: python3 | DragonBaby308</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -383,423 +383,64 @@
   </div>
 </header>
 
-      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+      
 <div class="pattern-center-blank"></div>
-
-  <div class="pattern-center single-center">
-    <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/summary_img/beego.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/summary_img/beego.png">
-    </div>
-    <header class="pattern-header single-header">
-      <h1 class="entry-title">
-      Go语言网络编程（TCP、HTTP、Beego框架）</h1>
-      <p class="entry-census">
-        <span>
-          <a href="www.dragonbaby308.com">
-            <img src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3Avatar.jpeg">
-          </a>
-        </span>
-        <span>
-          <a href="www.dragonbaby308.com">DragonBaby308</a>
-        </span>
-        <span class="bull">
-        ·</span>
-        2019-12-4<span class="bull">
-        ·</span>
-      <span id="busuanzi_value_page_pv"></span>次阅读</p>
-    </header>
+<div class="pattern-center ">
+  <div class="pattern-attachment-img">
+    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="python3.img" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
   </div>
-
+  <header class="pattern-header ">
+    <h1 class="cat-title">python3</h1>
+  </header>
+</div>
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
-        <div class="toc"></div>
-        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
-        
-        <div class="entry-content">
-          <h1 id="Go语言网络编程（TCP、HTTP、Beego框架）"><a href="#Go语言网络编程（TCP、HTTP、Beego框架）" class="headerlink" title="Go语言网络编程（TCP、HTTP、Beego框架）"></a><code>Go</code>语言网络编程（<code>TCP</code>、<code>HTTP</code>、<code>Beego</code>框架）</h1><h2 id="（一）TCP编程"><a href="#（一）TCP编程" class="headerlink" title="（一）TCP编程"></a>（一）<code>TCP</code>编程</h2><p>涉及的包：<code>net</code></p>
-<h3 id="1-服务端"><a href="#1-服务端" class="headerlink" title="1.服务端"></a>1.服务端</h3><ol>
-<li><code>net.Listen()</code>监听某个端口</li>
-<li>循环获取连接，为每个连接开启一个<code>Goroutine</code></li>
-<li>在单独的<code>Goroutine</code>中读取每个连接的数据</li>
-<li><strong>关闭连接</strong></li>
-</ol>
-<pre><code class="go">package main
-
-import (
-    &quot;fmt&quot;
-    &quot;net&quot;
-    &quot;strings&quot;
-)
-
-func main() {
-    fmt.Println(&quot;TCP服务端启动……&quot;)
-
-    //监听50000端口
-    listen, err := net.Listen(&quot;tcp&quot;, &quot;0.0.0.0:50000&quot;)
-
-    //错误处理
-    if err != nil {
-        fmt.Println(&quot;监听50000端口错误：&quot;, err)
-        return
-    }
-
-    //开启循环，获取连接
-    for {
-        conn, err := listen.Accept()
-        if err != nil {
-            fmt.Println(&quot;获取连接错误：&quot;, err)
-            return
-        }
-        //为每个连接开启一个Goroutine
-        go process(conn)
-    }
-}
-
-//连接处理函数
-func process(conn net.Conn)  {
-    //执行完关闭连接
-    defer conn.Close()
-
-    //开启循环，处理连接
-    for {
-        buf := make([]byte, 512)
-        n, err := conn.Read(buf)
-        if err != nil {
-            fmt.Println(&quot;读取数据失败：&quot;, err)
-            return
-        }
-        //打印接收到的数据
-        fmt.Printf(strings.TrimSpace(string(buf[0:n])))
-    }
-}
-</code></pre>
-<h3 id="2-客户端"><a href="#2-客户端" class="headerlink" title="2.客户端"></a>2.客户端</h3><ol>
-<li><code>net.Dail()</code>连接服务端的某个端口</li>
-<li>收发数据</li>
-<li><strong>关闭连接</strong></li>
-</ol>
-<pre><code class="go">package main
-
-import (
-    &quot;bufio&quot;
-    &quot;fmt&quot;
-    &quot;net&quot;
-    &quot;os&quot;
-    &quot;strings&quot;
-)
-
-func main() {
-    //拨号，连接50000端口
-    conn, err := net.Dial(&quot;tcp&quot;, &quot;localhost:50000&quot;)
-    if err != nil {
-        fmt.Println(&quot;连接服务端失败：&quot;, err)
-        return
-    }
-
-    //读取键盘输入
-    inputReader := bufio.NewReader(os.Stdin)
-    for {
-        input, _ := inputReader.ReadString(&#39;\n&#39;)
-        trimedInput := strings.Trim(input, &quot;\r\n&quot;)
-        //输入Q退出
-        if trimedInput == &quot;Q&quot; {
-            return
-        }
-
-        //将数据写入连接，发送给服务端
-        _, err = conn.Write([]byte(trimedInput))
-        if err != nil {
-            return
-        }
-    }
-
-    //执行结束后关闭连接
-    defer conn.Close()
-}
-</code></pre>
-<hr>
-<h2 id="（二）HTTP编程"><a href="#（二）HTTP编程" class="headerlink" title="（二）HTTP编程"></a>（二）<code>HTTP</code>编程</h2><p>涉及的包：<code>net/http</code></p>
-<h3 id="1-服务端-1"><a href="#1-服务端-1" class="headerlink" title="1.服务端"></a>1.服务端</h3><ol>
-<li><p><code>http.HandleFunc()</code>：<strong>指定某个函数处理对应路径下的请求</strong></p>
-<blockquote>
-<p>对应的处理函数接收<code>w http.ResponseWriter, r *http.Request</code>两个参数。</p>
-</blockquote>
-</li>
-<li><p><code>http.ListenAndServe()</code>：<strong>监听某个端口的请求</strong></p>
-</li>
-</ol>
-<pre><code class="go">package main
-
-import (
-    &quot;fmt&quot;
-    &quot;net/http&quot;
-)
-
-func main() {
-    http.HandleFunc(&quot;/&quot;, Hello)
-    if err := http.ListenAndServe(&quot;0.0.0.0:8080&quot;, nil); err != nil {
-        fmt.Println(&quot;HTTP开启失败！&quot;)
-    }
-}
-
-func Hello(w http.ResponseWriter, r *http.Request)  {
-    fmt.Println(&quot;处理“localhost:8080/”路径下的请求&quot;)
-    fmt.Fprintf(w, &quot;Hello World&quot;)
-}
-</code></pre>
-<h3 id="2-客户端-1"><a href="#2-客户端-1" class="headerlink" title="2.客户端"></a>2.客户端</h3><ol>
-<li><code>http.Get(url string) (resp *Response, err error)</code></li>
-<li><code>http.Post(url, contentType string, body io.Reader) (resp *Response, err error)</code></li>
-<li><code>http.Head(url string) (resp *Response, err error)</code></li>
-</ol>
-<pre><code class="go">package main
-
-import (
-    &quot;fmt&quot;
-    &quot;io/ioutil&quot;
-    &quot;net/http&quot;
-)
-
-func main() {
-    response, err := http.Get(&quot;http://www.dragonbaby308.com/&quot;)
-    if err != nil {
-        fmt.Println(&quot;http.Get()错误：&quot;, err)
-        return
-    }
-
-    data, err := ioutil.ReadAll(response.Body)
-    if err != nil {
-        fmt.Println(&quot;读取响应数据错误：&quot;, err)
-        return
-    }
-
-    fmt.Println(string(data))
-}
-</code></pre>
-<hr>
-<h2 id="（三）Beego-MVC框架"><a href="#（三）Beego-MVC框架" class="headerlink" title="（三）Beego MVC框架"></a>（三）<code>Beego</code> MVC框架</h2><blockquote>
-<p>参考<a href="https://beego.me/docs/intro/" target="_blank" rel="noopener">《<code>Beego</code>开发文档》</a></p>
-</blockquote>
-<ol>
-<li><code>go get github.com/astaxie/beego</code>下载<code>Beego</code>框架</li>
-<li>创建如下目录结构：</li>
-</ol>
-<pre><code class="text">beego
-├─controller                    ：控制器层
-     ├─IndexController            ：【/index控制器】
-                 ├─index.go                
-├─conf                            ：配置
-     ├─app.conf                    ：【默认配置文件】
-├─main                            ：入口
-     ├─main.go                    ：【入口程序】
-├─model                            ：模型层
-├─router                        ：路由
-     ├─router.go                ：【路由规则】
-└─view                            ：视图层
-     ├─index
-             ├─index.html        ：【/index模板】
-</code></pre>
-<ol start="3">
-<li><code>main/main.go</code>中导入<code>Beego</code>框架，通过<code>beego.Run()</code>运行：</li>
-</ol>
-<pre><code class="go">package main
-
-import (
-    &quot;github.com/astaxie/beego&quot;
-    _ &quot;router&quot;        //调用router的init()
-)
-
-func main() {
-    //运行Beego框架
-    beego.Run()
-}
-</code></pre>
-<ol start="4">
-<li><code>router/router.go</code>中创建路由规则：</li>
-</ol>
-<pre><code class="go">package router
-
-import &quot;github.com/astaxie/beego&quot;
-
-func init() {
-    //路由规则：
-    //1.URL路径
-    //2.对应的控制器
-    //3.对应处理函数
-    beego.Router(&quot;/index&quot;, &amp;IndexController.IndexController{}, &quot;*:Index&quot;)
-}
-</code></pre>
-<ol start="5">
-<li>在<code>controller/IndexController/index.go</code>中继承<code>Beego</code>的控制器，配置模板：</li>
-</ol>
-<pre><code class="go">package IndexController
-
-import (
-        &quot;github.com/astaxie/beego&quot;
-        &quot;github.com/astaxie/beego/logs&quot;
-)
-
-//继承Beego的控制器
-type IndexController struct {
-    beego.Controller
-}
-
-//处理函数
-func (p *IndexController) Index() {
-    //打日志
-    logs.Debug(&quot;进入IndexController&quot;)
-
-    //1.【页面形式】
-    //配置模板
-    p.TplName = &quot;index/index.html&quot;
-
-    //2.【API形式】
-    //autorender=false，不再渲染页面，可以返回JSON类型的结果
-    // m := make(map[string]interface{})
-    // m[&quot;code&quot;] = 200
-    // m[&quot;msg&quot;] = &quot;success&quot;
-    // p.Data[&quot;json&quot;] = m
-    // p.ServeJSON(true)
-}
-</code></pre>
-<ol start="6">
-<li><code>view/index/index.html</code>模板：</li>
-</ol>
-<pre><code class="html">&lt;html&gt;
-    &lt;body&gt;
-        &lt;p&gt;Hello World!&lt;/p&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<ol start="7">
-<li><code>Beego</code><strong>默认会解析</strong><code>conf/app.conf</code>配置文件：</li>
-</ol>
-<pre><code class="conf"># IP地址
-httpaddr = &quot;127.0.0.1&quot;
-
-# 应用名
-appname = beego_demo
-
-# 是否自动渲染模板，默认true，返回渲染后的页面；
-# 如果想要返回API类型的JSON数据，将其改为false
-autorender = true
-
-# 运行时环境
-runmode = &quot;dev&quot;
-
-# 开发环境
-[dev]
-# 端口，默认9090
-httpport = 9090
-
-# 生产环境
-[prod]
-# 端口
-httpport = 9091
-</code></pre>
-<hr>
-<h3 id="bee工具"><a href="#bee工具" class="headerlink" title="bee工具"></a><code>bee</code>工具</h3><p>参考<a href="https://beego.me/docs/install/bee.md" target="_blank" rel="noopener">《<code>bee</code> 工具简介》</a></p>
-
-        </div>
-        <!-- .entry-content -->
-        <div class="single-reward">
-          <div class="reward-open">赏
-            <div class="reward-main">
-              <ul class="reward-row">
-                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/AliPayQR.jpg"></li>
-                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanQR.jpg"></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-        <footer class="post-footer">
-          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
-          <div class="post-tags">
-          </div>
-          <div class="post-share">
-            <div class="social-share sharehidden share-component"></div>
-            <i class="iconfont show-share icon-forward"></i>
-          </div>
-        </footer><!-- .entry-footer -->
-      </article>
-      <!-- #post-## -->
-      <div class="toc" style="background: none;"></div>
-      <section class="post-squares nextprev">
-        
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/oh-my-zsh/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/mac/iterm2_oh-my-zsh/FujikoIterm2.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/mac/iterm2_oh-my-zsh/FujikoIterm2.png">
-              </div>
-              <span class="label">
-              Previous Post</span>
-              <div class="info">
-                <h3>
-                iTerm2和oh-my-zsh联合打造Mac终端</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
-        
-          
-            <div class="post-nepre half next">
-          
-            <a href="/github/" rel="next">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/summary_img/gakki/7.gif" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/summary_img/gakki/7.gif">
-              </div>
-              <span class="label">
-              Next Post</span>
-              <div class="info">
-                <h3>
-                GitHub小技巧</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
-      </section>
       
-<div id="vcomments"></div>
-<script>
-  window.onload = function(){
-      var valine = new Valine();
-      valine.init({
-        el: '#vcomments',
-        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
-        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
-        path: window.location.pathname,
-        placeholder: "你是我一生只会遇见一次的惊喜 ..."
-      })
-  }
-</script>
-
-      <section class="author-profile">
-        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-          <a href="www.dragonbaby308.com" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3Avatar.jpeg" itemprop="image" alt="DragonBaby308" height="70" width="70"></a>
-          <div class="meta">
-            <span class="title">Author</span>
-            <h3 itemprop="name">
-            <a href="www.dragonbaby308.com" itemprop="url" rel="author">DragonBaby308</a>
-            </h3>
-          </div>
+  <!-- 首页默认取最最新文章集 -->
+  
+    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <div class="post-entry">
+    <div class="feature">
+      <a href="/oh-my-zsh/">
+        <div class="overlay">
+          <i class="iconfont icon-text">
+          </i>
         </div>
-        <hr>
-        <p><i class="iconfont icon-write"></i></p>
-      </section>
-    </main><!-- #main -->
-  </div><!-- #primary -->
+        <img width="150" height="150" src="https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/mac/iterm2_oh-my-zsh/FujikoIterm2.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
+      </a>
+    </div>
+    <h1 class="entry-title">
+    <a href="/oh-my-zsh/">
+    iTerm2和oh-my-zsh联合打造Mac终端</a>
+    </h1>
+    <div class="p-time">
+      <i class="iconfont icon-time">
+      </i>
+    2019-12-10</div>
+    <p>
+    </p>
+    <footer class="entry-footer">
+      <div class="post-more">
+        <a href="/oh-my-zsh/">
+          <i class="iconfont icon-caidan">
+          </i>
+        </a>
+      </div>
+    </footer>
+  </div>
+  <hr>
+</article>
+  
+
+
+      <div class="clearer">
+      </div>
+    </main>
+    <!--  -->
+    
+  </div>
 </div>
-
-
-
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>

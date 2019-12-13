@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-12-13T14:47:46.084Z</updated>
+  <updated>2019-12-13T14:50:05.335Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iTerm2和oh-my-zsh联合打造Mac终端</title>
+    <link href="/oh-my-zsh/"/>
+    <id>/oh-my-zsh/</id>
+    <published>2019-12-10T14:21:27.000Z</published>
+    <updated>2019-12-13T14:50:05.335Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;iTerm2和oh-my-zsh联合打造Mac终端&quot;&gt;&lt;a href=&quot;#iTerm2和oh-my-zsh联合打造Mac终端&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="/tags/Linux/"/>
+    
+      <category term="GitHub" scheme="/tags/GitHub/"/>
+    
+      <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="Shell" scheme="/tags/Shell/"/>
+    
+      <category term="Fun!!!!!!!" scheme="/tags/Fun/"/>
+    
+      <category term="Mac" scheme="/tags/Mac/"/>
+    
+      <category term="oh-my-zsh" scheme="/tags/oh-my-zsh/"/>
+    
+      <category term="iTerm2" scheme="/tags/iTerm2/"/>
+    
+      <category term="python3" scheme="/tags/python3/"/>
+    
+      <category term="pip" scheme="/tags/pip/"/>
+    
+      <category term="HomeBrew" scheme="/tags/HomeBrew/"/>
+    
+  </entry>
   
   <entry>
     <title>Go语言网络编程（TCP、HTTP、Beego框架）</title>
@@ -595,13 +641,13 @@
       <category term="Docker" scheme="/categories/Docker/"/>
     
     
-      <category term="Docker" scheme="/tags/Docker/"/>
-    
       <category term="分布式" scheme="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
     
       <category term="MySQL" scheme="/tags/MySQL/"/>
     
       <category term="高可用" scheme="/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/"/>
+    
+      <category term="Docker" scheme="/tags/Docker/"/>
     
       <category term="Redis" scheme="/tags/Redis/"/>
     
