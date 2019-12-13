@@ -48,7 +48,7 @@
   /*End of Initial Variables*/
   </script>
   <script type="text/javascript">
-  var bg = "https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg3.jpg,https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(3).jpg.webp,/https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg3.jpg,https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg1.jpg,https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(7).jpg.webp".split(",");
+  var bg = "https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg3.jpg,https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(3).jpg.webp,/https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg2.jpg,https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(7).jpg.webp".split(",");
   var bgindex = Math.floor(Math.random()*bg.length);
   if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
     alert('朋友，IE浏览器未适配哦~');
@@ -354,7 +354,7 @@
   <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;">
   <i class="fa fa-anchor" aria-hidden="true">
   </i>
-  START:DASH!!</h1>
+  快速导航</h1>
   
   <div class="top-feature-v2">
     <div class="the-feature square from_left_and_right">
@@ -375,7 +375,7 @@
     <main id="main" class="site-main" role="main">
       <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;">
       <i class="fa fa-envira" aria-hidden="true"></i>
-      Discovery</h1>
+      正文</h1>
       
   <!-- 首页默认取最最新文章集 -->
   
@@ -510,8 +510,6 @@
       <div class="post-meta">
         <span><i class="fa fa-tags"></i>
         
-            <a href="/tags/GitHub/">GitHub<em>·</em></a>
-          
             <a href="/tags/Go/">Go<em>·</em></a>
           
             <a href="/tags/TCP/">TCP<em>·</em></a>
@@ -527,6 +525,8 @@
             <a href="/tags/Beego/">Beego<em>·</em></a>
           
             <a href="/tags/bee/">bee<em>·</em></a>
+          
+            <a href="/tags/GitHub/">GitHub<em>·</em></a>
           
             <a href="/tags/JSON/">JSON<em>·</em></a>
           
@@ -569,11 +569,11 @@
       <div class="post-meta">
         <span><i class="fa fa-tags"></i>
         
+            <a href="/tags/Go/">Go<em>·</em></a>
+          
             <a href="/tags/GitHub/">GitHub<em>·</em></a>
           
             <a href="/tags/Git/">Git<em>·</em></a>
-          
-            <a href="/tags/Go/">Go<em>·</em></a>
           
         </span>
         <span>
@@ -661,14 +661,6 @@
       <div class="post-meta">
         <span><i class="fa fa-tags"></i>
         
-            <a href="/tags/GitHub/">GitHub<em>·</em></a>
-          
-            <a href="/tags/Git/">Git<em>·</em></a>
-          
-            <a href="/tags/Homebrew/">Homebrew<em>·</em></a>
-          
-            <a href="/tags/Mac/">Mac<em>·</em></a>
-          
             <a href="/tags/Go/">Go<em>·</em></a>
           
             <a href="/tags/HTTP/">HTTP<em>·</em></a>
@@ -679,7 +671,15 @@
           
             <a href="/tags/多线程/">多线程<em>·</em></a>
           
+            <a href="/tags/GitHub/">GitHub<em>·</em></a>
+          
             <a href="/tags/JSON/">JSON<em>·</em></a>
+          
+            <a href="/tags/Git/">Git<em>·</em></a>
+          
+            <a href="/tags/Homebrew/">Homebrew<em>·</em></a>
+          
+            <a href="/tags/Mac/">Mac<em>·</em></a>
           
             <a href="/tags/OS/">OS<em>·</em></a>
           
@@ -924,7 +924,7 @@
     <!-- 
       <nav class="navigator">
         
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next</a>
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="iconfont icon-right"></i></a>
       </nav>
      -->
   </div>
@@ -938,7 +938,7 @@
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -950,10 +950,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
-            // PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',

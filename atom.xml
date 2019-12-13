@@ -120,8 +120,6 @@
       <category term="Go" scheme="/categories/Go/"/>
     
     
-      <category term="GitHub" scheme="/tags/GitHub/"/>
-    
       <category term="Go" scheme="/tags/Go/"/>
     
       <category term="TCP" scheme="/tags/TCP/"/>
@@ -137,6 +135,8 @@
       <category term="Beego" scheme="/tags/Beego/"/>
     
       <category term="bee" scheme="/tags/bee/"/>
+    
+      <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="JSON" scheme="/tags/JSON/"/>
     
@@ -165,11 +165,11 @@
       <category term="GitHub" scheme="/categories/GitHub/"/>
     
     
+      <category term="Go" scheme="/tags/Go/"/>
+    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
-    
-      <category term="Go" scheme="/tags/Go/"/>
     
   </entry>
   
@@ -227,14 +227,6 @@
       <category term="Go" scheme="/categories/Go/"/>
     
     
-      <category term="GitHub" scheme="/tags/GitHub/"/>
-    
-      <category term="Git" scheme="/tags/Git/"/>
-    
-      <category term="Homebrew" scheme="/tags/Homebrew/"/>
-    
-      <category term="Mac" scheme="/tags/Mac/"/>
-    
       <category term="Go" scheme="/tags/Go/"/>
     
       <category term="HTTP" scheme="/tags/HTTP/"/>
@@ -245,7 +237,15 @@
     
       <category term="多线程" scheme="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
+      <category term="GitHub" scheme="/tags/GitHub/"/>
+    
       <category term="JSON" scheme="/tags/JSON/"/>
+    
+      <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="Homebrew" scheme="/tags/Homebrew/"/>
+    
+      <category term="Mac" scheme="/tags/Mac/"/>
     
       <category term="OS" scheme="/tags/OS/"/>
     
