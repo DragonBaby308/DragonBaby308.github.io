@@ -22,7 +22,7 @@ tags:
 - 分布式
 keywords:
 description:
-photos: https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/summary_img/uid.jpg
+photos: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/uid.jpg
 ---
 
 #  分布式全局唯一ID
