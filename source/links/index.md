@@ -14,19 +14,11 @@ links:
       img: https://cloud.moezx.cc/Picture/svg/landscape/fields.svg
       name: Google
       desc: Google 镜像
-    - url: https://shino.cc/fgvf
-      img: https://cloud.moezx.cc/Picture/svg/landscape/fields.svg
-      name: Google
-      desc: Google 镜像
   - group: 小伙伴们
     desc: 欢迎交换友链 ꉂ(ˊᗜˋ)
     items:
-    - url: https://shino.cc/fgvf
-      img: https://cloud.moezx.cc/Picture/svg/landscape/fields.svg
-      name: Google
-      desc: Google 镜像
-    - url: https://shino.cc/fgvf
-      img: https://cloud.moezx.cc/Picture/svg/landscape/fields.svg
-      name: Google
-      desc: Google 镜像
+    - url: http://www.dragonbaby308.com/
+      img: https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/hexo/db3.png
+      name: DragonBaby308's Blog
+      desc: 记住迄今为止每一次失败时有心无力的感受，Fighting for ATM !!!
 ---

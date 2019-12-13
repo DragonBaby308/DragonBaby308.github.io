@@ -36,11 +36,19 @@ lazyloadImg: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progre
 menus:
   首页: { path: /, fa: fa-fort-awesome faa-shake }
   归档: { path: /archives, fa: fa-archive faa-shake, submenus: {
-    技术: {path: /categories/技术/, fa: fa-code },
-    生活: {path: /categories/生活/, fa: fa-file-text-o },
-    资源: {path: /categories/资源/, fa: fa-cloud-download },
-    随想: {path: /categories/随想/, fa: fa-commenting-o },
-    转载: {path: /categories/转载/, fa: fa-book }
+    算法: {path: /categories/算法/, fa: fa-code },
+    Java基础: {path: /categories/Java基础/, fa: fa-code },
+    Linux: {path: /categories/Linux/, fa: fa-code },
+    设计模式: {path: /categories/设计模式/, fa: fa-code },
+    分布式: {path: /categories/分布式/, fa: fa-code },
+    Docker: {path: /categories/Docker/, fa: fa-code },
+    Hexo: {path: /categories/Hexo/, fa: fa-code },
+    GitHub: {path: /categories/GitHub/, fa: fa-code },
+    Go: {path: /categories/Go/, fa: fa-code },
+    # 生活: {path: /categories/生活/, fa: fa-file-text-o },
+    # 资源: {path: /categories/资源/, fa: fa-cloud-download },
+    # 随想: {path: /categories/随想/, fa: fa-commenting-o },
+    随笔: {path: /categories/随笔/, fa: fa-book }
   } }
   清单: { path: javascript:;, fa: fa-list-ul faa-vertical, submenus: {
     书单: {path: /tags/悦读/, fa: fa-th-list faa-bounce },
@@ -68,7 +76,9 @@ homeArticleShown: 10
 
 # 背景图片
 bg:
-  - https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg3.jpg
+  # - https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg3.jpg
+  - /https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.1/img/bg/bg5.jpg
+  - /https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.1/img/bg/bg4.jpg
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(2).jpg.webp
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(3).jpg.webp
   - /https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg2.jpg
