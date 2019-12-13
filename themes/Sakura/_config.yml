@@ -51,8 +51,8 @@ menus:
     随笔: {path: /categories/随笔/, fa: fa-book }
   } }
   清单: { path: javascript:;, fa: fa-list-ul faa-vertical, submenus: {
-    书单: {path: /tags/悦读/, fa: fa-th-list faa-bounce }
-    # 番组: {path: /bangumi/, fa: fa-film faa-vertical },
+    # 书单: {path: /tags/悦读/, fa: fa-th-list faa-bounce },
+    番组: {path: /bangumi/, fa: fa-film faa-vertical }
     # 歌单: {path: /music/, fa: fa-headphones },
     # 图集: {path: /tags/图集/, fa: fa-photo }
   } }
@@ -76,16 +76,14 @@ homeArticleShown: 10
 
 # 背景图片
 bg:
-  # - https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg3.jpg
-  - https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.1/img/bg/bg5.jpg
-  - https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.1/img/bg/bg4.jpg
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(2).jpg.webp
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(3).jpg.webp
   - https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg2.jpg
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(4).jpg.webp
-  # - https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg1.jpg
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(5).jpg.webp
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(7).jpg.webp
+  - https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg1.jpg
+  - https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg3.jpg
 
 # 背景图片样式：
 # 空：原图
