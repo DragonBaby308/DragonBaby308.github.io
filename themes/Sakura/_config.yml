@@ -28,8 +28,8 @@ notice: 我不玩游戏，我定规则。
 lazyloadImg: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg
 
 
-
-cdn: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6
+# 站点CDN，可以为空，图片需要填完整路径
+cdn: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0
 
 
 menus:
@@ -63,30 +63,39 @@ menus:
 homePageSortType: -1
 # Home page article shown number)
 homeArticleShown: 10
-# 背景图片 更好的修改
-bg:
-  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(1).jpg.webp
-  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(2).jpg.webp
-  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(3).jpg.webp
-  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(4).jpg.webp
-  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(5).jpg.webp
-  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(6).jpg.webp
-  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(7).jpg.webp
-  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(8).jpg.webp
 
-# 背景图片样式 空 原图效果 filter-dim 阴影 filter-grid 横条 filter-dot 点点
+
+# 背景图片
+bg:
+  - /img/bg/bg1.jpg
+  - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(2).jpg.webp
+  - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(3).jpg.webp
+  - /img/bg/bg3.jpg
+  - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(4).jpg.webp
+  - /img/bg/bg2.jpg
+  - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(5).jpg.webp
+  - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(7).jpg.webp
+
+# 背景图片样式：
+# 空：原图
+# filter-dim：阴影
+# filter-grid：横条
+# filter-dot：点点
 bgclass: filter-dot
 
-# startdash url, title, desc img
-startdash: 
-  - {url: /theme-sakura/, title: Sakura, desc: 本站 hexo 主题, img: /img/startdash/sakura.md.png}
-  - {url: http://space.bilibili.com/271849279, title: Bilibili, desc: 博主的b站视频, img: /img/startdash/bilibili.jpg}
-  - {url: /, title: hojun的万事屋, desc: 技术服务, img: /img/startdash/wangshiwu.jpg}
+# 快速导航面板
+# URL：链接，如果是本站链接，可以简写
+# title：大标题
+# desc：描述
+# img：背景图
+startdash:
+  # - {url: /theme-sakura/, title: Sakura, desc: 本站 hexo 主题, img: /img/startdash/sakura.md.png}
+  - {url: https://space.bilibili.com/24837083, title: Bilibili, desc: 乾杯！！！, img: /img/startdash/bilibili.jpg}
 
 
 
 # your site build time or founded date
-siteBuildingTime: 07/17/2018
+siteBuildingTime: 12/12/2019
 
 #social  url, img PC端配置
 social:
