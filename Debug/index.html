@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Tag: 递归 | DragonBaby308</title>
+  <title itemprop="name">《Debug》 | DragonBaby308</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -383,97 +383,132 @@
   </div>
 </header>
 
-      
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="递归.img" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/debug.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/debug.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      《Debug》</h1>
+      <p class="entry-census">
+        <span>
+          <a href="www.dragonbaby308.com">
+            <img src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3Avatar.jpeg">
+          </a>
+        </span>
+        <span>
+          <a href="www.dragonbaby308.com">DragonBaby308</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2019-5-22<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
   </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">递归</h1>
-  </header>
-</div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <blockquote>
+<p>应该是五一假期期间，我在归乡的大巴上偶然间看到了B站的“文豪试炼场”活动，主题是“如果突然世界末日了，我要怎么生存”。<br>  <img src="https://tva1.sinaimg.cn/large/007rAy9hgy1g3ah7aywsgj30u01hdb2a.jpg" alt="创作缘起1：世界末日题材"><br>  我本来只是随便一瞥就准备关掉的，当时正是<a href="https://github.com/996icu/996.ICU/blob/master/README_CN.md" target="_blank" rel="noopener">996.ICU</a>占据热搜的时间，不知怎么的，我的脑子里突然就浮现出一个“程序员996加班加点解决了BUG，但自己却在内部结构优化时被当成BUG给解决掉了”的点子，于是我想，要不我把它写下来吧。我只是一个在校学生，虽然毕业后会是程序员，但至少还有好几个月可以舒舒服服地过。这个点子并没有多推陈出新，甚至有些跑题，我的文笔也实属平庸，我不是什么公知大V，写来下甚至不会有人能看到，我想：“我何必费力不讨好呢？”<br>  但是我想到了马丁.尼莫拉写纳粹屠杀犹太人的诗——《我没有说话》：<br>“起初他们迫害共产党员，我没有说话，因为我不是马克思的信徒。”<br>“后来他们迫害犹太人，我没有说话，因为我是日耳曼人。”<br>“再后来他们迫害天主教徒，我没有说话，因为我是新教牧师。”<br>“最后他们迫害到我头上，我环顾四周，却再也没有人能为我说话。”<br>  于是我在大巴上构思，回到家后，花了一个晚上，写下了这篇《Debug》，并试着进行了投稿，果不其然稿件被退回，“让你996正是给你奋斗的机会啊”、“我不给你加班费那就不算加班咯”几句被勒令修改。说来实在讽刺！这些字句我甚至没有经过任何夸张，全是“有良心的企业家”们的原话！所有人都只看到了B站作为国内最大的二次元聚集地，其风气开放、言论自由，但没人看到B站也有程序员，他们也是要加班的，对996的反对，也损害到了B站的利益。自媒体的控股者是企业家，企业家怎么会为被剥削者发声！<br>  <img src="https://tva1.sinaimg.cn/large/007rAy9hgy1g3ah9h97gbj30u01hdtea.jpg" alt="Reject"><br>  我是个很倔的人，想着既然心血已经付出，只要能有一个人看到，这件事情也就值得，于是我不得不妥协，修改了部分措辞后重新进行了投稿，但是由于未被划分到“文豪试炼场”之类，所以根本就没有人看到。<br>  <img src="https://tva1.sinaimg.cn/large/007rAy9hgy1g3ahbyjnefj30u01hdtd9.jpg" alt="Compromise"><br>  我以为这些文字也就石沉大海了，我所做的只不过是为了无愧于心，但是几天后，居然有人看到了这篇文章，还在评论区表现出了他的赏识：<br>  <img src="https://tva1.sinaimg.cn/large/007rAy9hgy1g3ahces8fsj30u01hd453.jpg" alt="Favor"><br>  有一个人看到了，我的目的达到了。<br>  2019年5月22日，我在自己的服务器上搭好了Hexo博客，将我的第一篇正式投稿作品记录下来，三五年后再来看看，我的笔力是否有所长进。  </p>
+</blockquote>
+<h2 id="《Debug》"><a href="#《Debug》" class="headerlink" title="《Debug》"></a>《Debug》</h2><p>  &emsp; &emsp; 我是“程序漏洞”，即俗称的bug，不同于我那些在开发环境就被发现的短命兄弟们，我一直隐姓埋名，苟活到了生产环境，并暗中观察着程序外的世界。<br>  &emsp; &emsp; 从摄像头传回的数据来看，今天屏幕前坐着的仍是那个秃顶油腻中年男子——我的夙敌，两个月来，他一直致力于发现我的蛛丝马迹，好几次我都是险死还生。<br>  &emsp; &emsp; 一阵信息扰动传来，屏幕右下角的通讯软件闪烁起来，网络中传来一条id叫“老板”的人发来的讯息——“小陈，今年还是你值班。”这让我的逻辑模块十分费解——明明老板比秃头年纪要小，怎么叫他“小陈”呢？<br>  &emsp; &emsp; 秃头蹙眉，回道：“可是老板，去年就是我，我已经两年没回家见二老了。”<br>  &emsp; &emsp; 老板道：“你好好工作，赚了钱给他们买些补品，不就尽了孝道吗？你这上有老下有小，让你996正是给你奋斗的机会啊！”<br>  &emsp; &emsp; 秃头回道：“那老板，加班费的事情？”<br>  &emsp; &emsp; 老板道：“我拿你当兄弟，你可不要胡说！我是个有良心的企业家，时刻遵守劳动法的，我不给你加班费那就不算加班咯。”<br>  &emsp; &emsp; 秃头怒目圆睁，喘着粗气飞速在聊天框输入了一串字符——“01000011 01001110 01001101……”[注1]，正在这时，他的手机响了起来，扬声器捕捉到了他的声音——<br>  &emsp; &emsp; “老婆。”<br>  &emsp; &emsp; “我也没有办法，工作也是为了养家，你理解一下——”<br>  &emsp; &emsp; “当然是家人重要，但不工作怎么养活一家三口？何况你肚子里又有了——”<br>  &emsp; &emsp; “不是怪你！不是怪你！全是我的错，这样吧，等忙完这一阵，我一定带你和晨晨出去旅游，咱好好放松一下。”<br>  &emsp; &emsp; “又要交补课费？上次不是才交……6000！这个月还有房贷……孕检吗？我记得了。”<br>  &emsp; &emsp; “不用麻烦岳父岳母了，我来想办法，怎么说我也是一家之主嘛。”<br>  &emsp; &emsp; “晚安，有事千万打我电话。”<br>  &emsp; &emsp; 他挂断了电话，揉了揉惺忪的睡眼，看了看聊天框未发送的消息，叹了一大口气，默默地全部删除掉。<br>  &emsp; &emsp; 他的手机又响了——<br>  &emsp; &emsp; “妈！”<br>  &emsp; &emsp; “我没事，身体好得很！您不用瞎操心！能有什么事，我都当爹的人了，能照顾好自己的。”<br>  &emsp; &emsp; “我实在没有办法，工作忙。明年，明年我准回来。”<br>  &emsp; &emsp; “我不累，我自己有分寸的，哪有那么容易猝死的。老板栽培，看得起我——不说这个了，爸还在生气？”<br>  &emsp; &emsp; “您劝劝他吧，我明年一定回！”<br>  &emsp; &emsp; “诶！拜拜。”<br>  &emsp; &emsp; 他摘掉了眼镜，捂住了双眼，几分钟后，用湿润的双手，给老板发了一条“谢谢”。<br>  &emsp; &emsp; 谢什么呢？我的逻辑模块又开始费解了，真希望我能有人类的情感模块啊。老板显然就听懂了，他回复道：“你知道就好，这几个月你天天精神不好，也不好好干活，你那个部门有个小伙子每天加班到4点呢！你的工资那么高，下面的年轻人都盯着你的位置呢，你这让我很为难啊。”<br>  &emsp; &emsp; 秃子回道：“我知道，家里最近有些情况，我一定注意，不会让私生活影响工作了，老板你看能不能加薪？”<br>  &emsp; &emsp; 老板道：“这个月内，你先把线上那个bug给我解决了再说吧。”<br>  &emsp; &emsp; 于是我的日子越来越难过了，秃子开始没日没夜地盯着屏幕，左手PageDown，右手滚轮，我的世界里一道侦查的光从天逡巡，所到之处，天崩地裂、山摧海啸，世界开始崩坏了，我放眼望去，容身之所已经所剩无几了。<br>  &emsp; &emsp; 天啊！秃子终于查到了那条调用链，我被逼到了悬崖边，万丈深渊下是灼热的熔浆，我已经无路可退了。<br>  &emsp; &emsp; 当你凝视bug时，bug也在凝视你。这就是我的终焉了，我想。<br>  &emsp; &emsp; 我记下了时间戳——“1549209599”[注2]，希望有人能帮我写在墓志铭——bug日志上。<br>  &emsp; &emsp; 我的生命慢慢消逝，临死前，我看到秃子闭着眼点了一颗烟，嘴角带着似有若无的笑，仿佛在追蹑往昔峥嵘岁月，忽然一阵信息扰动传来——“你干的不错，bug修复了，加薪的事情我想了想，不能答应你。明天你自愿离职吧。”<br>  &emsp; &emsp; 秃子的笑僵在了嘴角上。  </p>
+<hr>
+<h2 id="注"><a href="#注" class="headerlink" title="注"></a>注</h2><ol>
+<li><code>01000011 01001110 01001101</code>是二进制码的<code>CNM</code>。  </li>
+<li><code>1549209599</code>是Unix<a href="https://tool.lu/timestamp/" target="_blank" rel="noopener">时间戳</a>，转换为日期格式就是<code>2019-02-03 23:59:59</code>，大年夜。</li>
+</ol>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre full previous">
+          
+            <a href="/bit-operation/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/bit.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/bit.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Java中的位运算</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+      </section>
       
-  <!-- 首页默认取最最新文章集 -->
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/Algorithm-DP/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/DP.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/Algorithm-DP/">
-    算法专题——动态规划</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2019-9-3</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/Algorithm-DP/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/Algorithm-sort/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/sort.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/Algorithm-sort/">
-    算法专题：排序</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2019-8-16</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/Algorithm-sort/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
-
-      <div class="clearer">
-      </div>
-    </main>
-    <!--  -->
-    
-  </div>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="www.dragonbaby308.com" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3Avatar.jpeg" itemprop="image" alt="DragonBaby308" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="www.dragonbaby308.com" itemprop="url" rel="author">DragonBaby308</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>

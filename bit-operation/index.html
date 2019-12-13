@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Tag: 递归 | DragonBaby308</title>
+  <title itemprop="name">Java中的位运算 | DragonBaby308</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -383,97 +383,241 @@
   </div>
 </header>
 
-      
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="递归.img" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/bit.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/bit.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Java中的位运算</h1>
+      <p class="entry-census">
+        <span>
+          <a href="www.dragonbaby308.com">
+            <img src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3Avatar.jpeg">
+          </a>
+        </span>
+        <span>
+          <a href="www.dragonbaby308.com">DragonBaby308</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2019-7-30<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
   </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">递归</h1>
-  </header>
-</div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="Java中的位运算"><a href="#Java中的位运算" class="headerlink" title="Java中的位运算"></a>Java中的位运算</h1><h2 id="（一）移位运算"><a href="#（一）移位运算" class="headerlink" title="（一）移位运算"></a>（一）移位运算</h2><h3 id="左移：-lt-lt"><a href="#左移：-lt-lt" class="headerlink" title="左移：&lt;&lt;"></a>左移：<code>&lt;&lt;</code></h3><p>左移1位相当于乘2，<code>x &lt;&lt; n</code>等价于<code>x * (2 ^ n)</code>。  </p>
+<pre><code class="java">int i = 4;  //100
+i = i &lt;&lt; 2; //10000 = 16 = 4 * (2 ^ 2)   
+</code></pre>
+<h4 id="应用：乘法"><a href="#应用：乘法" class="headerlink" title="应用：乘法"></a>应用：乘法</h4><p>对于<code>h = 2 ^ n - 1</code>来说，其中n为整数，有：<br><code>h * a</code> =<br><code>(2 ^ n - 1) * a</code> =<br><code>(a * 2 ^ n) - a</code> =<br><code>(a &lt;&lt; n) - a</code></p>
+<h3 id="有符号右移：-gt-gt"><a href="#有符号右移：-gt-gt" class="headerlink" title="有符号右移：&gt;&gt;"></a>有符号右移：<code>&gt;&gt;</code></h3><p>右移1位相当于除2，<code>x &gt;&gt; n</code>等价于<code>x / 2n</code>。</p>
+<pre><code class="java">int i = 4; //100
+i = i &gt;&gt; 2; //001 = 1 = 4 / (2 ^ 2)
+</code></pre>
+<h3 id="无符号右移：-gt-gt-gt"><a href="#无符号右移：-gt-gt-gt" class="headerlink" title="无符号右移：&gt;&gt;&gt;"></a>无符号右移：<code>&gt;&gt;&gt;</code></h3><p>应用：</p>
+<h4 id="求某m位数c的高n位：c-gt-gt-gt-m-n"><a href="#求某m位数c的高n位：c-gt-gt-gt-m-n" class="headerlink" title="求某m位数c的高n位：c &gt;&gt;&gt; (m - n)"></a>求某m位数c的高n位：<code>c &gt;&gt;&gt; (m - n)</code></h4><p>如：求<code>32</code>位<code>int</code>型变量<code>c</code>的高<code>16</code>位 —— <code>c &gt;&gt;&gt; 16</code></p>
+<h2 id="（二）逻辑运算"><a href="#（二）逻辑运算" class="headerlink" title="（二）逻辑运算"></a>（二）逻辑运算</h2><h3 id="按位与：-amp-【有0则0】"><a href="#按位与：-amp-【有0则0】" class="headerlink" title="按位与：&amp;【有0则0】"></a>按位与：<code>&amp;</code>【有0则0】</h3><p>1 &amp; 0 = 0<br>1 &amp; 1 = 1<br>0 &amp; 0 = 0  </p>
+<h4 id="1-判断奇偶"><a href="#1-判断奇偶" class="headerlink" title="1. 判断奇偶"></a>1. 判断奇偶</h4><p><code>n &amp; 1 == 1</code>则为奇数，<code>n &amp; 1 == 0</code>则为偶数</p>
+<pre><code class="java">// 1 的二进制为：000...0001
+int odd = 5;    //101   奇数最后一位必为1，与1按位与，一定是000...0001       
+int even = 6;   //110   偶数最后一位必为0，与1按位与，一定是000...0000
+//odd &amp; 1 = 1，奇数
+//even &amp; 1 = 0，偶数
+</code></pre>
+<h4 id="2-判断是否是2的整数次幂"><a href="#2-判断是否是2的整数次幂" class="headerlink" title="2. 判断是否是2的整数次幂"></a>2. 判断是否是2的整数次幂</h4><p><code>n &amp; (n-1) == 0</code>是2 ^ n，<code>n &amp; (n-1)  == 1</code>不是2 ^ n</p>
+<pre><code class="java">//请看：
+//4：100
+//3：011
+//8：1000
+//7：0111
+//可知：
+//2 ^ n的二进制码必定是1000...000的格式，除了首位为1，其他都为0
+//2 ^ n - 1的二进制码必定是0111...111的格式，除了首位为0，其他都为1
+int isTrue = 16;    //10000
+int isFalse = 15;   //01111
+//isFalse - 1 = 14 ，二进制01110
+//isTrue &amp; (isTrue - 1) = 0，2 ^ n
+//isFale &amp; (isFalse - 1) = 01110，非2 ^ n
+</code></pre>
+<h4 id="3-对2的整数次幂取模"><a href="#3-对2的整数次幂取模" class="headerlink" title="3. 对2的整数次幂取模"></a>3. 对2的整数次幂取模</h4><p><code>m &amp; (n - 1)</code>等价于<code>m % n</code>。</p>
+<p><strong>注意：n必须要是2 ^ n！！！并不所有数都可以。</strong></p>
+<pre><code class="java">// HashMap中获取元素下标
+// 将key.hashCode()前16位与后16位异或，求出一个hash值，这一步是为了让元素分布更加均衡
+int hash = (key == null) ? 0 : ((key.hashCode()) ^ (key.hashCode() &gt;&gt;&gt; 16));
+// 将hash值对数组长度取模，将hash值映射成数组位置
+int index = hash &amp; (len - 1);
+// 这也是为什么HashMap的容量一定要2 ^ n的原因 —— 方便位运算取模
+</code></pre>
+<h4 id="4-求某m位数的低n位：c-amp-1-lt-lt-m-n-1"><a href="#4-求某m位数的低n位：c-amp-1-lt-lt-m-n-1" class="headerlink" title="4. 求某m位数的低n位：c &amp; ((1 &lt;&lt; (m - n)) - 1)"></a>4. 求某m位数的低n位：<code>c &amp; ((1 &lt;&lt; (m - n)) - 1)</code></h4><p>如：求<code>32</code>位<code>int</code>型变量<code>c</code>的低<code>16</code>位 —— <code>c &amp; ((1 &lt;&lt; 16 )- 1)</code></p>
+<h3 id="按位或：-【有1则1】"><a href="#按位或：-【有1则1】" class="headerlink" title="按位或：|【有1则1】"></a>按位或：<code>|</code>【有1则1】</h3><p>1 | 1 = 1<br>1 | 0 = 1<br>0 | 0 = 0</p>
+<h4 id="1-HashMap中的应用：最小的2的幂次方"><a href="#1-HashMap中的应用：最小的2的幂次方" class="headerlink" title="1. HashMap中的应用：最小的2的幂次方"></a>1. <code>HashMap</code>中的应用：最小的2的幂次方</h4><pre><code class="java">//该方法可以保证返回一个能容纳cap的2的幂次方
+static final int tableSizeFor(int cap) {
+    int n = cap - 1;
+    n |= n &gt;&gt;&gt; 1;
+    n |= n &gt;&gt;&gt; 2;
+    n |= n &gt;&gt;&gt; 4;
+    n |= n &gt;&gt;&gt; 8;
+    n |= n &gt;&gt;&gt; 16;
+    return (n &lt; 0) ? 1 : (n &gt;= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + 1;
+}
+</code></pre>
+<ul>
+<li>我们以<code>cap = 65（1000001）</code>为例，那么<code>n = 64（1000000）</code></li>
+<li><code>n &gt;&gt;&gt; 1 = 0100000</code></li>
+<li><code>n |= n &gt;&gt;&gt; 1 = 1000000|0100000 = 1100000（96）</code></li>
+<li><code>n |= n &gt;&gt;&gt; 2 = 1100000|0011000 = 1111000（120）</code></li>
+<li><code>n |= n &gt;&gt;&gt; 4 = 1111000|0000111 = 1111111（127）</code></li>
+<li><code>n |= n &gt;&gt;&gt; 8 = 1111111|0000000 = 1111111（127）</code></li>
+<li><code>n |= n &gt;&gt;&gt; 16 = 1111111|0000000 = 1111111（127）</code></li>
+<li><code>n + 1 = 128 = 2 ^ 7</code></li>
+</ul>
+<h3 id="按位非：-【取反】"><a href="#按位非：-【取反】" class="headerlink" title="按位非：~【取反】"></a>按位非：<code>~</code>【取反】</h3><h3 id="按位异或：-【相同则0，相异为1】"><a href="#按位异或：-【相同则0，相异为1】" class="headerlink" title="按位异或：^【相同则0，相异为1】"></a>按位异或：<code>^</code>【相同则0，相异为1】</h3><p>1 ^ 1 = 0<br>0 ^ 0 = 0<br>1 ^ 0 = 1  </p>
+<p>特点：</p>
+<ol>
+<li>任何数和自己异或都是0：a ^ a = 0</li>
+<li>0和任何数异或都是该数本身：0 ^ a = a</li>
+</ol>
+<h4 id="1-HashMap中的应用：扰动函数"><a href="#1-HashMap中的应用：扰动函数" class="headerlink" title="1. HashMap中的应用：扰动函数"></a>1. <code>HashMap</code>中的应用：扰动函数</h4><pre><code class="java">int hash = key.hashCode() ^ (key.hashCode() &gt;&gt;&gt; 16);
+//将高低16位进行异或，使得元素在HashMap上分布均匀
+</code></pre>
+<h4 id="2-不用临时变量交换两个数"><a href="#2-不用临时变量交换两个数" class="headerlink" title="2. 不用临时变量交换两个数"></a>2. 不用临时变量交换两个数</h4><p>主要用到的原理就是<code>a ^ (b ^ a) = b</code></p>
+<pre><code class="java">//交换a和b的值
+//a = a + b;
+//b = a - b;
+//a = a - b;
+int a = -10;
+int b = 11;
+a = a ^ b;
+b = a ^ b;  //(a ^ b) ^ b = a
+a = a ^ b;  //(a ^ b) ^ (a ^ b) ^ b = b
+//交换后a = 11, b = -10
+
+//注意a和b不能是同一对象！！！！！！！
+</code></pre>
+<p>警惕以下情况——<strong>a和b出于某种原因，变成了同一个对象</strong>，那么以上代码都会出错：</p>
+<pre><code class="java">//a = 2
+a = a + a;  //4
+a = a - a;  //0
+a = a - a;  //0
+//a = 0
+
+a = a ^ a;  //0
+a = a ^ a;  //0
+a = a ^ a;  //0
+//a = 0
+</code></pre>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/BIO-NIO-AIO/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/nio.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/nio.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                BIO / NIO / AIO</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/Debug/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/debug.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/debug.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                《Debug》</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
       
-  <!-- 首页默认取最最新文章集 -->
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/Algorithm-DP/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/DP.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/Algorithm-DP/">
-    算法专题——动态规划</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2019-9-3</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/Algorithm-DP/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/Algorithm-sort/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/sort.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/Algorithm-sort/">
-    算法专题：排序</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2019-8-16</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/Algorithm-sort/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
-
-      <div class="clearer">
-      </div>
-    </main>
-    <!--  -->
-    
-  </div>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="www.dragonbaby308.com" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3Avatar.jpeg" itemprop="image" alt="DragonBaby308" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="www.dragonbaby308.com" itemprop="url" rel="author">DragonBaby308</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>

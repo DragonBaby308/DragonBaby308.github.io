@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Tag: 递归 | DragonBaby308</title>
+  <title itemprop="name">BIO / NIO / AIO | DragonBaby308</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -383,97 +383,455 @@
   </div>
 </header>
 
-      
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="递归.img" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/nio.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/nio.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      BIO / NIO / AIO</h1>
+      <p class="entry-census">
+        <span>
+          <a href="www.dragonbaby308.com">
+            <img src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3Avatar.jpeg">
+          </a>
+        </span>
+        <span>
+          <a href="www.dragonbaby308.com">DragonBaby308</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2019-8-16<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
   </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">递归</h1>
-  </header>
-</div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="BIO-amp-NIO-amp-AIO"><a href="#BIO-amp-NIO-amp-AIO" class="headerlink" title="BIO &amp; NIO &amp; AIO"></a>BIO &amp; NIO &amp; AIO</h1><h2 id="（〇）同步vs异步、阻塞vs非阻塞"><a href="#（〇）同步vs异步、阻塞vs非阻塞" class="headerlink" title="（〇）同步vs异步、阻塞vs非阻塞"></a>（〇）同步vs异步、阻塞vs非阻塞</h2><h3 id="同步vs异步"><a href="#同步vs异步" class="headerlink" title="同步vs异步"></a>同步vs异步</h3><ol>
+<li>同步：<strong>发起一个调用后，被调用者未处理完请求之前，调用不返回</strong></li>
+<li>异步：<strong>发起一个调用后，立即收到被调用者的回应表示已经接收到请求，但是被调用者没有返回结果，会通过事件/回调等机制通知调用者结果</strong></li>
+</ol>
+<h3 id="阻塞vs非阻塞"><a href="#阻塞vs非阻塞" class="headerlink" title="阻塞vs非阻塞"></a>阻塞vs非阻塞</h3><ol>
+<li>阻塞：调用方必须等待请求返回结果（<strong>即被挂起</strong>），不能从事其他任务<blockquote>
+<p>阻塞I/O线程处于线程的哪个状态呢？<br>答案：<strong><code>RUNNABLE</code>。因为它既没有等待<code>notify()/notifyAll()</code>，也不是由于<code>synchronized</code>被阻塞</strong></p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p><strong>线程池实现了伪异步I/O，但是底层仍然是<code>BIO</code>。</strong></p>
+</blockquote>
+<ol start="2">
+<li>非阻塞：调用方在等待请求返回结果时，不会被挂起，可以从事其他任务<blockquote>
+<p>在网上看到了一个很贴切的比喻——烧开水：<br>1.你妈妈叫你烧开水，你小时候比较笨，坐在开水壶前等水开，这是<strong>同步阻塞</strong>；<br>2.等你大一点了，知道等水烧开的这段时间可以忙别的事情，你只需要时不时来看看水烧开了没有，这是<strong>同步非阻塞</strong>；<br>3.后来你们家用上了水烧开会发出声音的壶，这样你就可以去干别的事情了，等到水开了它自己会发出声音提醒你，这就是<strong>异步非阻塞</strong></p>
+</blockquote>
+</li>
+</ol>
+<h2 id="（一）BIO"><a href="#（一）BIO" class="headerlink" title="（一）BIO"></a>（一）BIO</h2><p><strong>同步阻塞I/O，数据的读取写入必须阻塞在一个线程内完成，不能应付高并发</strong>。  </p>
+<p>BIO设计的类有40多个，看似杂乱，但是其实都是从4个抽象类中派生来的。</p>
+<ol>
+<li><code>Reader</code>：字符输入流</li>
+<li><code>InputStream</code>：字节输入流</li>
+<li><code>Writer</code>：字符输出流</li>
+<li><code>OutputStream</code>：字节输出流</li>
+</ol>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h4 id="1-字符读取-Reader"><a href="#1-字符读取-Reader" class="headerlink" title="1.字符读取 - Reader"></a>1.字符读取 - <code>Reader</code></h4><ol>
+<li>节点流：</li>
+</ol>
+<ul>
+<li>文件操作：<code>FileReader</code></li>
+<li>管道操作：<code>PipedReader</code></li>
+<li>数组操作：<code>CharArrayReader</code></li>
+</ul>
+<ol start="2">
+<li>处理流：</li>
+</ol>
+<ul>
+<li>缓冲操作：<code>BufferedReader</code></li>
+<li>转化控制：<code>InputStreamReader</code></li>
+</ul>
+<h4 id="2-字节读取-InputStream"><a href="#2-字节读取-InputStream" class="headerlink" title="2.字节读取 - InputStream"></a>2.字节读取 - <code>InputStream</code></h4><ol>
+<li>节点流：</li>
+</ol>
+<ul>
+<li>文件操作：<code>FileInputStream</code></li>
+<li>管道操作：<code>PipedInputStream</code></li>
+<li>数组操作：<code>ByteArrayInputStream</code></li>
+</ul>
+<ol start="2">
+<li>处理流：</li>
+</ol>
+<ul>
+<li>缓冲操作：<code>BufferedInputStream</code></li>
+<li>基本数据类型操作：<code>DataInputStream</code></li>
+<li>对象序列化操作：<code>ObjectInputStream</code></li>
+<li><code>SequenceInputStream</code></li>
+</ul>
+<h4 id="3-字符写出-Writer"><a href="#3-字符写出-Writer" class="headerlink" title="3.字符写出 - Writer"></a>3.字符写出 - <code>Writer</code></h4><ol>
+<li>节点流：</li>
+</ol>
+<ul>
+<li>文件操作：<code>FileWriter</code></li>
+<li>管道操作：<code>PipedWriter</code></li>
+<li>数组操作：<code>CharArrayWriter</code></li>
+</ul>
+<ol start="2">
+<li>处理流：</li>
+</ol>
+<ul>
+<li>缓冲操作：<code>BufferedWriter</code></li>
+<li>转化控制：<code>OutputStreamWriter</code></li>
+<li>打印控制：<code>PrintWriter</code></li>
+</ul>
+<h4 id="4-字节写出-OutputStream"><a href="#4-字节写出-OutputStream" class="headerlink" title="4.字节写出 - OutputStream"></a>4.字节写出 - <code>OutputStream</code></h4><ol>
+<li>节点流：</li>
+</ol>
+<ul>
+<li>文件操作：<code>FileOutputStream</code></li>
+<li>管道操作:<code>PipedOutputStream</code></li>
+<li>数组操作：<code>ByteArrayOutputStream</code></li>
+</ul>
+<ol start="2">
+<li>处理流：</li>
+</ol>
+<ul>
+<li>缓冲操作：<code>BufferedOutputStream</code></li>
+<li>基本数据类型操作：<code>DataOutputStream</code></li>
+<li>对象序列化操作：<code>ObjectOutputStream</code></li>
+<li>打印操作：<code>PrintStream</code></li>
+</ul>
+<hr>
+<h3 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h3><pre><code class="java">//BIO：try-catch-finally
+BufferedReader br = null;
+String sCurrentLine = null;
+try{
+    br = new BufferedReader(new FileReader(&quot;C:\\Users\\19047535\\IdeaProjects\\batal\\src\\io\\text.txt&quot;));
+    while ((sCurrentLine = br.readLine()) != null) {
+        System.out.println(sCurrentLine);
+    }
+}catch (IOException e){
+    e.printStackTrace();
+}finally {
+    try{
+        if (br != null)
+            br.close();
+    }catch (IOException e){
+        e.printStackTrace();
+    }
+}
+</code></pre>
+<p>使用<a href="http://www.dragonbaby308.com/effective-java/" target="_blank" rel="noopener"><code>try-with-resources</code></a>取代<code>try-catch-finally</code>：</p>
+<pre><code class="java">//BIO：try-with-resource
+try(BufferedReader br2 = new BufferedReader(
+    new FileReader(&quot;C:\\Users\\19047535\\IdeaProjects\\batal\\src\\io\\text.txt&quot;))) {
+    while ((sCurrentLine = br2.readLine()) != null) {
+        System.out.println(sCurrentLine);
+    }
+}catch (IOException e){
+    e.printStackTrace();
+}
+</code></pre>
+<hr>
+<h3 id="缺点-amp-解决方案：线程池"><a href="#缺点-amp-解决方案：线程池" class="headerlink" title="缺点 &amp; 解决方案：线程池"></a>缺点 &amp; 解决方案：线程池</h3><p>每一个请求需要一个I/O线程进行处理，同时线程的创建、销毁需要消耗系统资源，加重了系统的负担。  </p>
+<p>解决方法：通过<strong>线程池</strong>复用线程</p>
+<blockquote>
+<p><strong>线程池本质上仍然是<code>BIO</code></strong></p>
+</blockquote>
+<hr>
+<h2 id="（二）NIO"><a href="#（二）NIO" class="headerlink" title="（二）NIO"></a>（二）NIO</h2><p><strong>同步非阻塞I/O，支持高并发、高负载</strong>。<br><strong>应用操作之后直接返回，不会堵塞在那里</strong>。</p>
+<h3 id="NIO-与-BIO-的区别"><a href="#NIO-与-BIO-的区别" class="headerlink" title="NIO 与 BIO 的区别"></a><code>NIO</code> 与 <code>BIO</code> 的区别</h3><ol>
+<li><code>BIO</code>是面向<strong>流</strong>的，<code>NIO</code>是面向<strong>缓冲区</strong>的</li>
+<li><code>BIO</code>是<strong>阻塞</strong>的，<code>NIO</code>是<strong>非阻塞</strong>的</li>
+<li><code>NIO</code>有<strong>选择器</strong>而<code>BIO</code>没有</li>
+</ol>
+<h3 id="读-amp-写"><a href="#读-amp-写" class="headerlink" title="读 &amp; 写"></a>读 &amp; 写</h3><ol>
+<li>读：创建一个<strong>缓冲区</strong>，然后请求<strong>通道</strong>读取数据</li>
+<li>写：创建一个<strong>缓冲区，填充数据</strong>，然后要求<strong>通道</strong>写入数据</li>
+</ol>
+<h3 id="核心组件"><a href="#核心组件" class="headerlink" title="核心组件"></a>核心组件</h3><h4 id="1-缓冲区（Buffer）"><a href="#1-缓冲区（Buffer）" class="headerlink" title="1.缓冲区（Buffer）"></a>1.缓冲区（<code>Buffer</code>）</h4><p><code>Buffer</code>的本质是一块内存区域，用于和<code>Channel</code>进行交互——将<code>Buffer</code>中的数据写入<code>Channel</code>，或是从<code>Channel</code>读取数据到<code>Buffer</code>。</p>
+<h5 id="（1）属性"><a href="#（1）属性" class="headerlink" title="（1）属性"></a>（1）属性</h5><ol>
+<li><code>capacity</code>：<strong><code>buffer</code>容量，一旦设置就不能更改</strong></li>
+<li><code>position</code>：<strong>下一个读/写元素的位置，通过<code>get</code>/<code>put</code>更新</strong></li>
+<li><code>limit</code>：<code>buffer</code>中不能读/写的第一个元素，换句话来说<strong>就是<code>buffer</code>中存活元素的个数</strong></li>
+<li><code>mark</code>：<code>buffer</code>中一个记录的位置，调用<code>mark()</code>可以让<code>mark = position</code>，调用<code>reset()</code>可以让<code>position = mark</code><blockquote>
+<p>0 &lt;= <code>mark</code> &lt;= <code>position</code> &lt;= <code>limit</code> &lt;= <code>capacity</code><br><img src="https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/NIO/Newly-created-buffer-attributes.png" alt></p>
+</blockquote>
+</li>
+</ol>
+<h5 id="（2）常见方法"><a href="#（2）常见方法" class="headerlink" title="（2）常见方法"></a>（2）常见方法</h5><ol>
+<li><code>Buffer clear()</code></li>
+<li><code>Buffer flip()</code></li>
+<li><code>Buffer rewind()</code></li>
+<li><code>Buffer position(int newPosition)</code></li>
+</ol>
+<h5 id="（3）使用缓冲区"><a href="#（3）使用缓冲区" class="headerlink" title="（3）使用缓冲区"></a>（3）使用缓冲区</h5><ol>
+<li>分配缓冲区：<code>Buffer.allocate(capacity)</code><br><code>`</code>java<br>//字节缓冲区<br>ByteBuffer buffer = ByteBuffer.allocate(28);</li>
+</ol>
+<p>//字符缓冲区<br>CharBuffer charBuffer = CharBuffer.allocate(100);<br>//从原有字符数组中分配缓冲区<br>char[] charArr = new char[100];<br>CharBuffer charBuffer2 = CharBuffer.wrap(charArr);<br>CharBuffer charBuffer2 = CharBuffer.wrap(charArr, 12, 43);    //分配一部分</p>
+<pre><code>
+2. 写入数据到缓冲区：`Channel.read(Buffer)`/`Buffer.put()`
+
+* 从`Channel`中读数据到`Buffer`
+```java
+int bytesRead = inChannel.read(buffer);
+</code></pre><ul>
+<li>通过<code>put</code>写数据<pre><code class="java">buffer.put(127);
+</code></pre>
+</li>
+</ul>
+<ol start="3">
+<li>从缓冲区读取数据：<code>Buffer.get()</code></li>
+<li>读写反转：<strong>调用<code>Buffer.flip()</code>可以让<code>limit = position; position = 0</code>，从读模式切换到写模式</strong></li>
+<li>查询剩余元素：<code>Buffer.hasRemaining()</code>，如果<code>buffer</code>非空，返回<code>true</code></li>
+<li>清空<code>buffer</code>：<code>Buffer.clear()</code><blockquote>
+<p>等价于：</p>
+</blockquote>
+</li>
+</ol>
+<pre><code class="java">for(int i = 0; buffer.hasRemaining(), i++){
+    buffer.get();
+}
+</code></pre>
+<hr>
+<h4 id="2-通道（Channel）"><a href="#2-通道（Channel）" class="headerlink" title="2.通道（Channel）"></a>2.通道（<code>Channel</code>）</h4><ul>
+<li><code>FileChannel</code></li>
+<li><code>SocketChannel</code></li>
+<li><code>ServerSocketChannel</code></li>
+<li><code>DatagramChannel</code></li>
+</ul>
+<pre><code class="java">RandomAccessFile raf = new RandomAccessFile(&quot;file&quot;, &quot;r&quot;);
+FileChannel fc = raf.getChannel();
+
+SocketChannel sc = SocketChannel.open();
+sc.connect(new InetSocketAddress(&quot;host&quot;, port));
+
+ServerSocketChannel ssc = ServerSocketChannel.open();
+ssc.socket().bind(new InetSocketAddress(localport));
+
+DatagramChannel dc = DatagramChannel.open();
+
+//channel.read()
+//channel.write()
+//channel.close()
+</code></pre>
+<h5 id="（1）多缓冲区操作"><a href="#（1）多缓冲区操作" class="headerlink" title="（1）多缓冲区操作"></a>（1）多缓冲区操作</h5><ul>
+<li><code>Scatter</code>：将1个<code>Channel</code>中的数据分散到N个<code>Buffer</code>中去</li>
+</ul>
+<pre><code class="java">public interface ScatteringByteChannel extends ReadableByteChannel{
+    public long read(ByteBuffer[] dsts) throws IOException;
+    public long read(ByteBuffer[] dsts, int offset, int length) throws IOException;
+}
+</code></pre>
+<ul>
+<li><code>Gather</code>：将N个<code>Buffer</code>中的数据<strong>按照顺序</strong>发送到一个<code>Channel</code></li>
+</ul>
+<pre><code class="java">public interface GatheringByteChannel extends ReadableByteChannel{
+    public long write(ByteBuffer[] srcs) throws IOException;
+    public long write(ByteBuffer[] srcs, int offset, int length) throws IOException;
+}
+</code></pre>
+<h5 id="（2）多通道之间数据传输"><a href="#（2）多通道之间数据传输" class="headerlink" title="（2）多通道之间数据传输"></a>（2）多通道之间数据传输</h5><ol>
+<li><code>transferFrom()</code>：把数据从通道源传输到<code>FileChannel</code></li>
+<li><code>transferTo()</code>：将<code>FileChannel</code>数据传输到其他通道</li>
+</ol>
+<pre><code class="java">public abstract class FileChannel
+        extends AbstractChannel
+        implements ByteChannel, GatheringByteChannel, ScatteringByteChannel
+{
+        // There are more other methods
+        public abstract long transferTo (long position, long count, WritableByteChannel target);
+        public abstract long transferFrom (ReadableByteChannel src, long position, long count);
+}
+</code></pre>
+<hr>
+<h4 id="3-选择器-多路复用器（Selector）"><a href="#3-选择器-多路复用器（Selector）" class="headerlink" title="3.选择器/多路复用器（Selector）"></a>3.选择器/多路复用器（<code>Selector</code>）</h4><p><strong>通过单线程的<code>Selector</code>检查多个<code>Channel</code>是否处于可读/可写，从而实现单线程管理多个通道。</strong></p>
+<h5 id="（1）优点"><a href="#（1）优点" class="headerlink" title="（1）优点"></a>（1）优点</h5><p><code>Selector</code><strong>通过多路复用避免了多线程，从而减少了线程上下文切换的开销</strong>。</p>
+<h5 id="（2）使用选择器"><a href="#（2）使用选择器" class="headerlink" title="（2）使用选择器"></a>（2）使用选择器</h5><ol>
+<li><p>创建：<code>Selector.open()</code></p>
+<pre><code class="java">Selector selector = Selector.open();
+</code></pre>
+</li>
+<li><p>注册<code>Channel</code>到<code>Selector</code>：<code>Channel.register(...)</code></p>
+<pre><code class="java">channel.configureBlocking(false);   //通道必须是非阻塞的
+SelectionKey key = channel.register(selector, SelectionKey.OP_READ);
+//一个SelectionKey表示了一个Selector和一个Channel之间的绑定关系
+</code></pre>
+</li>
+</ol>
+<hr>
+<h3 id="demo-1"><a href="#demo-1" class="headerlink" title="demo"></a>demo</h3><pre><code class="java">public static void main(String[] args) throws IOException{
+    //NIO
+    System.out.println(&quot;============NIO============&quot;);
+    RandomAccessFile file = new RandomAccessFile(&quot;C:\\Users\\19047535\\IdeaProjects\\batal\\src\\io\\text.txt&quot;, &quot;r&quot;);
+    //通过文件打开channel
+    FileChannel channel = file.getChannel();
+    //分配buffer
+    ByteBuffer buffer = ByteBuffer.allocate(1024);
+    while (channel.read(buffer) &gt; 0){
+        buffer.flip();
+        for (int i = 0; i &lt; buffer.limit(); i++) {
+            System.out.println((char)buffer.get());
+        }
+        buffer.clear();
+    }
+    channel.close();
+    file.close();
+}
+</code></pre>
+<hr>
+<h3 id="内存映射文件"><a href="#内存映射文件" class="headerlink" title="内存映射文件"></a>内存映射文件</h3><p>内存映射文件（memory-mapped file）能让你创建/修改那些大到无法读入内存的文件。有了内存映射文件，你就可以<strong>认为文件已经全部读入内存，然后把它当作一个非常大的数组来访问</strong>。<br>内存映射文件虽然最后还是需要从磁盘读取文件，但是<strong>它不需要将数据读取到OS的内核缓冲区，而是直接将进程的用户私有空间和文件磁盘地址进行映射，就好像是从内存中读/写文件一样，所以才快</strong>。</p>
+<hr>
+<h2 id="（三）AIO"><a href="#（三）AIO" class="headerlink" title="（三）AIO"></a>（三）AIO</h2><p><strong>异步非阻塞I/O：应用操作之后直接返回，不会堵塞在那里，当后台处理完成，操作系统会通知相应的线程进行后续的操作</strong>。  </p>
+<p><code>AIO</code>包括<code>Sockets</code>和<code>Files</code>两部分的异步通道接口及实现，并<strong>尽量使用OS提供的原生本地I/O功能进行实现</strong>。</p>
+<h3 id="AIO-和-NIO-的区别"><a href="#AIO-和-NIO-的区别" class="headerlink" title="AIO 和 NIO 的区别"></a><code>AIO</code> 和 <code>NIO</code> 的区别</h3><ol>
+<li><code>NIO</code>是OS有了I/O资源后，<strong>通知调用方（I/O线程）执行I/O操作</strong>；</li>
+<li><code>AIO</code>是<strong>直接将I/O操作以函数的形式传给OS，有资源的时候由OS代替执行，只以<code>Future</code>或<code>Callback</code>的形式返回一个异步的结果给调用方（I/O线程）</strong>。</li>
+</ol>
+<h3 id="AIO的I-O操作"><a href="#AIO的I-O操作" class="headerlink" title="AIO的I/O操作"></a><code>AIO</code>的I/O操作</h3><h4 id="1-Future"><a href="#1-Future" class="headerlink" title="1.Future"></a>1.<code>Future</code></h4><p><strong>提交一个I/O操作请求，返回一个<code>Future</code>。然后调用方可以通过<code>Future.get()</code>进行检查，确认它是否完成</strong>，或者阻塞I/O操作直到正常完成后超时异常。</p>
+<pre><code class="java">//异步通道
+AsynchronousSocketChannel ch = AsynchronousSocketChannel.open();
+//分配缓冲区
+ByteBuffer buffer = ByteBuffer.allocateDirect(8192);
+//异步 读
+Future&lt;Integer&gt; result = ch.read(buffer);
+try{
+    //通过Future.get()异步获取执行结果
+    int bytesRead = result.get();  
+    //Success
+    if(bytesRead == -1) return;
+}catch(ExecutionException e) {
+    //Fail
+}
+</code></pre>
+<p>注意：<strong><code>Future.get()</code>是同步的</strong>，谨慎使用。</p>
+<hr>
+<h4 id="2-Callback"><a href="#2-Callback" class="headerlink" title="2.Callback"></a>2.<code>Callback</code></h4><p><strong>提交一个I/O操作请求，并且指定一个<code>CompletionHandler</code>。当异步I/O完成后，发送一个请求，此时<code>CompletionHandler</code>对象的<code>completed</code>/<code>failed</code>方法将会被回调</strong>。</p>
+<pre><code class="java">public interface CompletionHandler&lt;V, A&gt; {
+    //当操作完成后被调用
+    //V result：操作结果
+    //A attachment：提交操作请求时的参数
+    void completed(V value, A attachment);
+
+    //当操作失败后被调用
+    //Throwable exc：失败原因
+    void failed(Throwable exc, A attachment);
+}
+</code></pre>
+<h4 id="3-Future-和-Callback-的区别"><a href="#3-Future-和-Callback-的区别" class="headerlink" title="3.Future 和 Callback 的区别"></a>3.<code>Future</code> 和 <code>Callback</code> 的区别</h4><ol>
+<li><strong><code>Future</code>是调用方主动异步查询操作成功/失败，然后调用方再根据操作结果实现不同逻辑</strong></li>
+<li><strong><code>Callback</code>是调用方直接将成功（<code>completed</code>）/失败（<code>failed</code>）时对应的操作以函数的方式传递给操作方，操作成功/失败后，操作方异步回调对应的函数</strong></li>
+</ol>
+<hr>
+<h3 id="AsynchronousFileChannel：异步文件通道"><a href="#AsynchronousFileChannel：异步文件通道" class="headerlink" title="AsynchronousFileChannel：异步文件通道"></a><code>AsynchronousFileChannel</code>：异步文件通道</h3><p><code>AsynchronousFileChannel</code>使数据可以<strong>异步</strong>读写。</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/Algorithm-sort/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/sort.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/sort.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                算法专题：排序</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/bit-operation/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/bit.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/bit.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Java中的位运算</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
       
-  <!-- 首页默认取最最新文章集 -->
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/Algorithm-DP/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/DP.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/Algorithm-DP/">
-    算法专题——动态规划</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2019-9-3</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/Algorithm-DP/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/Algorithm-sort/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/sort.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/Algorithm-sort/">
-    算法专题：排序</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2019-8-16</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/Algorithm-sort/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
-
-      <div class="clearer">
-      </div>
-    </main>
-    <!--  -->
-    
-  </div>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="www.dragonbaby308.com" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3Avatar.jpeg" itemprop="image" alt="DragonBaby308" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="www.dragonbaby308.com" itemprop="url" rel="author">DragonBaby308</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>

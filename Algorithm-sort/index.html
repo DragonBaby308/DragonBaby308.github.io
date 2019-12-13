@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">算法专题：排序 | DragonBaby308</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "さくら荘そのhojun";
+  mashiro_option.author_name = "hojun";
+  mashiro_option.site_url = "https://sakura.hojun.cn";
+  mashiro_option.v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz";
+  mashiro_option.v_appKey = "mgOpfzbkHYqU92CV4IDlAUHQ";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(1).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(3).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(6).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(7).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(8).jpg.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://sakura.hojun.cn">
+          <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/avatar.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Live your life with passion! With some drive!</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/honjun" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="social-github" title="sina">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/sina.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="social-github" title="wangyiyun">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/wangyiyun.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="social-github" title="zhihu">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/zhihu.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="social-github" title="email">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/email.svg">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/wechat.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">さくら荘その</span>
+            <span class="shironeko">hojun</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/资源/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/随想/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/转载/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          转载
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/图集/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          图集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Lab
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/client/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+                    客户端
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                    RSS
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/sort.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/sort.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      算法专题：排序</h1>
+      <p class="entry-census">
+        <span>
+          <a href="www.dragonbaby308.com">
+            <img src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3Avatar.jpeg">
+          </a>
+        </span>
+        <span>
+          <a href="www.dragonbaby308.com">DragonBaby308</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2019-8-16<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><hr>
+<h2 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h2><p>一个排序算法的稳定性是指，如果<strong>a=b</strong>，排序前a在b前面，那么排序后a也要在b的前面。即<strong>排序后元素的相对位置不变</strong>。  </p>
+<p>简单来说：</p>
+<ul>
+<li><strong>如果一个排序算法会将某个元素单独提到某个位置，那么它就是不稳定的</strong>；</li>
+<li><strong>如果一个排序算法只涉及两两相邻元素之间的交换，那么它就是稳定的</strong>。</li>
+</ul>
+<ol>
+<li>稳定排序：<code>冒泡排序</code>、<code>插入排序</code>、<code>希尔排序</code>、<code>归并排序</code></li>
+<li>不稳定排序：<code>选择排序</code>、<code>快排</code>、<code>堆排序</code></li>
+</ol>
+<hr>
+<h2 id="1-选择排序（O-N-2-）"><a href="#1-选择排序（O-N-2-）" class="headerlink" title="1.选择排序（O(N^2)）"></a>1.选择排序（<code>O(N^2)</code>）</h2><ul>
+<li>选择排序（Selection Sort）每次排序时，从未排序序列中“选择”一个元素加入排序序列，因此得名。  </li>
+<li>选择排序需要两次遍历 —— 第一遍是遍历所有元素，确认已排序的序列范围[0,i)；第二遍是<strong>遍历所有未排序序列[i,lastIndex]，每次将当前位置与队首（i）元素比较，选择最小元素，交换到队首</strong>，所以选择排序的时间复杂度是<code>O(N^2)</code></li>
+<li>选择排序是<strong>不稳定排序</strong>，因为存在将元素单独提到某个位置的情况</li>
+</ul>
+<pre><code class="java">//选择排序
+public static int[] selectionSort(int[] in) {
+    int lastIndex = in.length - 1;  //即：循环遍历次数
+    for (int i = 0; i &lt;= lastIndex; i++) {  //每次遍历，将最小元素浮动到最左边
+        //0~i是已排序序列，i~lastIndex是未排序序列，将未排序中的最小元素放在i位置
+        for(int j = i; j &lt;= lastIndex; j++) {
+            //默认in[i]是最小元素，如果in[j]小于in[i]，则交换
+            if (in[j] &lt; in[i]) {    //如果i=j，那么in[i]=in[j]
+                //所以可以保证in[i]、in[j]是不同对象，可以通过异或进行交换
+                in[i] = in[i] ^ in[j];
+                in[j] = in[i] ^ in[j];
+                in[i] = in[i] ^ in[j];
+            }
+        }
+    }
+    return in;
+}
+</code></pre>
+<blockquote>
+<p>选择排序 &amp; 插入排序 的区别：<br><strong>选择排序是每次从未排序序列中选择最小/最大的元素，加入已排序序列</strong>；<br><strong>插入排序是每次按顺序从未排序序列中选择一个元素，加入已排序序列中的合适位置</strong>；<br><strong>也就是说，选择排序遍历的未排序序列，插入排序遍历的已排序序列</strong>。</p>
+</blockquote>
+<hr>
+<h2 id="2-冒泡排序（O-N-2-）"><a href="#2-冒泡排序（O-N-2-）" class="headerlink" title="2.冒泡排序（O(N^2)）"></a>2.冒泡排序（<code>O(N^2)</code>）</h2><ul>
+<li>冒泡排序（Bubble Sort）每次排序时，将未排序序列最大元素“浮动”到尾部，因此得名。  </li>
+<li>冒泡排序需要两次遍历 —— 第一遍是遍历所有元素，确认已排序的序列范围[lastIndex - i, lastIndex]；第二遍是<strong>遍历所有未排序序列（0, lastIndex - i），相邻元素两两比较，将最大元素浮动到队尾</strong>，所以冒泡排序的时间复杂度是<code>O(N^2)</code></li>
+<li>冒泡排序是<strong>稳定排序</strong>，因为只涉及相邻元素两两比较</li>
+</ul>
+<pre><code class="java">//冒泡排序
+public static int[] bubbleSort(int[] in) {
+    int lastIndex = in.length - 1;
+    for (int i = 0; i &lt;= lastIndex; i++) {
+        //[lastIndex - i,lastIndex]是排好序的序列
+        //[0,lastIndex - i)是未排好序的序列
+        for(int j = 0; j &lt;= lastIndex - i - 1; j++) {
+            //与选择排序不同，冒泡排序是两两相邻元素比较后交换
+            //将较大的交换到后面
+            if (in[j + 1] &lt; in[j]) {    //不同元素异或交换
+                in[j + 1] = in[j] ^ in[j + 1];
+                in[j] = in[j] ^ in[j + 1];
+                in[j + 1] = in[j] ^ in[j + 1];
+            }
+        }
+    }
+    return in;
+}
+</code></pre>
+<hr>
+<h3 id="2-1-冒泡排序优化：交换标志位"><a href="#2-1-冒泡排序优化：交换标志位" class="headerlink" title="2.1 冒泡排序优化：交换标志位"></a>2.1 冒泡排序优化：交换标志位</h3><p>对冒泡排序的优化是加入一个<strong>交换标志位，如果某一次循环中没有进行数据交换，说明剩余的序列已经是有序的了，可以不再进行后续的循环</strong>。</p>
+<pre><code class="java">//优化冒泡排序——加入交换标志位
+public static int[] flagBubbleSort(int[] in) {
+    //标志位：本趟排序是否进行了交换
+    //如果本趟排序没有进行元素交换，说明已经有序了，可以提前结束循环
+    boolean exchange;
+    int lastIndex = in.length - 1;
+    for (int i = 0; i &lt;= lastIndex; i++) {
+        exchange = false;
+        //[lastIndex - i,lastIndex]是排好序的序列
+        //[0,lastIndex - i)是未排好序的序列
+        for(int j = 0; j &lt;= lastIndex - i - 1; j++) {
+            //与选择排序不同，冒泡排序是两两相邻元素比较后交换
+            //将较大的交换到后面
+            if (in[j + 1] &lt; in[j]) {    //不同元素异或交换
+                in[j + 1] = in[j] ^ in[j + 1];
+                in[j] = in[j] ^ in[j + 1];
+                in[j + 1] = in[j] ^ in[j + 1];
+                exchange = true;    //发生了交换
+            }
+        }
+        if(!exchange) break;    //无交换直接退出循环
+    }
+    return in;
+}
+</code></pre>
+<hr>
+<h2 id="3-插入排序（O-N-2-）"><a href="#3-插入排序（O-N-2-）" class="headerlink" title="3.插入排序（O(N^2)）"></a>3.插入排序（<code>O(N^2)</code>）</h2><blockquote>
+<p>在形容插入排序时，一般都会类比摸扑克。你的手牌就是已排序序列，牌堆就是未排序序列，每次摸牌时会选择手排中的合适位置插入。<br>我的习惯就是强迫按顺序插好牌 - - ||| ，后来我才发现其他孩子摸牌根本不会像我一样，他们都是一把抓在手里面的，所以每次玩扑克他们都要等我抓好牌=====(￣▽￣*)b</p>
+</blockquote>
+<ul>
+<li>插入排序（Insertion Sort）的原理就是将序列分为两个部分，一部分是已排序序列，另一部分是未排序序列，每次从未排序序列中选择一个元素插入已排序序列中的合适位置</li>
+<li>插入排序需要两次循环——第一次是遍历所有元素，确定已排序序列[0,i)；第二次是<strong>遍历所有已排序序列[0,i)，将位置i的元素插入已排序序列的合理位置</strong>——由于遍历的序列是已经排好序的，所以这一步只需要用到一个临时变量。所以插入排序的时间复杂度是<code>O(N^2)</code></li>
+<li><strong>使用一个临时变量<code>temp</code>存储位置i的元素。从j=i位置开始向前遍历，如果<code>in[j] &gt; temp</code>，那么<code>j--</code>；如果<code>in[j] &lt;= temp</code>，那么交换j位置元素和<code>temp</code>，然后<code>j--</code>，继续比较<code>in[j]</code>和<code>temp</code></strong>。</li>
+<li>插入排序是<strong>稳定性排序</strong>，因为只涉及到相邻元素两两比较</li>
+</ul>
+<pre><code class="java">    //插入排序
+    public static int[] insertionSort(int[] in) {
+        int lastIndex = in.length - 1;
+        //从1开始遍历，是默认最开始的已排序序列就是第一个元素，index=0
+        for (int i = 1; i &lt;= lastIndex; i++) {
+            int temp = in[i];   //待比较元素
+            //注意i不能比1小，否则就会数组越界
+            while (i &gt;= 1 &amp;&amp; in[i - 1] &gt; temp) {  //已排序序列[0,i)，最大下标i - 1
+                //i - 1位置元素大于待比较元素，i - 1位置元素后移
+                in[i] = in[i - 1];
+                i--;
+            }
+            //退出循环说明找到了合适的位置
+            in[i] = temp;
+        }
+        return in;
+    }
+</code></pre>
+<hr>
+<h3 id="3-1-希尔排序（O-NlogN-）-缩小增量排序"><a href="#3-1-希尔排序（O-NlogN-）-缩小增量排序" class="headerlink" title="3.1 希尔排序（O(NlogN)）/缩小增量排序"></a>3.1 希尔排序（<code>O(NlogN)</code>）/缩小增量排序</h3><ul>
+<li>希尔排序（Shell Sort）是一种改进的插入排序，也成为缩小增量排序，1959年由Donald Shell提出。<strong>希尔排序采用了分治的思想，将原序列分为若干个子序列，对子序列分别进行插入排序，所以它的时间复杂度也理所应当是<code>O(NlogN)</code></strong></li>
+<li><strong>初始增量<code>gap = len / 2</code>，随后每次循环<code>gap = gap / 2</code>，直到减为1，循环终止</strong>。增量<code>gap</code>的意义是将序列分为多少子序列。</li>
+<li>希尔排序存在非相邻元素交换位置，所以希尔排序是<strong>不稳定排序</strong>。</li>
+</ul>
+<p><img src="https://tva2.sinaimg.cn/large/007DFXDhgy1g62psnakjbj30nv0n20te.jpg" alt><br>如图：</p>
+<ol>
+<li>初始分组<code>gap = len / 2 = 5</code>，将原序列分为5组，要求每组元素之间间隔尽可能大，所以是{i, i + gap, i + 2 <em> gap, …, i + n </em> gap}</li>
+<li>对5组子序列分别进行插入排序，将较小的元素交换到前面</li>
+<li>交换完后，<code>gap /= 2</code>，将原序列重新分为2组，要求每组元素之间间隔尽可能大，所以是{i, i + gap, i + 2 <em> gap, …, i + n </em> gap}</li>
+<li>对2组子序列分别进行插入排序，将较小的元素交换到前面</li>
+<li><code>gap = 2 / 1 = 1</code>，进行最后一次插入排序，结束循环</li>
+</ol>
+<pre><code class="java">//希尔排序
+public static int[] shellSort(int[] in) {
+    int gap = in.length &gt;&gt; 1;   //初始值，gap = len / 2
+    while (gap &gt; 0) {
+        //从gap开始是因为默认[0,gap)是排好序的
+        //即每个子序列第一个元素是排好序的，一共gap个元素
+        //将序列分为gap组，对子序列进行插入排序
+        for (int i = gap; i &lt; in.length; i++) {     
+            int temp = in[i];
+            //限制了gap&gt;0，所以只需要 i-gap&gt;=0 而非 1
+            while ((i - gap &gt;= 0) &amp;&amp; (in[i - gap] &gt; temp) ) {   
+                in[i] = in[i - gap];
+                i -= gap;   //每次跨度为一个gap
+            }
+            //退出循环说明找到了合适位置
+            in[i] = temp;
+        }
+        gap = gap &gt;&gt; 1; //gap = gap / 2
+    }
+    return in;
+}
+</code></pre>
+<blockquote>
+<p>希尔排序 vs 插入排序：<br>插入排序是稳定的，希尔排序不稳定；<br><strong>希尔排序比较次数和移动次数都要明显小于插入排序，N越大越明显</strong>；<br><strong>希尔排序不适用于链式结构</strong></p>
+</blockquote>
+<hr>
+<h2 id="4-归并排序（O-NlogN-）"><a href="#4-归并排序（O-NlogN-）" class="headerlink" title="4.归并排序（O(NlogN)）"></a>4.归并排序（<code>O(NlogN)</code>）</h2><ul>
+<li><strong>合并两个有序子序列的过程：创建一个和两个字序列长度和等长的序列，分别用一个指针指向两个子序列的头部，将两个子序列头部较小的那个加入到新序列，最后一个序列全部被加入新序列，就可以把另一个序列剩下的元素加入新序列。所以归并排序需要额外的内存空间</strong></li>
+</ul>
+<pre><code class="java">//合并两个有序子序列
+//@params: left[]   左子序列
+//@params: right[]  右子序列
+public static void merge(int[] left, int[] right) {
+  //结果序列，用于合并两个子有序序列
+  int[] rst = new int[left.length + right.length];
+  //左子序列、右子序列、总序列当前位置
+  int l = 0, r = 0, curr = 0;
+  //遍历，直到某个子序列被遍历完，将较小的放前面
+    while (l &lt; left.length &amp;&amp; r &lt; right.length) {
+        if (left[l] &lt; right[r]) {
+            rst[curr] = left[l];
+            l++;
+            curr++;
+        }else{
+            rst[curr] = right[r];
+            r++;
+            curr++;
+        }
+    }
+    //剩余序列直接加入结果序列
+    while(l &lt; left.length) {
+        rst[curr] = left[l];
+        l++;
+        curr++;
+    }
+    while (r &lt; right.length) {
+        rst[curr] = right[r];
+        r++;
+        curr++;
+    }
+    return rst;
+}
+</code></pre>
+<ul>
+<li><strong>归并排序（Merge Sort）利用了分治的思想，将序列不断进行二分，直到每组子序列只剩下两个元素（“分”），然后对这两个元素进行排序（“治”），最后将所有子序列两两进行合并，合并时重新排序（“合”），所以时间复杂度是<code>O(NlogN)</code></strong></li>
+<li>归并排序只涉及相邻元素之间的交换，所以是<strong>稳定性排序</strong></li>
+</ul>
+<p><img src="https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/algorithm/mergeSort.png" alt></p>
+<pre><code class="java">//归并排序：递归地使用二分法，将一个序列分解为两个子序列，直到子序列只剩下一个元素
+//@params:  in[]
+public static int[] mergeSort(int[] in) {
+    //退出递归的条件：子序列只剩下一个元素
+    if(in == null || in.length &lt; 2) return in;
+    int mid = in.length &gt;&gt; 1;   //从中间将序列切分
+    //Arrays.copyOfRange(int[] a, int from, int to);    复制范围[from,to)
+    int[] left = Arrays.copyOfRange(in, 0, mid);    //不包括mid
+    int[] right = Arrays.copyOfRange(in, mid, in.length);
+    //递归调用mergeSort，然后将结果merge合并
+    return merge(mergeSort(left), mergeSort(right) );
+}
+</code></pre>
+<p>测试：</p>
+<pre><code class="java">int[] in = {999, 1, 2, 4, 3, -1, 0, 0};
+System.out.println(&quot;归并排序： &quot; + Arrays.toString(mergeSort(in)));
+//归并排序： [-1, 0, 0, 1, 2, 3, 4, 999]
+</code></pre>
+<hr>
+<h2 id="5-快速排序（O-NlogN-）"><a href="#5-快速排序（O-NlogN-）" class="headerlink" title="5.快速排序（O(NlogN)）"></a>5.快速排序（<code>O(NlogN)</code>）</h2><blockquote>
+<p>参考了<a href="https://cloud.tencent.com/developer/article/1403566" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1403566</a>，说的很详细。</p>
+</blockquote>
+<ul>
+<li>快速排序（Quick Sort）的中心思想是<strong>每次选取一个基准值（<code>pivot</code>），然后通过比较与交换，使得<code>pivot</code>左边的元素都小于<code>pivot</code>，<code>pivot</code>右边的元素都大于<code>pivot</code>；然后再通过二分法，对<code>pivot</code>左右的子序列分别进行快排。所以快排的时间复杂度是<code>O(NlogN)</code></strong></li>
+<li><strong><code>pivot</code>一般直接选择最左元素</strong></li>
+<li>交换<code>pivot</code>左右元素用到了<strong>快慢指针法——快指针从右往左遍历，直到找到比<code>pivot</code>小的元素；慢指针从左往右遍历，直到找到比<code>pivot</code>大的元素。由于我们的目的是让左边的更小，右边的更大，所以我们将快慢指针元素进行交换（交换之前要判断慢指针是否超过了快指针）。</strong></li>
+</ul>
+<p>如下图：</p>
+<ol>
+<li>基准值是最左端元素6。慢指针i，从左往右；快指针j，从右往左</li>
+</ol>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-3158494/p9633kvbb4.png?imageView2/2/w/1620" alt="1"></p>
+<ol start="2">
+<li>j先走，当遇到比基准值小的元素时停止（5&lt;6）；然后i再走，遇到比基准值大的元素时停止（7&gt;6）</li>
+</ol>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-3158494/796vehfe4u.png?imageView2/2/w/1620" alt="2"></p>
+<ol start="3">
+<li>如果<strong>慢指针没有超过快指针</strong>，就将快慢指针所在元素进行交换</li>
+</ol>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-3158494/smty0jsupr.png?imageView2/2/w/1620" alt="3"><br><img src="https://ask.qcloudimg.com/http-save/yehe-3158494/1b3sxbdx3p.png?imageView2/2/w/1620" alt="4"><br><img src="https://ask.qcloudimg.com/http-save/yehe-3158494/3sylc5gclx.png?imageView2/2/w/1620" alt="5"></p>
+<ol start="4">
+<li>重复以上步骤，直到快慢指针相遇，<strong>将快慢指针所在位置元素与基准值进行交换，基准值指针指向快慢指针所在位置</strong></li>
+</ol>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-3158494/wi69z7vc16.png?imageView2/2/w/1620" alt="6"><br><img src="https://ask.qcloudimg.com/http-save/yehe-3158494/t4rtww7ipb.png?imageView2/2/w/1620" alt="7"><br><img src="https://ask.qcloudimg.com/http-save/yehe-3158494/nwqmb1jkj0.png?imageView2/2/w/1620" alt="8"></p>
+<ol start="5">
+<li>交换完成后，基准值左边的元素就都小于基准值，基准值右边的元素都大于基准值</li>
+</ol>
+<ul>
+<li>以上操作都是相对的，<strong>如果<code>pivot</code>选择了最右元素，那么快指针就应该是从左往右遍历的那个</strong></li>
+<li><strong>递归</strong>地对基准值左右序列进行快排，直到元素全部有序。<strong>退出递归的条件——子序列只剩下一个元素，即存在<code>low &gt; high</code></strong><blockquote>
+<p>同样是上述序列{6,1,2,7,9,3,4,5,10,8}，如果慢指针i先走会发生什么?<br>（1）pivot=6，i=7&gt;6，j=5&lt;6，交换i与j：<code>{6,1,2,&quot;5&quot;,9,3,4,&quot;7&quot;,10,8}</code>；<br>（2）i=9&gt;6，j=4&lt;6，交换i与j：<code>{6,1,2,5,&quot;4&quot;,3,&quot;9&quot;,10,8}</code>；<br>（3）i=9=j，交换i/j与pivot：<code>{&quot;9&quot;,1,2,5,4,3,&quot;6&quot;,10,8}</code>，9&gt;6，很明显结果不对。<br>结论：<strong>如果快指针先走，可以保证快慢指针相遇时元素值小于pivot，交换过来后可以保证pivot左边元素都小于pivot；但是如果慢指针先走，很可能相遇时元素值就大于pivot，交换后pivot左边就会存在比pivot大的元素。</strong></p>
+</blockquote>
+</li>
+</ul>
+<pre><code class="java">public static void quickSort(int[] in, int low, int high) {
+    //退出递归条件：子序列只有一个元素，此时low = high
+    if(low &gt; high) return;
+    int pivot = in[low];    //基准值，选最左边元素
+    int quick = high;   //快指针，比慢指针先走一步，从右往左
+    int slow = low;     //慢指针，从左往右
+    //当quick遇到了比pivot小的元素，
+    //同时slow遇到了比pivot大的元素，那么就交换两个元素
+    while (slow &lt; quick) {
+        //快指针要先走一步
+        //快指针向左，直到找到比pivot小的元素
+        while (in[quick] &gt;= pivot &amp;&amp; slow &lt; quick) {
+            quick--;
+        }
+        //慢指针往右，直到找到比pivot大的元素
+        while (in[slow] &lt;= pivot &amp;&amp; slow &lt; quick) {
+            slow++;
+        }
+        //需要再次判断slow是否已经遇到或超过了quick
+        if (slow &lt; quick) {
+            //交换两个元素 —— 可以肯定slow!=quick，是不同元素，
+            //所以可以用异或交换两个元素
+            in[slow] = in[slow] ^ in[quick];
+            in[quick] = in[slow] ^ in[quick];
+            in[slow] = in[slow] ^ in[quick];
+        }
+    }
+    //将快慢指针所在位置元素与基准值进行交换
+    //slow与quick相遇的位置，就是基准值指针应该在的位置
+    in[low] = in[slow];
+    in[slow] = pivot;
+    //slow或者quick就是新的pivot，左边元素都比它小，右边元素都比它大
+    //递归对pivot的左右序列进行快排
+    quickSort(in, low, slow - 1);   //基准值不需要再排序，所以是slow-1
+    quickSort(in, slow + 1, high);  //基准值不需要再排序，所以是slow+1
+}
+</code></pre>
+<p>测试：</p>
+<pre><code class="java">int[] in = {999, 1, 2, 4, 3, -1, 0, 0};
+quickSort(in, 0, in.length - 1);
+System.out.println(Arrays.toString(in));
+//结果为：[-1, 0, 0, 1, 2, 3, 4, 999]
+</code></pre>
+<hr>
+<h3 id="5-1-彩虹排序（NlogK，K是元素种类）"><a href="#5-1-彩虹排序（NlogK，K是元素种类）" class="headerlink" title="5.1 彩虹排序（NlogK，K是元素种类）"></a>5.1 彩虹排序（<code>NlogK</code>，K是元素种类）</h3><p>彩虹排序适用于<strong>序列中元素种类是已知常数</strong>的情况。</p>
+<ul>
+<li>彩虹排序（Rainbow Sort）是一种变种的快排，快排是从元素N中选择基准值进行分治，所以时间复杂度是<code>O(NlogN)</code>，而彩虹排序则是从元素种类K中选择基准值进行分治，所以时间复杂度是<code>O(NlogK)</code>，而K是常数。</li>
+<li>具体的分治策略是：<strong>递归地从种类K中选择一个基准值，每次使得基准值左边的种类编码小于基准值，右边的种类编码大于基准值</strong></li>
+<li>结束递归的条件：</li>
+</ul>
+<ol>
+<li>普通快排的结束递归条件：序列中只有一个元素，<code>low == high</code>（或者<code>low &gt; high</code>）</li>
+<li><strong>彩虹排序中额外的结束递归条件：序列中只有一种元素，<code>elementFrom == elementTo</code>（或者<code>elementFrom &gt; elementTo</code>）</strong><blockquote>
+<p><code>elementFrom</code>、<code>elementTo</code>是指子序列（下标从<code>start</code>到<code>end</code>）中元素种类<strong>从第<code>elementFrom</code>种到第<code>elementTo</code>种，即元素种类范围</strong>。</p>
+</blockquote>
+</li>
+</ol>
+<p>参考<a href="https://www.lintcode.com/problem/sort-colors-ii/description" target="_blank" rel="noopener">LintCode 143. Sort Colors II</a>这题，看看彩虹排序的实际应用：</p>
+<pre><code class="java">/**
+* @param colors: A list of integer
+* @param k: An integer
+* @return: nothing
+*/
+public static void sortColors2(int[] colors, int k) {
+    if (colors == null || colors.length == 0) return;
+    rainbowSort(colors, 0, colors.length - 1, 1, k);
+}
+
+//彩虹排序
+//@params: colors[]     输入序列，包含从colorFrom到colorTo种类的颜色
+//@params: start        子序列开始位置
+//@params: end          子序列结束位置
+//@params: colorFrom    颜色种类开始位置
+//@params: colorTo      颜色种类结束位置
+private static void rainbowSort(int[] colors,
+                             int start,
+                             int end,
+                             int colorFrom,
+                             int colorTo) {
+    //结束递归的条件：
+    // 1.传统快排结束条件：子序列只有一个元素；
+    // 2.彩虹排序结束条件：子序列只有一种元素
+    if (start == end || colorFrom == colorTo) return;
+    //中间颜色，即基准值pivot
+    int colorMid = (colorFrom + colorTo) &gt;&gt; 1;
+    int left = start, right = end;
+    while (left &lt;= right) {
+        //找到基准值左边大于基准值的元素
+        while (left &lt;= right &amp;&amp; colors[left] &lt;= colorMid) left++;
+        //找到基准值右边小于基准值的元素
+        while (left &lt;= right &amp;&amp; colors[right] &gt; colorMid) right--;
+        //再次判断，如果此时left指针没有超过right指针，就交换两个位置元素
+        if (left &lt;= right) {    //可能相等，不能用异或
+            int temp = colors[left];
+            colors[left] = colors[right];
+            colors[right] = temp;
+            left++;
+            right--;
+        }
+    }
+    //由于基准值选择的是中间位置，所以不需要将基准值交换到left所在位置
+    rainbowSort(colors, start, right, colorFrom, colorMid);
+    rainbowSort(colors, left, end, colorMid + 1, colorTo);  //基准值可以不作为子序列参与下一轮循环
+}
+</code></pre>
+<p>测试：</p>
+<pre><code class="java">public static void main(String[] args) {
+    int[] in = {3,2,2,1,4};
+    sortColors2(in, 4);
+    System.out.println(Arrays.toString(in));    //[1,2,2,3,4]
+}
+</code></pre>
+<hr>
+<h2 id="6-堆排序（O-N-KlogN-，K是排序序列长度）"><a href="#6-堆排序（O-N-KlogN-，K是排序序列长度）" class="headerlink" title="6.堆排序（O(N + KlogN)，K是排序序列长度）"></a>6.堆排序（<code>O(N + KlogN)</code>，K是排序序列长度）</h2><p><strong>如果想得到一个序列中第K个最小元素之前的部分序列，最好采用堆排序！！！</strong></p>
+<ul>
+<li>堆排序存在非相邻元素之间的交换，所以是<strong>非稳定排序</strong></li>
+<li>堆的特定：</li>
+</ul>
+<ol>
+<li>堆是一棵<a href="http://www.dragonbaby308.com/Algorithm-BinaryTree/" target="_blank" rel="noopener">完全二叉树</a>。可以用<strong>数组</strong>表示，节点k有如下特点：<strong>父节点为<code>(k-1)/2</code>，左孩子为<code>2k + 1</code>，右孩子为<code>2k + 2</code></strong>。</li>
+<li>如果是大根堆，那么<strong>对于任何节点，其父节点都会比所有子节点大</strong>；如果是小根堆，那么<strong>对于任何节点，其父节点都会比所有子节点小</strong></li>
+</ol>
+<p><img src="https://tva3.sinaimg.cn/large/007DFXDhly1g63zjv24xij30vx0nrabf.jpg" alt></p>
+<p>参考上图，理解了下面3个问题，也就理解了堆排序：</p>
+<ol>
+<li>给定一个数组表示的满二叉树，如何构建一个堆？或者说，对一个堆进行了修改后，如何保证修改后的序列仍是一个堆？</li>
+</ol>
+<ul>
+<li><code>heapify</code>：对于任意节点来说，堆都有父亲节点大于（或小于）左右儿子的特点，所以，<strong>对于任意节点，将其与其左右儿子比较大小，将最大的元素替换到父亲节点，对替换下去的节点重复进行此操作</strong>，即可将满二叉树构建成堆。<blockquote>
+<p>比如说上图，对于5-7-8这棵子树来说，5&lt;8，所以将5和8交换位置，然后重新对替换下去的5节点进行<code>heapify</code></p>
+</blockquote>
+</li>
+</ul>
+<pre><code class="java">//heapify：将满二叉树构建为堆
+//@param: tree[]    表示堆的数组
+//@param: n         节点总数
+//@param: i         对哪个节点进行heapify
+public static void heapify(int[] tree, int n, int i) {
+  if(i &gt;= n) return; //结束递归条件：建堆节点下标超过节点总数，i&gt;=n
+  //根据满二叉树的特点，有：
+  int left = 2 * i + 1; //左子树
+  int right = 2 * i + 2;  //右子树
+  //将父亲、左右子树3者中最大的数替换到父亲节点
+  int max = i;
+  //注意left 和 right不能越界
+  if(left &lt; n &amp;&amp; tree[left] &gt; tree[max]) max = left;
+  if (right &lt; n &amp;&amp; tree[right] &gt; tree[max]) max = right;
+  if(max != i) {  //如果父亲节点就是最大节点，就不需要重新建堆了
+    //交换max和i的元素
+    tree[max] = tree[max] ^ tree[i];
+    tree[i] = tree[max] ^ tree[i];
+    tree[max] = tree[max] ^ tree[i];
+    //对替换下去的节点重新建堆
+    heapify(tree, n, max);
+  }
+}
+</code></pre>
+<ol start="2">
+<li>通过步骤1，我们有了将一个修改后的堆还原成堆的能力，那么给定一个数组表示的满二叉树，如何构建出初始的堆？</li>
+</ol>
+<ul>
+<li>我们可以从树的<strong>倒数第二层（h-1层）逆序地对每个节点进行<code>heapify</code>操作，直到根节点</strong>，这样我们就能得到一个初始堆。</li>
+<li>为什么不从树的倒数第一层（h层）开始<code>heapify</code>呢？因为<strong>倒数第一层没有子节点，本身就是满二叉树，没有<code>heapify</code>的必要</strong>。</li>
+<li>那么如何确定倒数第二层的下标呢？<strong>我们知道满二叉树中，k节点的父亲节点是<code>(k-1)/2</code>，我们可以确定倒数第一层的最后一个节点（即数组尾部），该节点的父亲节点正好就位于倒数第二层，这就是我们<code>heapify</code>的起点</strong><pre><code class="java">//初始建堆
+//@params: tree[] 满二叉树
+//@params: n      节点总数
+public static void buildHeap(int[] tree, int n) {
+int last = tree.length;
+int parent = (last - 1) &gt;&gt; 1; //倒数第二层
+for(int i = parent; i &gt;= 0; i--) {
+  heapify(tree, n, i);
+}
+}
+</code></pre>
+</li>
+</ul>
+<ol start="3">
+<li>现在我们有了一个初始堆，有了能够将更改后的堆构建成新堆的能力，如何进行堆排序？</li>
+</ol>
+<ul>
+<li><strong>堆的特点是父亲节点大于（或小于）儿子节点，那么其根节点必定是最大的（最小的），也就是说我们每次构建好堆，都能得到一个剩余元素的最大值（最小值）</strong></li>
+<li><strong>将根节点（最大值/最小值）与堆尾元素（也就是数组队尾）进行交换，然后将堆尾剔除并记录下来（当然这是逻辑上的剔除，实际上你可以在<code>heapify</code>的时候不传入堆尾即可），并对剩余元素重新进行<code>heapify</code>。重复此步骤，直到已排序的序列长度满足要求。</strong><pre><code class="java">//堆排序
+//@params: tree[] 满二叉树
+//@params: n      节点总数
+public static void heapSort(int[] tree, int n) {
+//构建初始堆
+buildHeap(tree, n);
+//如果只需要k个有序序列，可以提前结束循环
+for(int i = n - 1; i &gt;= 0; i--) {
+  //将根节点与堆尾进行交换
+  int temp = tree[i];
+  tree[i] = tree[0];
+  tree[0] = temp;
+  //剔除堆尾的最大值，对剩余元素重新进行heapify
+  heapify(tree, i, 0);
+}
+}
+</code></pre>
+</li>
+</ul>
+<hr>
+<h2 id="归并排序-vs-快排-vs-堆排序"><a href="#归并排序-vs-快排-vs-堆排序" class="headerlink" title="归并排序 vs 快排 vs 堆排序"></a>归并排序 vs 快排 vs 堆排序</h2><ol>
+<li>如果从<strong>空间复杂度</strong>来考虑，<strong>首选堆排序，然后是快排，最后是归并排序（需要额外的内存空间）</strong></li>
+<li>如果是从<strong>稳定性</strong>来考虑，应选择<strong>归并排序</strong>，因为快排和堆排序并不稳定</li>
+<li>如果从<strong>平均情况下的排序速度</strong>来考虑，应该选择<strong>快排</strong></li>
+</ol>
+<hr>
+<h2 id="7-基数排序（O-N-D-，D为位数，N为元素个数）"><a href="#7-基数排序（O-N-D-，D为位数，N为元素个数）" class="headerlink" title="7.基数排序（O(N*D)，D为位数，N为元素个数）"></a>7.基数排序（<code>O(N*D)</code>，D为位数，N为元素个数）</h2><ul>
+<li>通过对排序的N个元素进行若干趟“分配”与“收集”来实现排序</li>
+<li>基数排序（Radix Sort）不需要交换元素位置，所以是<strong>稳定性排序</strong></li>
+<li><strong>基数排序效率与初始序列是否有序没有关联</strong></li>
+<li>在基数排序中，<strong>对于任何位数上的基数进行装桶操作时，都需要n + r个临时空间</strong></li>
+</ul>
+<p>任何一个阿拉伯数字，它的各个位数上的基数都是以0 ~ 9 来表示的，我们将0 ~ 9视为10个桶。<br>如：给定序列{50,123,543,187,49,30,0,2,11,100}<br><img src="https://tva4.sinaimg.cn/large/007DFXDhly1g647knrqf3j30uw0t5wgc.jpg" alt>  </p>
+<ol>
+<li>首先根据个位数元素分到指定的桶中。</li>
+<li>将桶中元素按顺序依次弹出，即{50,30,0,100,11,2,123,543,187,49}</li>
+<li>再根据十位数将元素分到指定桶中。</li>
+<li>将桶中元素按顺序依次弹出，即{0,100,2,11,123,30,543,49,50,187}</li>
+<li>再根据百位数将元素分到指定桶中。</li>
+<li>将桶中元素按顺序依次弹出，此时元素就已经有序了</li>
+</ol>
+<pre><code class="java">//基数排序
+//不考虑负数的情况
+public static int[] radixSort(int[] in) {
+    int len = in.length;
+    if (len &lt; 2 || in == null) return in;
+    //0~9：10个桶，每一个桶是一个不定长的ArrayList
+    ArrayList&lt;ArrayList&lt;Integer&gt;&gt; buckets = new ArrayList&lt;ArrayList&lt;Integer&gt;&gt;();
+    for (int i = 0; i &lt; 10; i++) buckets.add(new ArrayList&lt;Integer&gt;());
+    //找出序列中的最大值——不能用排序算法，不然还基数排序个什么劲？
+    int max = in[0];
+    for (int i = 1; i &lt; len; i++) max = in[i] &gt; max ? in[i] : max;
+    //根据最大值，判断位数——即需要循环入桶、出桶的次数
+    int digit = 0;
+    while (max != 0) {
+        max /= 10;
+        digit++;
+    }
+
+    //入桶 &amp; 出桶
+    int mod = 10, div = 1;
+    for (int i = 0; i &lt; digit; i++, mod *= 10, div *= 10) {
+        //遍历序列，入桶
+        for (int j = 0; j &lt; len; j++) {
+            int temp = (in[j] % mod) / div;
+            //判断对应位的元素，存入桶中
+            //ArrayList API: T get(int index);  &amp;   add(T t);
+            buckets.get(temp).add(in[j]);
+        }
+        //遍历所有桶，出桶
+        int[] newArray = new int[len];  //出桶序列
+        int cnt = 0;
+        for (int outArrayIndex = 0; outArrayIndex &lt; buckets.size(); outArrayIndex++) {
+            for (int inArrayIndex = 0; inArrayIndex &lt; buckets.get(outArrayIndex).size(); inArrayIndex++) {
+                newArray[cnt++] = buckets.get(outArrayIndex).get(inArrayIndex);
+                //等价于：
+                //newArray[cnt] = buckets.get(outArrayIndex).get(inArrayIndex);
+                //cnt++;
+            }
+            //记得出桶后要清空桶，不能影响下一次循环
+            buckets.get(outArrayIndex).clear();
+        }
+        //出桶序列替换原序列
+        for (int j = 0; j &lt; len; j++) in[j] = newArray[j];
+        }
+        return in;
+    }
+</code></pre>
+<hr>
+<h2 id="8-计数排序"><a href="#8-计数排序" class="headerlink" title="8.计数排序"></a>8.计数排序</h2><p>计数排序（Counting Sort）</p>
+<hr>
+<h2 id="9-桶排序"><a href="#9-桶排序" class="headerlink" title="9.桶排序"></a>9.桶排序</h2><p>桶排序（Bucket Sort）</p>
+<hr>
+<h2 id="10-拓扑排序"><a href="#10-拓扑排序" class="headerlink" title="10.拓扑排序"></a>10.拓扑排序</h2><ul>
+<li>入度：<strong>指向节点的边的个数（比如图中节点1的入度就是0）</strong><br><img src="https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/algorithm/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F.png" alt></li>
+</ul>
+<ol>
+<li>使用<code>BFS</code>进行拓扑排序</li>
+<li>找到图中<strong>入度为0</strong>的节点，<strong>从图中移除</strong></li>
+<li><strong>被移除节点指向的节点，入度减1</strong></li>
+<li>重复2、3</li>
+<li><strong>如果最后不存在入度为0的节点，说明图中有环，这时候拓扑排序无解</strong></li>
+</ol>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/Algorithm-DP/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/DP.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/DP.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                算法专题——动态规划</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/BIO-NIO-AIO/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/nio.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/nio.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                BIO / NIO / AIO</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="www.dragonbaby308.com" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3Avatar.jpeg" itemprop="image" alt="DragonBaby308" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="www.dragonbaby308.com" itemprop="url" rel="author">DragonBaby308</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 DragonBaby308<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2018</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Coding Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">さくら荘そのhojun</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/honjun" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="http://weibo.com/mashirozx?is_all=1" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/资源/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/随想/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/转载/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  转载
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/悦读/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/图集/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  图集
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Lab
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/client/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+            客户端
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/atom.xml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2660651585"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>

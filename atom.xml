@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-12-13T14:37:35.975Z</updated>
+  <updated>2019-12-13T14:43:47.364Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Crond定时任务</title>
+    <link href="/crond/"/>
+    <id>/crond/</id>
+    <published>2019-10-28T14:37:32.000Z</published>
+    <updated>2019-12-13T14:43:47.364Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Crond定时任务&quot;&gt;&lt;a href=&quot;#Crond定时任务&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="/tags/Linux/"/>
+    
+      <category term="ECS" scheme="/tags/ECS/"/>
+    
+      <category term="Crond" scheme="/tags/Crond/"/>
+    
+      <category term="定时任务" scheme="/tags/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>算法专题——动态规划</title>
@@ -50,6 +82,174 @@
       <category term="DP" scheme="/tags/DP/"/>
     
       <category term="递归" scheme="/tags/%E9%80%92%E5%BD%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法专题：排序</title>
+    <link href="/Algorithm-sort/"/>
+    <id>/Algorithm-sort/</id>
+    <published>2019-08-16T12:24:26.000Z</published>
+    <updated>2019-12-13T14:42:21.819Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;排序&quot;&gt;&lt;a href=&quot;#排序&quot; class=&quot;headerlink&quot; title=&quot;排序&quot;&gt;&lt;/a&gt;排序&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;稳定性&quot;&gt;&lt;a href=&quot;#稳定性&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="位运算" scheme="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+      <category term="算法" scheme="/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="递归" scheme="/tags/%E9%80%92%E5%BD%92/"/>
+    
+      <category term="排序" scheme="/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="分治法" scheme="/tags/%E5%88%86%E6%B2%BB%E6%B3%95/"/>
+    
+      <category term="冒泡排序" scheme="/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="选择排序" scheme="/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="插入排序" scheme="/tags/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="希尔排序" scheme="/tags/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="归并排序" scheme="/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="堆排序" scheme="/tags/%E5%A0%86%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="基数排序" scheme="/tags/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="计数排序" scheme="/tags/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="桶排序" scheme="/tags/%E6%A1%B6%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="快排" scheme="/tags/%E5%BF%AB%E6%8E%92/"/>
+    
+      <category term="图" scheme="/tags/%E5%9B%BE/"/>
+    
+      <category term="拓扑排序" scheme="/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="BFS" scheme="/tags/BFS/"/>
+    
+      <category term="队列" scheme="/tags/%E9%98%9F%E5%88%97/"/>
+    
+      <category term="彩虹排序" scheme="/tags/%E5%BD%A9%E8%99%B9%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="双指针" scheme="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    
+      <category term="ArrayList" scheme="/tags/ArrayList/"/>
+    
+      <category term="Arrays" scheme="/tags/Arrays/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BIO / NIO / AIO</title>
+    <link href="/BIO-NIO-AIO/"/>
+    <id>/BIO-NIO-AIO/</id>
+    <published>2019-08-16T11:50:20.000Z</published>
+    <updated>2019-12-13T14:42:51.957Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;BIO-amp-NIO-amp-AIO&quot;&gt;&lt;a href=&quot;#BIO-amp-NIO-amp-AIO&quot; class=&quot;headerlink&quot; title=&quot;BIO &amp;amp; NIO &amp;amp; AIO&quot;&gt;&lt;/a&gt;BIO &amp;amp; NIO &amp;amp;
+        
+      
+    
+    </summary>
+    
+      <category term="Java基础" scheme="/categories/Java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="BIO" scheme="/tags/BIO/"/>
+    
+      <category term="NIO" scheme="/tags/NIO/"/>
+    
+      <category term="Java Base" scheme="/tags/Java-Base/"/>
+    
+      <category term="多线程" scheme="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+      <category term="线程池" scheme="/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/"/>
+    
+      <category term="Future" scheme="/tags/Future/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java中的位运算</title>
+    <link href="/bit-operation/"/>
+    <id>/bit-operation/</id>
+    <published>2019-07-30T04:44:54.000Z</published>
+    <updated>2019-12-13T14:43:19.092Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Java中的位运算&quot;&gt;&lt;a href=&quot;#Java中的位运算&quot; class=&quot;headerlink&quot; title=&quot;Java中的位运算&quot;&gt;&lt;/a&gt;Java中的位运算&lt;/h1&gt;&lt;h2 id=&quot;（一）移位运算&quot;&gt;&lt;a href=&quot;#（一）移位运算&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java基础" scheme="/categories/Java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="ARTSK" scheme="/tags/ARTSK/"/>
+    
+      <category term="位运算" scheme="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+      <category term="HashMap" scheme="/tags/HashMap/"/>
+    
+      <category term="String" scheme="/tags/String/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《Debug》</title>
+    <link href="/Debug/"/>
+    <id>/Debug/</id>
+    <published>2019-05-22T14:37:35.000Z</published>
+    <updated>2019-12-13T14:44:10.300Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;应该是五一假期期间，我在归乡的大巴上偶然间看到了B站的“文豪试炼场”活动，主题是“如果突然世界末日了，我要怎么生存”。&lt;br&gt;  &lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="Novel" scheme="/tags/Novel/"/>
+    
+      <category term="996" scheme="/tags/996/"/>
     
   </entry>
   
