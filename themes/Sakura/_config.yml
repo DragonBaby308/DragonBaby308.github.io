@@ -6,9 +6,9 @@ siteName: DB3
 
 # favicon and site master avatar
 # 标签页小图标：
-favicon: /img/header/db3.png
+favicon: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3.png
 # 头像：
-avatar: /img/header/db3Avatar.jpg
+avatar: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3Avatar.jpg
 
 # 站点URL
 url: https://DragonBaby308.github.io/
@@ -73,7 +73,7 @@ bg:
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(3).jpg.webp
   - /https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg3.jpg
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(4).jpg.webp
-  - https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg3.jpg
+  - https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg1.jpg
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(5).jpg.webp
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(7).jpg.webp
 
@@ -91,7 +91,7 @@ bgclass: filter-dot
 # img：背景图
 startdash:
   # - {url: /theme-sakura/, title: Sakura, desc: 本站 hexo 主题, img: /img/startdash/sakura.md.png}
-  - {url: https://space.bilibili.com/24837083, title: Bilibili, desc: 乾杯！！！, img: /img/startdash/bilibili.jpg}
+  - {url: https://space.bilibili.com/24837083, title: Bilibili, desc: 乾杯！！！, img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/startdash/bilibili.jpg}
 
 
 
@@ -104,10 +104,10 @@ siteBuildingTime: 12/12/2019
 # img：图标
 social:
   GitHub: {url: http://github.com/DragonBaby308, img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/github.png}
-  掘金: {url: https://juejin.im/user/5cef386351882551b47a32f7, img: /img/social/juejin.jpg}
-  BiliBili: {url: https://space.bilibili.com/24837083, img: /img/social/bilibili.jpeg}
-  WeChat: {url: /#, qrcode: /img/social/wechat.jpg, img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/wechat.png}
-  QQ: {url: /#, qrcode: /img/social/qq.jpg, img: https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/social/qq.png}
+  掘金: {url: https://juejin.im/user/5cef386351882551b47a32f7, img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/social/juejin.jpg}
+  BiliBili: {url: https://space.bilibili.com/24837083, img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/social/bilibili.jpeg}
+  WeChat: {url: /#, qrcode: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/social/wechat.jpg, img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/wechat.png}
+  QQ: {url: /#, qrcode: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/social/qq.jpg, img: https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/social/qq.png}
 
 # 社交按钮移动端
 # url：链接
@@ -122,8 +122,8 @@ msocial:
 
 # 赞赏二维码
 donate:
-  alipay: /img/donate/alipay.jpg
-  wechat: /img/donate/wxpay.jpg
+  alipay: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/donate/alipay.jpg
+  wechat: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/donate/wxpay.jpg
 
 # 首页视频
 movies:
