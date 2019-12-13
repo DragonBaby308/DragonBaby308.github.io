@@ -29,7 +29,7 @@ lazyloadImg: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progre
 
 
 # 站点CDN，可以为空，图片需要填完整路径
-cdn: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0
+# cdn: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0
 
 
 # 站点菜单配置【暂时保持，以后慢慢改】
@@ -68,12 +68,12 @@ homeArticleShown: 10
 
 # 背景图片
 bg:
-  - /img/bg/bg1.jpg
+  - https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg3.jpg
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(2).jpg.webp
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(3).jpg.webp
-  - /img/bg/bg3.jpg
+  - /https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg3.jpg
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(4).jpg.webp
-  - /img/bg/bg2.jpg
+  - https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg3.jpg
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(5).jpg.webp
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(7).jpg.webp
 
