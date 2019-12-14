@@ -106,11 +106,11 @@
       <category term="Linux" scheme="/categories/Linux/"/>
     
     
+      <category term="Linux" scheme="/tags/Linux/"/>
+    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
-    
-      <category term="Linux" scheme="/tags/Linux/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
@@ -263,11 +263,11 @@
     
       <category term="Git" scheme="/tags/Git/"/>
     
+      <category term="Go" scheme="/tags/Go/"/>
+    
       <category term="Homebrew" scheme="/tags/Homebrew/"/>
     
       <category term="Mac" scheme="/tags/Mac/"/>
-    
-      <category term="Go" scheme="/tags/Go/"/>
     
       <category term="HTTP" scheme="/tags/HTTP/"/>
     
@@ -570,11 +570,11 @@
       <category term="GitHub" scheme="/categories/GitHub/"/>
     
     
+      <category term="Linux" scheme="/tags/Linux/"/>
+    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
-    
-      <category term="Linux" scheme="/tags/Linux/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
