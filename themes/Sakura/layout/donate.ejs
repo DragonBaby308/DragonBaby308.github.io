@@ -61,7 +61,7 @@
     var MainBox = $('#MainBox');
     var BTCQR = '/images/donate/BTCQR.png'; // 二维码路径
     var AliPayQR  = '<%- (theme.cdn || '') + theme.donate.alipay %>';
-    var WeChanQR  = '<%- (theme.cdn || '') + theme.donate.wechatSQ %>';
+    var WeChanQR  = '<%- (theme.cdn || '') + theme.donate.wechat %>';
 
     function showQR(QR) {
       if (QR) {
@@ -82,7 +82,7 @@
       } else if (thisID === 'AliPay') {
         showQR(AliPayQR);
       } else if (thisID === 'WeChat') {
-        showQR(WeChanQR);
+        showQR(WeChan);
       }
     });
 
