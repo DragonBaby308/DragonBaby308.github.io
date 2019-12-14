@@ -17,7 +17,7 @@ tags:
 - Future
 keywords:
 description:
-photos: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/nio.jpg
+photos: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/posts/nio.png
 ---
 
 #  BIO & NIO & AIO
