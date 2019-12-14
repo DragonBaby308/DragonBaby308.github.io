@@ -1,7 +1,7 @@
 ---
 title: Docker应用：使用NextCloud搭建私有云盘
 author: DragonBaby308
-avatar: 'https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3Avatar.jpeg'
+avatar: 'https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/header/avatar.jpg'
 authorLink: www.dragonbaby308.com
 authorAbout:
 authorDesc:

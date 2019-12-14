@@ -1,7 +1,7 @@
 ---
 title: GayHub上一些有趣的项目【持续更新~】
 author: DragonBaby308
-avatar: 'https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3Avatar.jpeg'
+avatar: 'https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/header/avatar.jpg'
 authorLink: www.dragonbaby308.com
 authorAbout:
 authorDesc:
