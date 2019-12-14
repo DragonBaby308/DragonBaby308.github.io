@@ -132,7 +132,7 @@ msocial:
 # 赞赏二维码
 donate:
   alipay: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/donate/alipay.jpg
-  wechat: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/donate/wxpay.jpg
+  wechat: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.3/img/donate/wxpay.jpg
 
 # 首页视频
 movies:
