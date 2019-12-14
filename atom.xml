@@ -156,13 +156,13 @@
     
       <category term="Go" scheme="/tags/Go/"/>
     
-      <category term="TCP" scheme="/tags/TCP/"/>
-    
-      <category term="HTTP" scheme="/tags/HTTP/"/>
+      <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
     
       <category term="Goroutine" scheme="/tags/Goroutine/"/>
     
-      <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
+      <category term="TCP" scheme="/tags/TCP/"/>
+    
+      <category term="HTTP" scheme="/tags/HTTP/"/>
     
       <category term="多线程" scheme="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
@@ -229,9 +229,9 @@
     
       <category term="Go" scheme="/tags/Go/"/>
     
-      <category term="Goroutine" scheme="/tags/Goroutine/"/>
-    
       <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
+    
+      <category term="Goroutine" scheme="/tags/Goroutine/"/>
     
       <category term="OS" scheme="/tags/OS/"/>
     
@@ -263,23 +263,23 @@
     
       <category term="Git" scheme="/tags/Git/"/>
     
+      <category term="Go" scheme="/tags/Go/"/>
+    
       <category term="Homebrew" scheme="/tags/Homebrew/"/>
     
       <category term="Mac" scheme="/tags/Mac/"/>
     
-      <category term="Go" scheme="/tags/Go/"/>
-    
-      <category term="HTTP" scheme="/tags/HTTP/"/>
+      <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
     
       <category term="Goroutine" scheme="/tags/Goroutine/"/>
     
-      <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
+      <category term="OS" scheme="/tags/OS/"/>
+    
+      <category term="HTTP" scheme="/tags/HTTP/"/>
     
       <category term="多线程" scheme="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
       <category term="JSON" scheme="/tags/JSON/"/>
-    
-      <category term="OS" scheme="/tags/OS/"/>
     
       <category term="GC" scheme="/tags/GC/"/>
     
@@ -346,9 +346,9 @@
     
       <category term="MySQL" scheme="/tags/MySQL/"/>
     
-      <category term="HTTP" scheme="/tags/HTTP/"/>
-    
       <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
+    
+      <category term="HTTP" scheme="/tags/HTTP/"/>
     
       <category term="Redis" scheme="/tags/Redis/"/>
     
@@ -516,7 +516,7 @@
     <link href="/BIO-NIO-AIO/"/>
     <id>/BIO-NIO-AIO/</id>
     <published>2019-08-16T11:50:20.000Z</published>
-    <updated>2019-12-14T02:55:43.343Z</updated>
+    <updated>2019-12-14T07:05:23.683Z</updated>
     
     <summary type="html">
     
