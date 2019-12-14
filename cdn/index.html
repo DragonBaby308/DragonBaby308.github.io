@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Tag: pip | DragonBaby308</title>
+  <title itemprop="name">使用jsDeliver和GitHub白嫖CDN | DragonBaby308</title>
   
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3.png">
   
@@ -362,64 +362,164 @@
   </div>
 </header>
 
-      
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="pip.img" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/summary_img/gakki/9.jpeg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/summary_img/gakki/9.jpeg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      使用jsDeliver和GitHub白嫖CDN</h1>
+      <p class="entry-census">
+        <span>
+          <a href="www.dragonbaby308.com">
+            <img src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/header/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="www.dragonbaby308.com">DragonBaby308</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2019-12-14<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
   </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">pip</h1>
-  </header>
-</div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      
-  <!-- 首页默认取最最新文章集 -->
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/oh-my-zsh/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="使用jsDeliver和GitHub白嫖CDN"><a href="#使用jsDeliver和GitHub白嫖CDN" class="headerlink" title="使用jsDeliver和GitHub白嫖CDN"></a>使用<code>jsDeliver</code>和<code>GitHub</code>白嫖<code>CDN</code></h1><p>查看<a href="https://www.jsdelivr.com/?docs=gh" target="_blank" rel="noopener">文档</a>可知，<code>jsDeliver CDN</code>主要使用了<code>GitHub</code>的<code>release</code>版本特性：</p>
+<pre><code class="text">// load any GitHub release, commit, or branch
+// note: we recommend using npm for projects that support it
+https://cdn.jsdelivr.net/gh/user/repo@version/file
+</code></pre>
+<ol>
+<li><p>新建<code>GitHub public</code>仓库，名称就叫<code>cdn</code>。</p>
+<blockquote>
+<p><img src="https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/git/cdn/newRepository.png" alt></p>
+</blockquote>
+</li>
+<li><p>在本地电脑克隆远程仓库，将需要的静态资源（比如图片、不超过<code>20M</code>的视频……）加入本地仓库，然后提交到远程仓库。</p>
+<blockquote>
+<p>默认你已经配置好了<code>GitHub</code>的<code>SSH</code>，并且本地<code>Git</code>也已经配置用户和邮箱。<br>参考<a href="http://www.dragonbaby308.com/progit/#%E9%A6%96%E6%AC%A1%E7%94%9F%E6%88%90SSH%E5%AF%86%E9%92%A5" target="_blank" rel="noopener">《Pro Git》</a></p>
+</blockquote>
+</li>
+</ol>
+<pre><code class="bash">git clone git@github.com:DragonBaby308/cdn.git
+cd cdn
+//添加静态资源，建议创建不同目录存储，防止太乱
+mkdir js
+mkdir img
+mkdir movie
+git add .
+git commit -m &quot;release 1.0&quot;
+git push
+</code></pre>
+<ol start="3">
+<li><p>在<code>GitHub</code>远程仓库中点击<code>release</code>发布。</p>
+<blockquote>
+<p><img src="https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/git/cdn/release.png" alt><br><img src="https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/git/cdn/release10.png" alt></p>
+</blockquote>
+</li>
+<li><p>通过<code>jsDeliver</code>引用资源</p>
+</li>
+</ol>
+<pre><code class="text">//加载js
+https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/js/jquery.js
+//加载图片
+https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/db3.png
+</code></pre>
+
         </div>
-        <img width="150" height="150" src="https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/mac/iterm2_oh-my-zsh/FujikoIterm2.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/oh-my-zsh/">
-    iTerm2和oh-my-zsh联合打造Mac终端</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2019-12-10</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/oh-my-zsh/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/donate/alipay.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/donate/wxpay.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/hexo-theme-sakura/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/hexo/sakura.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://dragonbaby308.oss-cn-hangzhou.aliyuncs.com/hexo/sakura.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Hexo主题 —— Sakura 入门</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "1Gb7SN48ui6FMug8B0CxMVY0-gzGzoHsz",
+        appKey: "WQONbJx0UduUSW5pDJQSQowU",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
-
-      <div class="clearer">
-      </div>
-    </main>
-    <!--  -->
-    
-  </div>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="www.dragonbaby308.com" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/header/avatar.jpg" itemprop="image" alt="DragonBaby308" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="www.dragonbaby308.com" itemprop="url" rel="author">DragonBaby308</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>

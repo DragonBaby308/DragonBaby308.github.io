@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-12-14T02:31:01.037Z</updated>
+  <updated>2019-12-14T02:55:20.185Z</updated>
   <id>/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>使用jsDeliver和GitHub白嫖CDN</title>
+    <link href="/cdn/"/>
+    <id>/cdn/</id>
+    <published>2019-12-14T02:53:13.000Z</published>
+    <updated>2019-12-14T02:55:20.185Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;使用jsDeliver和GitHub白嫖CDN&quot;&gt;&lt;a href=&quot;#使用jsDeliver和GitHub白嫖CDN&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="GitHub" scheme="/categories/GitHub/"/>
+    
+    
+      <category term="CDN" scheme="/tags/CDN/"/>
+    
+      <category term="jsDeliver" scheme="/tags/jsDeliver/"/>
+    
+      <category term="GitHub" scheme="/tags/GitHub/"/>
+    
+      <category term="Git" scheme="/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo主题 —— Sakura 入门</title>
     <link href="/hexo-theme-sakura/"/>
     <id>/hexo-theme-sakura/</id>
     <published>2019-12-13T09:20:00.000Z</published>
-    <updated>2019-12-14T02:31:01.037Z</updated>
+    <updated>2019-12-14T03:01:25.893Z</updated>
     
     <summary type="html">
     
@@ -38,6 +70,10 @@
       <category term="Hexo" scheme="/categories/Hexo/"/>
     
     
+      <category term="CDN" scheme="/tags/CDN/"/>
+    
+      <category term="jsDeliver" scheme="/tags/jsDeliver/"/>
+    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
@@ -46,10 +82,6 @@
     
       <category term="Hexo主题" scheme="/tags/Hexo%E4%B8%BB%E9%A2%98/"/>
     
-      <category term="CDN" scheme="/tags/CDN/"/>
-    
-      <category term="jsDeliver" scheme="/tags/jsDeliver/"/>
-    
   </entry>
   
   <entry>
@@ -57,7 +89,7 @@
     <link href="/oh-my-zsh/"/>
     <id>/oh-my-zsh/</id>
     <published>2019-12-10T14:21:27.000Z</published>
-    <updated>2019-12-13T14:50:05.335Z</updated>
+    <updated>2019-12-14T02:58:00.153Z</updated>
     
     <summary type="html">
     
@@ -74,11 +106,11 @@
       <category term="Linux" scheme="/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="/tags/Linux/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="Linux" scheme="/tags/Linux/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
@@ -103,7 +135,7 @@
     <link href="/go-web/"/>
     <id>/go-web/</id>
     <published>2019-12-04T15:37:01.000Z</published>
-    <updated>2019-12-13T14:47:46.084Z</updated>
+    <updated>2019-12-14T02:57:15.683Z</updated>
     
     <summary type="html">
     
@@ -147,7 +179,7 @@
     <link href="/github/"/>
     <id>/github/</id>
     <published>2019-11-28T16:01:55.000Z</published>
-    <updated>2019-12-13T14:47:25.135Z</updated>
+    <updated>2019-12-14T02:57:07.226Z</updated>
     
     <summary type="html">
     
@@ -178,7 +210,7 @@
     <link href="/goroutine/"/>
     <id>/goroutine/</id>
     <published>2019-11-22T14:48:10.000Z</published>
-    <updated>2019-12-13T14:48:24.930Z</updated>
+    <updated>2019-12-14T02:57:31.210Z</updated>
     
     <summary type="html">
     
@@ -210,7 +242,7 @@
     <link href="/go/"/>
     <id>/go/</id>
     <published>2019-11-20T15:03:51.000Z</published>
-    <updated>2019-12-13T14:48:06.859Z</updated>
+    <updated>2019-12-14T02:57:23.259Z</updated>
     
     <summary type="html">
     
@@ -260,7 +292,7 @@
     <link href="/crond/"/>
     <id>/crond/</id>
     <published>2019-10-28T14:37:32.000Z</published>
-    <updated>2019-12-13T14:43:47.364Z</updated>
+    <updated>2019-12-14T02:56:00.652Z</updated>
     
     <summary type="html">
     
@@ -292,7 +324,7 @@
     <link href="/uid/"/>
     <id>/uid/</id>
     <published>2019-09-10T14:35:30.000Z</published>
-    <updated>2019-12-13T15:00:29.817Z</updated>
+    <updated>2019-12-14T02:58:23.034Z</updated>
     
     <summary type="html">
     
@@ -337,7 +369,7 @@
     <link href="/Distributed-System/"/>
     <id>/Distributed-System/</id>
     <published>2019-09-06T13:01:40.000Z</published>
-    <updated>2019-12-13T14:45:38.871Z</updated>
+    <updated>2019-12-14T02:56:32.487Z</updated>
     
     <summary type="html">
     
@@ -376,7 +408,7 @@
     <link href="/Algorithm-DP/"/>
     <id>/Algorithm-DP/</id>
     <published>2019-09-03T14:40:22.000Z</published>
-    <updated>2019-12-13T14:37:35.975Z</updated>
+    <updated>2019-12-14T02:55:28.715Z</updated>
     
     <summary type="html">
     
@@ -413,7 +445,7 @@
     <link href="/Algorithm-sort/"/>
     <id>/Algorithm-sort/</id>
     <published>2019-08-16T12:24:26.000Z</published>
-    <updated>2019-12-13T14:42:21.819Z</updated>
+    <updated>2019-12-14T02:55:35.829Z</updated>
     
     <summary type="html">
     
@@ -484,7 +516,7 @@
     <link href="/BIO-NIO-AIO/"/>
     <id>/BIO-NIO-AIO/</id>
     <published>2019-08-16T11:50:20.000Z</published>
-    <updated>2019-12-13T14:42:51.957Z</updated>
+    <updated>2019-12-14T02:55:43.343Z</updated>
     
     <summary type="html">
     
@@ -520,7 +552,7 @@
     <link href="/fun-with-GayHub/"/>
     <id>/fun-with-GayHub/</id>
     <published>2019-08-04T09:47:11.000Z</published>
-    <updated>2019-12-13T14:47:01.653Z</updated>
+    <updated>2019-12-14T02:56:58.272Z</updated>
     
     <summary type="html">
     
@@ -538,11 +570,11 @@
       <category term="GitHub" scheme="/categories/GitHub/"/>
     
     
-      <category term="Linux" scheme="/tags/Linux/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="Linux" scheme="/tags/Linux/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
@@ -571,7 +603,7 @@
     <link href="/bit-operation/"/>
     <id>/bit-operation/</id>
     <published>2019-07-30T04:44:54.000Z</published>
-    <updated>2019-12-13T14:43:19.092Z</updated>
+    <updated>2019-12-14T02:55:49.364Z</updated>
     
     <summary type="html">
     
@@ -603,7 +635,7 @@
     <link href="/raspberry-pi/"/>
     <id>/raspberry-pi/</id>
     <published>2019-07-07T05:59:25.000Z</published>
-    <updated>2019-12-13T14:49:39.354Z</updated>
+    <updated>2019-12-14T02:58:16.063Z</updated>
     
     <summary type="html">
     
@@ -631,7 +663,7 @@
     <link href="/docker-nextcloud/"/>
     <id>/docker-nextcloud/</id>
     <published>2019-07-06T12:13:06.000Z</published>
-    <updated>2019-12-13T14:46:22.008Z</updated>
+    <updated>2019-12-14T02:56:42.945Z</updated>
     
     <summary type="html">
     
@@ -659,7 +691,7 @@
     <link href="/docker/"/>
     <id>/docker/</id>
     <published>2019-07-01T05:21:30.000Z</published>
-    <updated>2019-12-13T14:46:38.866Z</updated>
+    <updated>2019-12-14T02:56:50.696Z</updated>
     
     <summary type="html">
     
@@ -710,7 +742,7 @@
     <link href="/Design-Pattern/"/>
     <id>/Design-Pattern/</id>
     <published>2019-05-31T06:34:05.000Z</published>
-    <updated>2019-12-13T14:45:10.442Z</updated>
+    <updated>2019-12-14T02:56:16.108Z</updated>
     
     <summary type="html">
     
@@ -755,7 +787,7 @@
     <link href="/Debug/"/>
     <id>/Debug/</id>
     <published>2019-05-22T14:37:35.000Z</published>
-    <updated>2019-12-13T14:44:10.300Z</updated>
+    <updated>2019-12-14T02:56:08.841Z</updated>
     
     <summary type="html">
     
@@ -776,52 +808,6 @@
       <category term="Novel" scheme="/tags/Novel/"/>
     
       <category term="996" scheme="/tags/996/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>静态博客Hexo搭建教程（本地、服务器两开花）</title>
-    <link href="/hexo/"/>
-    <id>/hexo/</id>
-    <published>2019-05-22T12:31:42.000Z</published>
-    <updated>2019-12-13T14:50:23.450Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;静态博客Hexo搭建-——-本地、服务器两开花&quot;&gt;&lt;a href=&quot;#静态博客Hexo搭建-——-本地、服务器两开花&quot; class=&quot;headerlink&quot; title=&quot;静态博客Hexo搭建 —— 本地、服务器两开花&quot;&gt;&lt;/a&gt;静态博客Hexo搭建 ——
-        
-      
-    
-    </summary>
-    
-      <category term="Hexo" scheme="/categories/Hexo/"/>
-    
-    
-      <category term="Linux" scheme="/tags/Linux/"/>
-    
-      <category term="Git" scheme="/tags/Git/"/>
-    
-      <category term="Shell" scheme="/tags/Shell/"/>
-    
-      <category term="Vim" scheme="/tags/Vim/"/>
-    
-      <category term="Node.js" scheme="/tags/Node-js/"/>
-    
-      <category term="JS" scheme="/tags/JS/"/>
-    
-      <category term="Mac" scheme="/tags/Mac/"/>
-    
-      <category term="Hexo框架" scheme="/tags/Hexo%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="Nginx" scheme="/tags/Nginx/"/>
-    
-      <category term="阿里云ECS" scheme="/tags/%E9%98%BF%E9%87%8C%E4%BA%91ECS/"/>
-    
-      <category term="Windows" scheme="/tags/Windows/"/>
     
   </entry>
   
