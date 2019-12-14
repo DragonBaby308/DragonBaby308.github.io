@@ -119,7 +119,7 @@
               
                 <li>
                   <a href="/#" target="_blank" class="social-github" title="QQ">
-                    <img src="https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/social/qq.png">
+                    <img src="https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.3/img/social/qq.svg">
                   </a>
                 </li>
               
@@ -740,6 +740,23 @@ links:
 <h2 id="（三）其他魔改"><a href="#（三）其他魔改" class="headerlink" title="（三）其他魔改"></a>（三）其他魔改</h2><h3 id="1-startdash名称更改"><a href="#1-startdash名称更改" class="headerlink" title="1.startdash名称更改"></a>1.<code>startdash</code>名称更改</h3><p>将<code>/themes/Sakura/layout/_partial/startdash.ejs</code>中的<code>&lt;h1 ...&gt;startdash&lt;/h1&gt;</code>改为<code>&lt;h1 ...&gt;快速导航&lt;/h1&gt;</code>。</p>
 <h3 id="2-Discovery名称更改"><a href="#2-Discovery名称更改" class="headerlink" title="2.Discovery名称更改"></a>2.<code>Discovery</code>名称更改</h3><p>将<code>/themes/Sakura/layout/index.ejs</code>中的<code>&lt;h1 ...&gt;Discovery&lt;/h1&gt;</code>改为<code>&lt;h1 ...&gt;正文&lt;/h1&gt;</code>。</p>
 <h3 id="3-文章链接更改"><a href="#3-文章链接更改" class="headerlink" title="3.文章链接更改"></a>3.文章链接更改</h3><p>将<code>_config.yaml</code>中的<code>permalink</code>属性修改为<code>permalink: :title/</code>。</p>
+<h3 id="4-新建帖子头部格式"><a href="#4-新建帖子头部格式" class="headerlink" title="4.新建帖子头部格式"></a>4.新建帖子头部格式</h3><p>修改<code>/scaffolds/post.md</code>，可以将<code>hexo n</code>生成的博客头改为自定义格式：</p>
+<pre><code class="md">---
+title: {{ title }}
+date: {{ date }}
+author: DragonBaby308
+avatar: &#39;https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/header/avatar.jpg&#39;
+authorLink: www.dragonbaby308.com
+authorAbout: 气是清风肉是泥。
+authorDesc: 佯狂难免假成真。
+categories: xxx
+comments: true
+tags: 
+keywords: 
+description: 
+photos: xxx
+---
+</code></pre>
 
         </div>
         <!-- .entry-content -->
@@ -843,7 +860,7 @@ links:
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -855,10 +872,10 @@ links:
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: '文章',
-            // PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
