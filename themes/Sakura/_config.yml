@@ -8,7 +8,7 @@ siteName: DB3
 # 标签页小图标：
 favicon: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3.png
 # 头像：
-avatar: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/header/db3Avatar.jpg
+avatar: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/header/avatar.jpg
 
 # 站点URL
 url: https://DragonBaby308.github.io/
@@ -77,6 +77,7 @@ homeArticleShown: 10
 # 背景图片
 bg:
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(2).jpg.webp
+  - https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/bg/bg4.jpg
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(3).jpg.webp
   - https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/bg/bg2.jpg
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(4).jpg.webp

@@ -46,7 +46,7 @@ insight:
 算法:
     zh: 程序 = 数据结构 + 算法
     en: Algorithm
-    img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/categories/Algorithm.jpg
+    img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/categories/Algorithm.jpg
 Java基础:
     zh: Java是世界上最好的语言！来战！
     en: Java
@@ -54,7 +54,7 @@ Java基础:
 Linux:
     zh: Talk is cheap, show me the code.
     en: Linux
-    img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/categories/Linux.jpg
+    img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/categories/Linux.jpg
 随笔:
     zh: 我有一个埋在心里的梦想，就是成为一个畅销小说家，没有和几个人说过。
     en: Code & Poetry.
@@ -74,15 +74,15 @@ Docker:
 Hexo:
     zh: Hexo是非常好用的静态博客。 ——  海氏.沃兹.基硕德
     en: Hexo
-    img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/categories/Hexo.jpg
+    img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/categories/Hexo.jpg
 GitHub:
     zh: 全世界最大同性交友平台 ——
     en: GayHub
-    img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/categories/GitHub.jpg
+    img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/categories/GitHub.jpg
 Go:
     zh: Go语言设计得非常人性化，我愿意把它作为第二语言。
     en: GoLang
-    img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/categories/Go.jpg
+    img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/categories/Go.jpg
 #category
 # 技术:
 #     zh: 野生技术协会

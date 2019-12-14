@@ -240,6 +240,7 @@ aplayer:
   mutex: true
 
 # Valine评论
+# 记得要在LeanCloud -> 设置 -> 安全中心 -> web安全域名 中，将新域名加进去
 valine: true
 v_appId: XXXXX
 v_appKey: XXXXX
