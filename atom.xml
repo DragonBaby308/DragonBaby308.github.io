@@ -263,10 +263,6 @@
     
       <category term="Git" scheme="/tags/Git/"/>
     
-      <category term="Homebrew" scheme="/tags/Homebrew/"/>
-    
-      <category term="Mac" scheme="/tags/Mac/"/>
-    
       <category term="Go" scheme="/tags/Go/"/>
     
       <category term="HTTP" scheme="/tags/HTTP/"/>
@@ -278,6 +274,10 @@
       <category term="多线程" scheme="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
       <category term="JSON" scheme="/tags/JSON/"/>
+    
+      <category term="Homebrew" scheme="/tags/Homebrew/"/>
+    
+      <category term="Mac" scheme="/tags/Mac/"/>
     
       <category term="OS" scheme="/tags/OS/"/>
     
