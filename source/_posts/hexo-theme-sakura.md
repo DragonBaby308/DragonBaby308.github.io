@@ -422,3 +422,27 @@ links:
 ###  3.文章链接更改
 
 将`_config.yaml`中的`permalink`属性修改为`permalink: :title/`。
+
+###  4.新建帖子头部格式
+
+修改`/scaffolds/post.md`，可以将`hexo n`生成的博客头改为自定义格式：
+
+```md
+---
+title: {{ title }}
+date: {{ date }}
+author: DragonBaby308
+avatar: 'https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/header/avatar.jpg'
+authorLink: www.dragonbaby308.com
+authorAbout: 气是清风肉是泥。
+authorDesc: 佯狂难免假成真。
+categories: xxx
+comments: true
+tags: 
+keywords: 
+description: 
+photos: xxx
+---
+```
+
+
