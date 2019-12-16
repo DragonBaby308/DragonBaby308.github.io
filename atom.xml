@@ -156,13 +156,13 @@
     
       <category term="Go" scheme="/tags/Go/"/>
     
-      <category term="TCP" scheme="/tags/TCP/"/>
-    
-      <category term="HTTP" scheme="/tags/HTTP/"/>
+      <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
     
       <category term="Goroutine" scheme="/tags/Goroutine/"/>
     
-      <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
+      <category term="TCP" scheme="/tags/TCP/"/>
+    
+      <category term="HTTP" scheme="/tags/HTTP/"/>
     
       <category term="多线程" scheme="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
@@ -229,9 +229,9 @@
     
       <category term="Go" scheme="/tags/Go/"/>
     
-      <category term="Goroutine" scheme="/tags/Goroutine/"/>
-    
       <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
+    
+      <category term="Goroutine" scheme="/tags/Goroutine/"/>
     
       <category term="OS" scheme="/tags/OS/"/>
     
@@ -269,17 +269,17 @@
     
       <category term="Go" scheme="/tags/Go/"/>
     
-      <category term="HTTP" scheme="/tags/HTTP/"/>
+      <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
     
       <category term="Goroutine" scheme="/tags/Goroutine/"/>
     
-      <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
+      <category term="OS" scheme="/tags/OS/"/>
+    
+      <category term="HTTP" scheme="/tags/HTTP/"/>
     
       <category term="多线程" scheme="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
       <category term="JSON" scheme="/tags/JSON/"/>
-    
-      <category term="OS" scheme="/tags/OS/"/>
     
       <category term="GC" scheme="/tags/GC/"/>
     
@@ -346,9 +346,9 @@
     
       <category term="MySQL" scheme="/tags/MySQL/"/>
     
-      <category term="HTTP" scheme="/tags/HTTP/"/>
-    
       <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
+    
+      <category term="HTTP" scheme="/tags/HTTP/"/>
     
       <category term="Redis" scheme="/tags/Redis/"/>
     
