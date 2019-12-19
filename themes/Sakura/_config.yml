@@ -22,7 +22,8 @@ pjax: 1
 mathjax: 0
 
 # 公告
-notice: 我不玩游戏，我定规则。
+notice: 出去散散心，早点回家过年，冲击金三银四了。
+  # 我不玩游戏，我定规则。
 
 # 懒加载的加载中图片
 lazyloadImg: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg
