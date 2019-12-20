@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-12-17T13:32:04.689Z</updated>
+  <updated>2019-12-20T15:52:18.578Z</updated>
   <id>/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Transaction-Consistency</title>
+    <title>分布式事务解决方案 &amp; 一致性协议</title>
     <link href="/Transaction-Consistency/"/>
     <id>/Transaction-Consistency/</id>
     <published>2019-12-17T12:47:23.000Z</published>
-    <updated>2019-12-17T13:32:04.689Z</updated>
+    <updated>2019-12-20T15:52:18.578Z</updated>
     
     <summary type="html">
     
@@ -158,11 +158,11 @@
       <category term="Linux" scheme="/categories/Linux/"/>
     
     
+      <category term="Linux" scheme="/tags/Linux/"/>
+    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
-    
-      <category term="Linux" scheme="/tags/Linux/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
@@ -622,11 +622,11 @@
       <category term="GitHub" scheme="/categories/GitHub/"/>
     
     
+      <category term="Linux" scheme="/tags/Linux/"/>
+    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
-    
-      <category term="Linux" scheme="/tags/Linux/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
