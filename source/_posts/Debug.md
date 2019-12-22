@@ -1,8 +1,8 @@
 ---
 title: 《Debug》
 author: 李唐
-avatar: 'https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/header/avatar.jpg'
-authorLink: www.dragonbaby308.com
+avatar: 'https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.4/img/header/LeeTang.jpeg'
+authorLink: 
 authorAbout:
 authorDesc:
 categories: 随笔
