@@ -1,6 +1,6 @@
 ---
 title: 《Debug》
-author: DragonBaby308
+author: 李唐
 avatar: 'https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/header/avatar.jpg'
 authorLink: www.dragonbaby308.com
 authorAbout:
