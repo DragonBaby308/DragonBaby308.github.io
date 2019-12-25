@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-12-23T13:30:28.207Z</updated>
+  <updated>2019-12-25T08:13:47.605Z</updated>
   <id>/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="/3pigs/"/>
     <id>/3pigs/</id>
     <published>2019-12-22T09:48:48.000Z</published>
-    <updated>2019-12-23T13:30:28.207Z</updated>
+    <updated>2019-12-25T08:13:47.605Z</updated>
     
     <summary type="html">
     
@@ -185,11 +185,11 @@
       <category term="Linux" scheme="/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="/tags/Linux/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="Linux" scheme="/tags/Linux/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
@@ -342,11 +342,11 @@
     
       <category term="Git" scheme="/tags/Git/"/>
     
+      <category term="Go" scheme="/tags/Go/"/>
+    
       <category term="Homebrew" scheme="/tags/Homebrew/"/>
     
       <category term="Mac" scheme="/tags/Mac/"/>
-    
-      <category term="Go" scheme="/tags/Go/"/>
     
       <category term="HTTP" scheme="/tags/HTTP/"/>
     
@@ -649,11 +649,11 @@
       <category term="GitHub" scheme="/categories/GitHub/"/>
     
     
-      <category term="Linux" scheme="/tags/Linux/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="Linux" scheme="/tags/Linux/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
