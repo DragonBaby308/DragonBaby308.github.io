@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-12-26T14:59:44.219Z</updated>
+  <updated>2019-12-25T11:06:15.235Z</updated>
   <id>/</id>
   
   <author>
@@ -15,30 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test</title>
-    <link href="/test/"/>
-    <id>/test/</id>
-    <published>2019-12-26T14:55:50.000Z</published>
-    <updated>2019-12-26T14:59:44.219Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="xxx" scheme="/categories/xxx/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>《三只小猪》初稿</title>
@@ -209,11 +185,11 @@
       <category term="Linux" scheme="/categories/Linux/"/>
     
     
+      <category term="Linux" scheme="/tags/Linux/"/>
+    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
-    
-      <category term="Linux" scheme="/tags/Linux/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
@@ -673,11 +649,11 @@
       <category term="GitHub" scheme="/categories/GitHub/"/>
     
     
+      <category term="Linux" scheme="/tags/Linux/"/>
+    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
-    
-      <category term="Linux" scheme="/tags/Linux/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
@@ -786,6 +762,57 @@
       <category term="Docker" scheme="/tags/Docker/"/>
     
       <category term="NextCloud" scheme="/tags/NextCloud/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 、 k8s 基础</title>
+    <link href="/docker/"/>
+    <id>/docker/</id>
+    <published>2019-07-01T05:21:30.000Z</published>
+    <updated>2019-12-14T02:56:50.696Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Docker-、-k8s-基础&quot;&gt;&lt;a href=&quot;#Docker-、-k8s-基础&quot; class=&quot;headerlink&quot; title=&quot;Docker 、 k8s 基础&quot;&gt;&lt;/a&gt;Docker 、 k8s 基础&lt;/h1&gt;&lt;hr&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="Docker" scheme="/categories/Docker/"/>
+    
+    
+      <category term="分布式" scheme="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+    
+      <category term="MySQL" scheme="/tags/MySQL/"/>
+    
+      <category term="高可用" scheme="/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/"/>
+    
+      <category term="Docker" scheme="/tags/Docker/"/>
+    
+      <category term="Redis" scheme="/tags/Redis/"/>
+    
+      <category term="MongoDB" scheme="/tags/MongoDB/"/>
+    
+      <category term="Spring" scheme="/tags/Spring/"/>
+    
+      <category term="Maven" scheme="/tags/Maven/"/>
+    
+      <category term="k8s" scheme="/tags/k8s/"/>
+    
+      <category term="架构" scheme="/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+      <category term="REST" scheme="/tags/REST/"/>
+    
+      <category term="微服务" scheme="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    
+      <category term="etcd" scheme="/tags/etcd/"/>
     
   </entry>
   
