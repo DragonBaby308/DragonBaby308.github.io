@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-01-02T12:18:42.285Z</updated>
+  <updated>2020-01-03T15:00:33.325Z</updated>
   <id>/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>go-orm</title>
+    <title>通过Beego ORM操作数据库</title>
     <link href="/go-orm/"/>
     <id>/go-orm/</id>
     <published>2020-01-02T12:16:50.000Z</published>
-    <updated>2020-01-02T12:18:42.285Z</updated>
+    <updated>2020-01-03T15:00:33.325Z</updated>
     
     <summary type="html">
     
@@ -151,13 +151,13 @@
       <category term="GitHub" scheme="/categories/GitHub/"/>
     
     
-      <category term="GitHub" scheme="/tags/GitHub/"/>
-    
-      <category term="Git" scheme="/tags/Git/"/>
-    
       <category term="CDN" scheme="/tags/CDN/"/>
     
       <category term="jsDeliver" scheme="/tags/jsDeliver/"/>
+    
+      <category term="GitHub" scheme="/tags/GitHub/"/>
+    
+      <category term="Git" scheme="/tags/Git/"/>
     
   </entry>
   
@@ -183,13 +183,13 @@
       <category term="Hexo" scheme="/categories/Hexo/"/>
     
     
-      <category term="GitHub" scheme="/tags/GitHub/"/>
-    
-      <category term="Git" scheme="/tags/Git/"/>
-    
       <category term="CDN" scheme="/tags/CDN/"/>
     
       <category term="jsDeliver" scheme="/tags/jsDeliver/"/>
+    
+      <category term="GitHub" scheme="/tags/GitHub/"/>
+    
+      <category term="Git" scheme="/tags/Git/"/>
     
       <category term="Hexo框架" scheme="/tags/Hexo%E6%A1%86%E6%9E%B6/"/>
     
@@ -219,11 +219,11 @@
       <category term="Linux" scheme="/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="/tags/Linux/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="Linux" scheme="/tags/Linux/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
@@ -265,13 +265,13 @@
       <category term="Go" scheme="/categories/Go/"/>
     
     
+      <category term="GitHub" scheme="/tags/GitHub/"/>
+    
       <category term="Go" scheme="/tags/Go/"/>
     
       <category term="Beego" scheme="/tags/Beego/"/>
     
       <category term="bee" scheme="/tags/bee/"/>
-    
-      <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="TCP" scheme="/tags/TCP/"/>
     
@@ -310,11 +310,11 @@
       <category term="GitHub" scheme="/categories/GitHub/"/>
     
     
-      <category term="Go" scheme="/tags/Go/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="Go" scheme="/tags/Go/"/>
     
   </entry>
   
@@ -372,11 +372,11 @@
       <category term="Go" scheme="/categories/Go/"/>
     
     
-      <category term="Go" scheme="/tags/Go/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="Go" scheme="/tags/Go/"/>
     
       <category term="Homebrew" scheme="/tags/Homebrew/"/>
     
@@ -683,11 +683,11 @@
       <category term="GitHub" scheme="/categories/GitHub/"/>
     
     
-      <category term="Linux" scheme="/tags/Linux/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="Linux" scheme="/tags/Linux/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
