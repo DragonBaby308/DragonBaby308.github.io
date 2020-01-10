@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-01-03T15:00:33.325Z</updated>
+  <updated>2019-12-25T11:06:15.235Z</updated>
   <id>/</id>
   
   <author>
@@ -15,40 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>通过Beego ORM操作数据库</title>
-    <link href="/go-orm/"/>
-    <id>/go-orm/</id>
-    <published>2020-01-02T12:16:50.000Z</published>
-    <updated>2020-01-03T15:00:33.325Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;通过Beego-ORM操作数据库&quot;&gt;&lt;a href=&quot;#通过Beego-ORM操作数据库&quot; class=&quot;headerlink&quot; title=&quot;通过Beego ORM操作数据库&quot;&gt;&lt;/a&gt;通过&lt;code&gt;Beego
-        
-      
-    
-    </summary>
-    
-      <category term="Go" scheme="/categories/Go/"/>
-    
-    
-      <category term="MySQL" scheme="/tags/MySQL/"/>
-    
-      <category term="Go" scheme="/tags/Go/"/>
-    
-      <category term="ORM" scheme="/tags/ORM/"/>
-    
-      <category term="Beego" scheme="/tags/Beego/"/>
-    
-      <category term="bee" scheme="/tags/bee/"/>
-    
-  </entry>
   
   <entry>
     <title>《三只小猪》初稿</title>
@@ -151,13 +117,13 @@
       <category term="GitHub" scheme="/categories/GitHub/"/>
     
     
-      <category term="CDN" scheme="/tags/CDN/"/>
-    
-      <category term="jsDeliver" scheme="/tags/jsDeliver/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="CDN" scheme="/tags/CDN/"/>
+    
+      <category term="jsDeliver" scheme="/tags/jsDeliver/"/>
     
   </entry>
   
@@ -183,13 +149,13 @@
       <category term="Hexo" scheme="/categories/Hexo/"/>
     
     
-      <category term="CDN" scheme="/tags/CDN/"/>
-    
-      <category term="jsDeliver" scheme="/tags/jsDeliver/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="CDN" scheme="/tags/CDN/"/>
+    
+      <category term="jsDeliver" scheme="/tags/jsDeliver/"/>
     
       <category term="Hexo框架" scheme="/tags/Hexo%E6%A1%86%E6%9E%B6/"/>
     
@@ -219,11 +185,11 @@
       <category term="Linux" scheme="/categories/Linux/"/>
     
     
+      <category term="Linux" scheme="/tags/Linux/"/>
+    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
-    
-      <category term="Linux" scheme="/tags/Linux/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
@@ -269,10 +235,6 @@
     
       <category term="Go" scheme="/tags/Go/"/>
     
-      <category term="Beego" scheme="/tags/Beego/"/>
-    
-      <category term="bee" scheme="/tags/bee/"/>
-    
       <category term="TCP" scheme="/tags/TCP/"/>
     
       <category term="HTTP" scheme="/tags/HTTP/"/>
@@ -282,6 +244,10 @@
       <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
     
       <category term="多线程" scheme="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+      <category term="Beego" scheme="/tags/Beego/"/>
+    
+      <category term="bee" scheme="/tags/bee/"/>
     
       <category term="JSON" scheme="/tags/JSON/"/>
     
@@ -376,11 +342,11 @@
     
       <category term="Git" scheme="/tags/Git/"/>
     
-      <category term="Go" scheme="/tags/Go/"/>
-    
       <category term="Homebrew" scheme="/tags/Homebrew/"/>
     
       <category term="Mac" scheme="/tags/Mac/"/>
+    
+      <category term="Go" scheme="/tags/Go/"/>
     
       <category term="HTTP" scheme="/tags/HTTP/"/>
     
@@ -683,11 +649,11 @@
       <category term="GitHub" scheme="/categories/GitHub/"/>
     
     
+      <category term="Linux" scheme="/tags/Linux/"/>
+    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
-    
-      <category term="Linux" scheme="/tags/Linux/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
@@ -796,6 +762,57 @@
       <category term="Docker" scheme="/tags/Docker/"/>
     
       <category term="NextCloud" scheme="/tags/NextCloud/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 、 k8s 基础</title>
+    <link href="/docker/"/>
+    <id>/docker/</id>
+    <published>2019-07-01T05:21:30.000Z</published>
+    <updated>2019-12-14T02:56:50.696Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Docker-、-k8s-基础&quot;&gt;&lt;a href=&quot;#Docker-、-k8s-基础&quot; class=&quot;headerlink&quot; title=&quot;Docker 、 k8s 基础&quot;&gt;&lt;/a&gt;Docker 、 k8s 基础&lt;/h1&gt;&lt;hr&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="Docker" scheme="/categories/Docker/"/>
+    
+    
+      <category term="分布式" scheme="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+    
+      <category term="MySQL" scheme="/tags/MySQL/"/>
+    
+      <category term="高可用" scheme="/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/"/>
+    
+      <category term="Docker" scheme="/tags/Docker/"/>
+    
+      <category term="Redis" scheme="/tags/Redis/"/>
+    
+      <category term="MongoDB" scheme="/tags/MongoDB/"/>
+    
+      <category term="Spring" scheme="/tags/Spring/"/>
+    
+      <category term="Maven" scheme="/tags/Maven/"/>
+    
+      <category term="k8s" scheme="/tags/k8s/"/>
+    
+      <category term="架构" scheme="/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+      <category term="REST" scheme="/tags/REST/"/>
+    
+      <category term="微服务" scheme="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    
+      <category term="etcd" scheme="/tags/etcd/"/>
     
   </entry>
   
