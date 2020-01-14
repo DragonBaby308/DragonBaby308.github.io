@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-12-25T11:06:15.235Z</updated>
+  <updated>2020-01-14T13:25:31.748Z</updated>
   <id>/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="/3pigs/"/>
     <id>/3pigs/</id>
     <published>2019-12-22T09:48:48.000Z</published>
-    <updated>2019-12-25T11:06:15.235Z</updated>
+    <updated>2020-01-14T13:25:31.748Z</updated>
     
     <summary type="html">
     
@@ -117,13 +117,13 @@
       <category term="GitHub" scheme="/categories/GitHub/"/>
     
     
-      <category term="GitHub" scheme="/tags/GitHub/"/>
-    
-      <category term="Git" scheme="/tags/Git/"/>
-    
       <category term="CDN" scheme="/tags/CDN/"/>
     
       <category term="jsDeliver" scheme="/tags/jsDeliver/"/>
+    
+      <category term="GitHub" scheme="/tags/GitHub/"/>
+    
+      <category term="Git" scheme="/tags/Git/"/>
     
   </entry>
   
@@ -149,13 +149,13 @@
       <category term="Hexo" scheme="/categories/Hexo/"/>
     
     
-      <category term="GitHub" scheme="/tags/GitHub/"/>
-    
-      <category term="Git" scheme="/tags/Git/"/>
-    
       <category term="CDN" scheme="/tags/CDN/"/>
     
       <category term="jsDeliver" scheme="/tags/jsDeliver/"/>
+    
+      <category term="GitHub" scheme="/tags/GitHub/"/>
+    
+      <category term="Git" scheme="/tags/Git/"/>
     
       <category term="Hexo框架" scheme="/tags/Hexo%E6%A1%86%E6%9E%B6/"/>
     
@@ -185,11 +185,11 @@
       <category term="Linux" scheme="/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="/tags/Linux/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="Linux" scheme="/tags/Linux/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
@@ -591,42 +591,6 @@
   </entry>
   
   <entry>
-    <title>BIO / NIO / AIO</title>
-    <link href="/BIO-NIO-AIO/"/>
-    <id>/BIO-NIO-AIO/</id>
-    <published>2019-08-16T11:50:20.000Z</published>
-    <updated>2019-12-14T07:05:23.683Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;BIO-amp-NIO-amp-AIO&quot;&gt;&lt;a href=&quot;#BIO-amp-NIO-amp-AIO&quot; class=&quot;headerlink&quot; title=&quot;BIO &amp;amp; NIO &amp;amp; AIO&quot;&gt;&lt;/a&gt;BIO &amp;amp; NIO &amp;amp;
-        
-      
-    
-    </summary>
-    
-      <category term="Java基础" scheme="/categories/Java%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="多线程" scheme="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    
-      <category term="Java Base" scheme="/tags/Java-Base/"/>
-    
-      <category term="BIO" scheme="/tags/BIO/"/>
-    
-      <category term="NIO" scheme="/tags/NIO/"/>
-    
-      <category term="线程池" scheme="/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/"/>
-    
-      <category term="Future" scheme="/tags/Future/"/>
-    
-  </entry>
-  
-  <entry>
     <title>GayHub上一些有趣的项目【持续更新~】</title>
     <link href="/fun-with-GayHub/"/>
     <id>/fun-with-GayHub/</id>
@@ -649,11 +613,11 @@
       <category term="GitHub" scheme="/categories/GitHub/"/>
     
     
-      <category term="Linux" scheme="/tags/Linux/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="Linux" scheme="/tags/Linux/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
@@ -813,6 +777,51 @@
       <category term="微服务" scheme="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
       <category term="etcd" scheme="/tags/etcd/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设计模式</title>
+    <link href="/Design-Pattern/"/>
+    <id>/Design-Pattern/</id>
+    <published>2019-05-31T06:34:05.000Z</published>
+    <updated>2019-12-14T02:56:16.108Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;设计模式&quot;&gt;&lt;a href=&quot;#设计模式&quot; class=&quot;headerlink&quot; title=&quot;设计模式&quot;&gt;&lt;/a&gt;设计模式&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;（一）策略模式（Strategy-Pattern）&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="设计模式" scheme="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="Redis" scheme="/tags/Redis/"/>
+    
+      <category term="Java Base" scheme="/tags/Java-Base/"/>
+    
+      <category term="Spring" scheme="/tags/Spring/"/>
+    
+      <category term="Java 8" scheme="/tags/Java-8/"/>
+    
+      <category term="函数式编程" scheme="/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="行为参数化" scheme="/tags/%E8%A1%8C%E4%B8%BA%E5%8F%82%E6%95%B0%E5%8C%96/"/>
+    
+      <category term="Lambda" scheme="/tags/Lambda/"/>
+    
+      <category term="设计模式" scheme="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="Reactor" scheme="/tags/Reactor/"/>
+    
+      <category term="响应式编程" scheme="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
