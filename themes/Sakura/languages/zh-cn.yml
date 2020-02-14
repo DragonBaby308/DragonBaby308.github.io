@@ -47,10 +47,10 @@ insight:
     zh: 程序 = 数据结构 + 算法
     en: Algorithm
     img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/categories/Algorithm.jpg
-Java基础:
-    zh: Java是世界上最好的语言！来战！
-    en: Java
-    img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/banner/coding.jpg
+# Java基础:
+#     zh: Java是世界上最好的语言！来战！
+#     en: Java
+#     img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/banner/coding.jpg
 Linux:
     zh: Talk is cheap, show me the code.
     en: Linux
@@ -59,10 +59,10 @@ Linux:
     zh: 我有一个埋在心里的梦想，就是成为一个畅销小说家，没有和几个人说过。
     en: Code & Poetry.
     img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/categories/Novel.jpg
-设计模式:
-    zh: 设计模式
-    en: Design Pattern
-    img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/categories/DesignPattern.jpg
+# 设计模式:
+#     zh: 设计模式
+#     en: Design Pattern
+#     img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/categories/DesignPattern.jpg
 分布式:
     zh: 分布式
     en: Distributed System
@@ -79,10 +79,11 @@ GitHub:
     zh: 全世界最大同性交友平台 ——
     en: GayHub
     img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/categories/GitHub.jpg
-Go:
-    zh: Go语言设计得非常人性化，我愿意把它作为第二语言。
-    en: GoLang
-    img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/categories/Go.jpg
+# Go:
+#     zh: Go语言设计得非常人性化，我愿意把它作为第二语言。
+#     en: GoLang
+#     img: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/categories/Go.jpg
+
 #category
 # 技术:
 #     zh: 野生技术协会
