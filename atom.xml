@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-01-14T13:25:31.748Z</updated>
+  <updated>2019-12-14T02:55:20.185Z</updated>
   <id>/</id>
   
   <author>
@@ -15,85 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>《三只小猪》初稿</title>
-    <link href="/3pigs/"/>
-    <id>/3pigs/</id>
-    <published>2019-12-22T09:48:48.000Z</published>
-    <updated>2020-01-14T13:25:31.748Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;《三只小猪》&quot;&gt;&lt;a href=&quot;#《三只小猪》&quot; class=&quot;headerlink&quot; title=&quot;《三只小猪》&quot;&gt;&lt;/a&gt;《三只小猪》&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;观《Revolting
-        
-      
-    
-    </summary>
-    
-      <category term="随笔" scheme="/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="Novel" scheme="/tags/Novel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>分布式事务解决方案 &amp; 一致性协议</title>
-    <link href="/Transaction-Consistency/"/>
-    <id>/Transaction-Consistency/</id>
-    <published>2019-12-17T12:47:23.000Z</published>
-    <updated>2019-12-20T15:52:18.578Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;分布式事务解决方案-amp-一致性协议&quot;&gt;&lt;a href=&quot;#分布式事务解决方案-amp-一致性协议&quot; class=&quot;headerlink&quot; title=&quot;分布式事务解决方案 &amp;amp; 一致性协议&quot;&gt;&lt;/a&gt;分布式事务解决方案 &amp;amp;
-        
-      
-    
-    </summary>
-    
-      <category term="分布式" scheme="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
-    
-    
-      <category term="分布式" scheme="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
-    
-      <category term="CAP" scheme="/tags/CAP/"/>
-    
-      <category term="ZooKeeper" scheme="/tags/ZooKeeper/"/>
-    
-      <category term="ZAB" scheme="/tags/ZAB/"/>
-    
-      <category term="高可用" scheme="/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/"/>
-    
-      <category term="2PC" scheme="/tags/2PC/"/>
-    
-      <category term="XA" scheme="/tags/XA/"/>
-    
-      <category term="3PC" scheme="/tags/3PC/"/>
-    
-      <category term="Paxos" scheme="/tags/Paxos/"/>
-    
-      <category term="Raft" scheme="/tags/Raft/"/>
-    
-      <category term="Quorum" scheme="/tags/Quorum/"/>
-    
-      <category term="TCC" scheme="/tags/TCC/"/>
-    
-      <category term="MQ" scheme="/tags/MQ/"/>
-    
-      <category term="幂等性" scheme="/tags/%E5%B9%82%E7%AD%89%E6%80%A7/"/>
-    
-  </entry>
   
   <entry>
     <title>使用jsDeliver和GitHub白嫖CDN</title>
@@ -117,13 +38,13 @@
       <category term="GitHub" scheme="/categories/GitHub/"/>
     
     
-      <category term="CDN" scheme="/tags/CDN/"/>
-    
-      <category term="jsDeliver" scheme="/tags/jsDeliver/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="CDN" scheme="/tags/CDN/"/>
+    
+      <category term="jsDeliver" scheme="/tags/jsDeliver/"/>
     
   </entry>
   
@@ -149,13 +70,13 @@
       <category term="Hexo" scheme="/categories/Hexo/"/>
     
     
-      <category term="CDN" scheme="/tags/CDN/"/>
-    
-      <category term="jsDeliver" scheme="/tags/jsDeliver/"/>
-    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="CDN" scheme="/tags/CDN/"/>
+    
+      <category term="jsDeliver" scheme="/tags/jsDeliver/"/>
     
       <category term="Hexo框架" scheme="/tags/Hexo%E6%A1%86%E6%9E%B6/"/>
     
@@ -185,11 +106,11 @@
       <category term="Linux" scheme="/categories/Linux/"/>
     
     
+      <category term="Linux" scheme="/tags/Linux/"/>
+    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
-    
-      <category term="Linux" scheme="/tags/Linux/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
@@ -206,50 +127,6 @@
       <category term="pip" scheme="/tags/pip/"/>
     
       <category term="HomeBrew" scheme="/tags/HomeBrew/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Go语言网络编程（TCP、HTTP、Beego框架）</title>
-    <link href="/go-web/"/>
-    <id>/go-web/</id>
-    <published>2019-12-04T15:37:01.000Z</published>
-    <updated>2019-12-14T02:57:15.683Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Go语言网络编程（TCP、HTTP、Beego框架）&quot;&gt;&lt;a href=&quot;#Go语言网络编程（TCP、HTTP、Beego框架）&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Go" scheme="/categories/Go/"/>
-    
-    
-      <category term="GitHub" scheme="/tags/GitHub/"/>
-    
-      <category term="Go" scheme="/tags/Go/"/>
-    
-      <category term="TCP" scheme="/tags/TCP/"/>
-    
-      <category term="HTTP" scheme="/tags/HTTP/"/>
-    
-      <category term="Goroutine" scheme="/tags/Goroutine/"/>
-    
-      <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
-    
-      <category term="多线程" scheme="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    
-      <category term="Beego" scheme="/tags/Beego/"/>
-    
-      <category term="bee" scheme="/tags/bee/"/>
-    
-      <category term="JSON" scheme="/tags/JSON/"/>
     
   </entry>
   
@@ -285,88 +162,6 @@
   </entry>
   
   <entry>
-    <title>Go语言并发编程</title>
-    <link href="/goroutine/"/>
-    <id>/goroutine/</id>
-    <published>2019-11-22T14:48:10.000Z</published>
-    <updated>2019-12-14T02:57:31.210Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Go语言并发编程&quot;&gt;&lt;a href=&quot;#Go语言并发编程&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Go" scheme="/categories/Go/"/>
-    
-    
-      <category term="Go" scheme="/tags/Go/"/>
-    
-      <category term="Goroutine" scheme="/tags/Goroutine/"/>
-    
-      <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
-    
-      <category term="OS" scheme="/tags/OS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Go语言入门</title>
-    <link href="/go/"/>
-    <id>/go/</id>
-    <published>2019-11-20T15:03:51.000Z</published>
-    <updated>2019-12-14T02:57:23.259Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Go语言入门&quot;&gt;&lt;a href=&quot;#Go语言入门&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Go" scheme="/categories/Go/"/>
-    
-    
-      <category term="GitHub" scheme="/tags/GitHub/"/>
-    
-      <category term="Git" scheme="/tags/Git/"/>
-    
-      <category term="Homebrew" scheme="/tags/Homebrew/"/>
-    
-      <category term="Mac" scheme="/tags/Mac/"/>
-    
-      <category term="Go" scheme="/tags/Go/"/>
-    
-      <category term="HTTP" scheme="/tags/HTTP/"/>
-    
-      <category term="Goroutine" scheme="/tags/Goroutine/"/>
-    
-      <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
-    
-      <category term="多线程" scheme="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    
-      <category term="JSON" scheme="/tags/JSON/"/>
-    
-      <category term="OS" scheme="/tags/OS/"/>
-    
-      <category term="GC" scheme="/tags/GC/"/>
-    
-      <category term="协程" scheme="/tags/%E5%8D%8F%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Crond定时任务</title>
     <link href="/crond/"/>
     <id>/crond/</id>
@@ -395,51 +190,6 @@
       <category term="Crond" scheme="/tags/Crond/"/>
     
       <category term="定时任务" scheme="/tags/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>分布式全局唯一ID</title>
-    <link href="/uid/"/>
-    <id>/uid/</id>
-    <published>2019-09-10T14:35:30.000Z</published>
-    <updated>2019-12-14T02:58:23.034Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;分布式全局唯一ID&quot;&gt;&lt;a href=&quot;#分布式全局唯一ID&quot; class=&quot;headerlink&quot; title=&quot;分布式全局唯一ID&quot;&gt;&lt;/a&gt;分布式全局唯一ID&lt;/h1&gt;&lt;hr&gt;
-&lt;h2 id=&quot;（一）UUID&quot;&gt;&lt;a href=&quot;#（一）UUID&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="分布式" scheme="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
-    
-    
-      <category term="分布式" scheme="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
-    
-      <category term="MySQL" scheme="/tags/MySQL/"/>
-    
-      <category term="HTTP" scheme="/tags/HTTP/"/>
-    
-      <category term="高并发" scheme="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
-    
-      <category term="Redis" scheme="/tags/Redis/"/>
-    
-      <category term="雪花算法" scheme="/tags/%E9%9B%AA%E8%8A%B1%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="CAS" scheme="/tags/CAS/"/>
-    
-      <category term="JVM" scheme="/tags/JVM/"/>
-    
-      <category term="MyCat" scheme="/tags/MyCat/"/>
-    
-      <category term="Java Base" scheme="/tags/Java-Base/"/>
     
   </entry>
   
@@ -483,43 +233,6 @@
   </entry>
   
   <entry>
-    <title>算法专题——动态规划</title>
-    <link href="/Algorithm-DP/"/>
-    <id>/Algorithm-DP/</id>
-    <published>2019-09-03T14:40:22.000Z</published>
-    <updated>2019-12-14T02:55:28.715Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;算法专题——动态规划&quot;&gt;&lt;a href=&quot;#算法专题——动态规划&quot; class=&quot;headerlink&quot; title=&quot;算法专题——动态规划&quot;&gt;&lt;/a&gt;算法专题——动态规划&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;参考自&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="算法" scheme="/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="背包问题" scheme="/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/"/>
-    
-      <category term="0-1背包" scheme="/tags/0-1%E8%83%8C%E5%8C%85/"/>
-    
-      <category term="完全背包" scheme="/tags/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85/"/>
-    
-      <category term="DP" scheme="/tags/DP/"/>
-    
-      <category term="递归" scheme="/tags/%E9%80%92%E5%BD%92/"/>
-    
-  </entry>
-  
-  <entry>
     <title>算法专题：排序</title>
     <link href="/Algorithm-sort/"/>
     <id>/Algorithm-sort/</id>
@@ -542,15 +255,15 @@
       <category term="算法" scheme="/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="位运算" scheme="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
-    
       <category term="算法" scheme="/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="递归" scheme="/tags/%E9%80%92%E5%BD%92/"/>
     
       <category term="排序" scheme="/tags/%E6%8E%92%E5%BA%8F/"/>
     
+      <category term="位运算" scheme="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
       <category term="分治法" scheme="/tags/%E5%88%86%E6%B2%BB%E6%B3%95/"/>
+    
+      <category term="递归" scheme="/tags/%E9%80%92%E5%BD%92/"/>
     
       <category term="冒泡排序" scheme="/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/"/>
     
@@ -613,11 +326,11 @@
       <category term="GitHub" scheme="/categories/GitHub/"/>
     
     
+      <category term="Linux" scheme="/tags/Linux/"/>
+    
       <category term="GitHub" scheme="/tags/GitHub/"/>
     
       <category term="Git" scheme="/tags/Git/"/>
-    
-      <category term="Linux" scheme="/tags/Linux/"/>
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
@@ -638,38 +351,6 @@
       <category term="Homebrew" scheme="/tags/Homebrew/"/>
     
       <category term="Mac" scheme="/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java中的位运算</title>
-    <link href="/bit-operation/"/>
-    <id>/bit-operation/</id>
-    <published>2019-07-30T04:44:54.000Z</published>
-    <updated>2019-12-14T02:55:49.364Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Java中的位运算&quot;&gt;&lt;a href=&quot;#Java中的位运算&quot; class=&quot;headerlink&quot; title=&quot;Java中的位运算&quot;&gt;&lt;/a&gt;Java中的位运算&lt;/h1&gt;&lt;h2 id=&quot;（一）移位运算&quot;&gt;&lt;a href=&quot;#（一）移位运算&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Java基础" scheme="/categories/Java%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="ARTSK" scheme="/tags/ARTSK/"/>
-    
-      <category term="位运算" scheme="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
-    
-      <category term="HashMap" scheme="/tags/HashMap/"/>
-    
-      <category term="String" scheme="/tags/String/"/>
     
   </entry>
   
@@ -752,17 +433,17 @@
       <category term="Docker" scheme="/categories/Docker/"/>
     
     
+      <category term="Docker" scheme="/tags/Docker/"/>
+    
       <category term="分布式" scheme="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
     
       <category term="MySQL" scheme="/tags/MySQL/"/>
     
       <category term="高可用" scheme="/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/"/>
     
-      <category term="Docker" scheme="/tags/Docker/"/>
+      <category term="MongoDB" scheme="/tags/MongoDB/"/>
     
       <category term="Redis" scheme="/tags/Redis/"/>
-    
-      <category term="MongoDB" scheme="/tags/MongoDB/"/>
     
       <category term="Spring" scheme="/tags/Spring/"/>
     
@@ -781,11 +462,11 @@
   </entry>
   
   <entry>
-    <title>设计模式</title>
-    <link href="/Design-Pattern/"/>
-    <id>/Design-Pattern/</id>
-    <published>2019-05-31T06:34:05.000Z</published>
-    <updated>2019-12-14T02:56:16.108Z</updated>
+    <title>《Debug》</title>
+    <link href="/Debug/"/>
+    <id>/Debug/</id>
+    <published>2019-05-22T14:37:35.000Z</published>
+    <updated>2019-12-22T14:16:44.605Z</updated>
     
     <summary type="html">
     
@@ -793,35 +474,65 @@
       
         
         
-          &lt;h1 id=&quot;设计模式&quot;&gt;&lt;a href=&quot;#设计模式&quot; class=&quot;headerlink&quot; title=&quot;设计模式&quot;&gt;&lt;/a&gt;设计模式&lt;/h1&gt;&lt;hr&gt;
-&lt;h2 id=&quot;（一）策略模式（Strategy-Pattern）&quot;&gt;&lt;a
+          &lt;blockquote&gt;
+&lt;p&gt;应该是五一假期期间，我在归乡的大巴上偶然间看到了B站的“文豪试炼场”活动，主题是“如果突然世界末日了，我要怎么生存”。&lt;br&gt;  &lt;img
         
       
     
     </summary>
     
-      <category term="设计模式" scheme="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="随笔" scheme="/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="Redis" scheme="/tags/Redis/"/>
+      <category term="Novel" scheme="/tags/Novel/"/>
     
-      <category term="Java Base" scheme="/tags/Java-Base/"/>
+      <category term="996" scheme="/tags/996/"/>
     
-      <category term="Spring" scheme="/tags/Spring/"/>
+  </entry>
+  
+  <entry>
+    <title>静态博客Hexo搭建教程（本地、服务器两开花）</title>
+    <link href="/hexo/"/>
+    <id>/hexo/</id>
+    <published>2019-05-22T12:31:42.000Z</published>
+    <updated>2019-12-14T02:58:08.639Z</updated>
     
-      <category term="Java 8" scheme="/tags/Java-8/"/>
+    <summary type="html">
     
-      <category term="函数式编程" scheme="/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"/>
+      
+      
+        
+        
+          &lt;h1 id=&quot;静态博客Hexo搭建-——-本地、服务器两开花&quot;&gt;&lt;a href=&quot;#静态博客Hexo搭建-——-本地、服务器两开花&quot; class=&quot;headerlink&quot; title=&quot;静态博客Hexo搭建 —— 本地、服务器两开花&quot;&gt;&lt;/a&gt;静态博客Hexo搭建 ——
+        
+      
     
-      <category term="行为参数化" scheme="/tags/%E8%A1%8C%E4%B8%BA%E5%8F%82%E6%95%B0%E5%8C%96/"/>
+    </summary>
     
-      <category term="Lambda" scheme="/tags/Lambda/"/>
+      <category term="Hexo" scheme="/categories/Hexo/"/>
     
-      <category term="设计模式" scheme="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
-      <category term="Reactor" scheme="/tags/Reactor/"/>
+      <category term="Linux" scheme="/tags/Linux/"/>
     
-      <category term="响应式编程" scheme="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8B/"/>
+      <category term="Git" scheme="/tags/Git/"/>
+    
+      <category term="Shell" scheme="/tags/Shell/"/>
+    
+      <category term="Vim" scheme="/tags/Vim/"/>
+    
+      <category term="Node.js" scheme="/tags/Node-js/"/>
+    
+      <category term="JS" scheme="/tags/JS/"/>
+    
+      <category term="Mac" scheme="/tags/Mac/"/>
+    
+      <category term="Hexo框架" scheme="/tags/Hexo%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="Nginx" scheme="/tags/Nginx/"/>
+    
+      <category term="阿里云ECS" scheme="/tags/%E9%98%BF%E9%87%8C%E4%BA%91ECS/"/>
+    
+      <category term="Windows" scheme="/tags/Windows/"/>
     
   </entry>
   
