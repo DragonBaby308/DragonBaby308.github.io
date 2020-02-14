@@ -34,7 +34,7 @@ tags:
 - Arrays
 keywords:
 description:
-photos: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.0/img/posts/sort.jpg
+photos: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.5.9/img/posts/sort.jpg
 ---
 
 #  排序
