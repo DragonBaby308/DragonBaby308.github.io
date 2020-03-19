@@ -1,8 +1,8 @@
 # site name
 # 站点名前缀，可以省略
-prefixName: 想进阿里の
+prefixName: 李唐
 # 站点名，显示为：前缀+站点名
-siteName: DB3
+siteName: 盛世
 
 # favicon and site master avatar
 # 标签页小图标：
@@ -14,7 +14,7 @@ avatar: https://cdn.jsdelivr.net/gh/DragonBaby308/cdn@1.2/img/header/avatar.jpg
 url: https://DragonBaby308.github.io/
 
 # 描述
-description: 2020年！春招一定要进阿里！
+description: 我醉欲眠卿且去，明朝有意抱琴来
 
 # 开启pjax
 pjax: 1
@@ -22,7 +22,7 @@ pjax: 1
 mathjax: 0
 
 # 公告
-notice: 我唯一知道的就是我一无所知。
+notice: 仰天大笑出门去，我辈岂是蓬蒿人
 
 # 懒加载的加载中图片
 lazyloadImg: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg
