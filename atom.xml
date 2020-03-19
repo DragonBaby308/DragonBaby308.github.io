@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-03-12T07:58:47.377Z</updated>
+  <updated>2019-12-14T02:55:20.185Z</updated>
   <id>/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>写在21岁</title>
-    <link href="/21/"/>
-    <id>/21/</id>
-    <published>2020-03-12T07:58:25.000Z</published>
-    <updated>2020-03-12T07:58:47.377Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;算了，写个锤子。&lt;/p&gt;
-
-        
-      
-    
-    </summary>
-    
-      <category term="xxx" scheme="/categories/xxx/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>使用jsDeliver和GitHub白嫖CDN</title>
@@ -359,6 +334,10 @@
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
+      <category term="Fun!!!!!!!" scheme="/tags/Fun/"/>
+    
+      <category term="Mac" scheme="/tags/Mac/"/>
+    
       <category term="Vim" scheme="/tags/Vim/"/>
     
       <category term="前端" scheme="/tags/%E5%89%8D%E7%AB%AF/"/>
@@ -369,13 +348,9 @@
     
       <category term="Vue.js" scheme="/tags/Vue-js/"/>
     
-      <category term="Fun!!!!!!!" scheme="/tags/Fun/"/>
-    
       <category term="JS" scheme="/tags/JS/"/>
     
       <category term="Homebrew" scheme="/tags/Homebrew/"/>
-    
-      <category term="Mac" scheme="/tags/Mac/"/>
     
   </entry>
   
@@ -543,13 +518,13 @@
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
+      <category term="Mac" scheme="/tags/Mac/"/>
+    
       <category term="Vim" scheme="/tags/Vim/"/>
     
       <category term="Node.js" scheme="/tags/Node-js/"/>
     
       <category term="JS" scheme="/tags/JS/"/>
-    
-      <category term="Mac" scheme="/tags/Mac/"/>
     
       <category term="Hexo框架" scheme="/tags/Hexo%E6%A1%86%E6%9E%B6/"/>
     
