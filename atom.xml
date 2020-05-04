@@ -334,10 +334,6 @@
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
-      <category term="Fun!!!!!!!" scheme="/tags/Fun/"/>
-    
-      <category term="Mac" scheme="/tags/Mac/"/>
-    
       <category term="Vim" scheme="/tags/Vim/"/>
     
       <category term="前端" scheme="/tags/%E5%89%8D%E7%AB%AF/"/>
@@ -348,9 +344,13 @@
     
       <category term="Vue.js" scheme="/tags/Vue-js/"/>
     
+      <category term="Fun!!!!!!!" scheme="/tags/Fun/"/>
+    
       <category term="JS" scheme="/tags/JS/"/>
     
       <category term="Homebrew" scheme="/tags/Homebrew/"/>
+    
+      <category term="Mac" scheme="/tags/Mac/"/>
     
   </entry>
   
@@ -518,13 +518,13 @@
     
       <category term="Shell" scheme="/tags/Shell/"/>
     
-      <category term="Mac" scheme="/tags/Mac/"/>
-    
       <category term="Vim" scheme="/tags/Vim/"/>
     
       <category term="Node.js" scheme="/tags/Node-js/"/>
     
       <category term="JS" scheme="/tags/JS/"/>
+    
+      <category term="Mac" scheme="/tags/Mac/"/>
     
       <category term="Hexo框架" scheme="/tags/Hexo%E6%A1%86%E6%9E%B6/"/>
     
